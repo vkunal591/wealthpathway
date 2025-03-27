@@ -14,8 +14,8 @@ const geistSans = Geist({
   });
 
 export const metadata: Metadata = {
-  title: "Wealth Path Way",
-  description: "Welth Path Way",
+  title: "PMS & AIF Investments",
+  description: "PMS & AIF Investments",
 };
 
 export default function RootLayout({

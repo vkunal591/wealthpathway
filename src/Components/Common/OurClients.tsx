@@ -71,7 +71,7 @@ export default function OurClients() {
                       }}
                 >
                     {clients.map((data, index) => (
-                        <SwiperSlide key={index} className="w-full sm:w-[calc(100%-50px)] mx-2">
+                        <SwiperSlide key={index} className="w-full sm:w-[calc(100%-50px)] lg:mx-2">
                             {/* The slide width for the first full card and the half-width for the next slide */}
                             <ClientCard index={index} data={data} />
                         </SwiperSlide>

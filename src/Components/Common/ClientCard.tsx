@@ -14,8 +14,8 @@ export default function ClientCard({ data, index }: any) {
     }, []);
 
     return (
-        <div key={index} className='h-[80vh] w-full scale-x-100 bg-gray-50 rounded-3xl  flex flex-col lg:flex-row items-center justify-center text-center shadow-lg overflow-hidden'>
-            <div className='w-full h-72 lg:h-full relative'>
+        <div key={index} className='h-[80vh] 2xl:h-auto w-full scale-x-100 bg-gray-50 rounded-3xl  flex flex-col lg:flex-row items-center justify-center text-center shadow-lg overflow-hidden'>
+            <div className='w-full h-76 lg:h-full relative'>
                 <video
                     ref={videoRef}
                     className="w-full object-cover h-full rounded-lg"
