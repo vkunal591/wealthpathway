@@ -6,6 +6,7 @@ import HeroSection from "@/Components/Common/HeroSection";
 import OurClients from "@/Components/Common/OurClients";
 import Loader from "@/Components/Common/Loader"; // Assuming you have a Loader component
 import ColorChangeText from "./components/ColorChangeText";
+import DoesDifferect from "./components/DoesDifferect";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,11 @@ export default function Home() {
       <OurClients />
       <ColorChangeText text="Traditional wealth management is broken & you need a better way to manage your money. Using unbiased data driven decisions, we ensure your investment journey is successful so you can focus on what matters most to you" />
       <div className="h-[50vh]">
-        {/* Add any additional content or padding as needed */}
+        <DoesDifferect />
+      </div>
+      <div className="h-screen">
+        .
+
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const Loader = () => {
 
   return (
     <div className="fixed inset-0 bg-black flex items-center justify-center z-[10000]">
-      <div className="text-2xl text-white">
+      <div className="text-2xl text-white uppercase">
         {/* Call the function to split text into characters */}
         {splitText("Welcome to Wealth 1")}
       </div>
