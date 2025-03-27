@@ -76,7 +76,7 @@ export default function DoesDifferect() {
             </h2>
 
             <div className='contianer space-y-8'>
-                {sections.map((data: any, index: any) => (<div className=' flex justify-evenly'>
+                {sections.map((data: any, index: any) => (<div key={index} className=' flex justify-evenly'>
                     <div key={index} className='flex flex-col justify-center items-center gap-4'>
                         <span className='rounded-full bg-white p-4 h-16 w-16 text-black text-2xl'>0{index + 1}</span>
                         <span className='h-screen w-[1px] bg-gray-100 inline-block'></span>
