@@ -1,30 +1,32 @@
 import React, { useState, useEffect } from "react";
 
+// Function to split the text into characters, including spaces, and wrap each one in a span element
+const splitText = (text: any) => {
+  return text.split("").map((char: any, index: any) => (
+    <span key={index} className="char">
+      {char === " " ? "\u00A0" : char}
+    </span> // Handling space as non-breaking space
+  ));
+};
+
 const Loader = () => {
-  const [text, setText] = useState("");
-  const fullText = "Weelcome to Wealth 1"; // Fixed spelling
+  const [, setIsLoading] = useState(true); // Loader state
 
   useEffect(() => {
-    let index = 0;
+    // Simulate loading time for demonstration
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Change to false to simulate loader finish
+    }, 5000); // Set loader duration (5 seconds)
 
-    const interval = setInterval(() => {
-      setText((prev) => prev + fullText[index]);
-      index += 1;
-
-      if (index === fullText.length-1) {
-        clearInterval(interval);
-      }
-    }, 100); // Adjust the time for the typing speed
-
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearTimeout(timer);
   }, []);
 
-  if(!text){
-    return null
-  }
   return (
     <div className="fixed inset-0 bg-black flex items-center justify-center z-[10000]">
-      <span className="text-3xl font-bold text-gray-50">{text}</span>
+      <div className="text-2xl text-white">
+        {/* Call the function to split text into characters */}
+        {splitText("Welcome to Wealth 1")}
+      </div>
     </div>
   );
 };
