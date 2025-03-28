@@ -9,6 +9,9 @@ import ColorChangeText from "./components/ColorChangeText";
 import DoesDifferect from "./components/DoesDifferect";
 import CanHelp from "./components/CanHelp";
 import OurExpert from "@/Components/Common/OurExpert";
+import DedicatedPartner from "@/Components/Common/DedicatedPartner";
+import InsightClients from "@/Components/Common/InsightClients";
+import GetInTouch from "@/Components/Common/GetInTouch";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +40,9 @@ export default function Home() {
 
       <CanHelp />
       <OurExpert />
+      <DedicatedPartner />
+      <InsightClients />
+      <GetInTouch />
       <div className="h-screen">
         .
 
