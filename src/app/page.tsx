@@ -43,10 +43,6 @@ export default function Home() {
       <DedicatedPartner />
       <InsightClients />
       <GetInTouch />
-      <div className="h-screen">
-        .
-
-      </div>
     </div>
   );
 }
