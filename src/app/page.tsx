@@ -17,7 +17,7 @@ export default function Home() {
     // Simulate a delay (replace with actual data fetching if needed)
     const timer = setTimeout(() => {
       setLoading(false); // Hide loader after 1 second
-    }, 200);
+    }, 2000);
 
     // Cleanup timeout on unmount
     return () => clearTimeout(timer);

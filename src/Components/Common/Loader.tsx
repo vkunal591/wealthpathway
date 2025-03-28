@@ -16,7 +16,7 @@ const Loader = () => {
     // Simulate loading time for demonstration
     const timer = setTimeout(() => {
       setIsLoading(false); // Change to false to simulate loader finish
-    }, 100); // Set loader duration (5 seconds)
+    }, 1000); // Set loader duration (5 seconds)
 
     return () => clearTimeout(timer);
   }, []);
