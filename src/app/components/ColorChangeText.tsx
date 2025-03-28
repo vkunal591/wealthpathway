@@ -24,7 +24,7 @@ export default function ColorChangeText({ text }: { text: string }) {
 
     return (
         <div className=' flex flex-col items-center justify-center bg-black text-center p-4 lg:p-16'>
-            <p className='text-4xl md:text-7xl font-bold lg:w-3/5 m-auto text-left mb-10' ref={textRef}>
+            <p className='text-4xl md:text-5xl font-bold lg:w-3/5 m-auto text-left mb-20' ref={textRef}>
                 {text.split(' ').map((word, index) => (
                     <span key={index} className={`${textColors[index]} transition-colors duration-300`}> {word}</span>
                 ))}
@@ -35,7 +35,7 @@ export default function ColorChangeText({ text }: { text: string }) {
                     width={800}
                     height={800}
                     alt="profile"
-                    className='rounded-full w-20 h-20'
+                    className='rounded-full w-16 h-16'
                 />
                 <div className='text-left'>
                     <h2 className='text-3xl font-semibold'>Sandeep Jethwani</h2>
