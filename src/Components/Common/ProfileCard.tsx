@@ -30,7 +30,7 @@ const ProfileCard: React.FC<Profile> = ({
   return (
     <div
       className={`bg-[#141414] hover:bg-white group shadow-lg rounded-3xl ${
-        isOpen ? "p-16 flex bg-white" : "p-6"
+        isOpen ? "p-6 lg:p-16 flex flex-col lg:flex-row bg-white" : "p-6"
       } cursor-pointer`}
       onClick={() => setIsOpen(!isOpen)}
     >

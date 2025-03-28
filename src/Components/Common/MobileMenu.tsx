@@ -16,147 +16,162 @@ export const MobileMenu = [
   },
 ];
 
-// export const services = [
-//   {
-//     title: "IT Services",
-//     links: [
-//       {
-//         label: "Web Development",
-//         image: "/assets/webdev.png",
-//         href: "/services/web-development",
-//         id: "web-development", // Unique ID for submenu
-//       },
-//       {
-//         label: "App Development",
-//         image: "/assets/appdev.png",
-//         href: "/services/app-development",
-//         id: "app-development", // Unique ID for submenu
-//       },
-//       {
-//         label: "Artificial Intelligence",
-//         image: "/assets/ai.png",
-//         href: "/services/artificial-intelligence",
-//         id: "ai", // Unique ID for submenu
-//       },
-//       {
-//         label: "Saas Development",
-//         image: "/assets/saas.png",
-//         href: "/services/saas-development",
-//         id: "saas", // Unique ID for submenu
-//       },
-//       {
-//         label: "Blockchain Development",
-//         image: "/assets/block.png",
-//         href: "/services/blockchain-development",
-//         id: "blockchain", // Unique ID for submenu
-//       },
-//       {
-//         label: "CRM Development",
-//         image: "/assets/crm.png",
-//         href: "/services/crm-development",
-//         id: "crm", // Unique ID for submenu
-//       },
-//       {
-//         label: "UX/UI Designing",
-//         image: "/assets/ux.png",
-//         href: "/services/ux-ui-designing",
-//         id: "ux-ui", // Unique ID for submenu
-//       },
-//       {
-//         label: "Digital Marketing",
-//         image: "/assets/webdev.png",
-//         href: "/services/digital-marketing",
-//         id: "digital-marketing", // Unique ID for submenu
-//       },
-//       {
-//         label: "API Development",
-//         image: "/assets/api.png",
-//         href: "/services/api-development",
-//         id: "api", // Unique ID for submenu
-//       },
-//     ],
-//   },
-//   {
-//     title: "Industries",
-//     links: [
-//       {
-//         id: "health-care", // Added id
-//         label: "Health Care",
-//         image: "/assets/serve1.png",
-//         href: "/industries/health-care",
-//       },
-//       {
-//         id: "oil-gas-energy", // Added id
-//         label: "Oil & Gas Energy",
-//         image: "/assets/serve2.png",
-//         href: "/industries/oil-gas-energy",
-//       },
-//       {
-//         id: "retails-e-commerce", // Added id
-//         label: "Retails & E-Commerce",
-//         image: "/assets/serve3.png",
-//         href: "/industries/retails-e-commerce",
-//       },
-//       {
-//         id: "real-estate-construction", // Added id
-//         label: "Real Estate & Construction",
-//         image: "/assets/serve4.png",
-//         href: "/industries/real-estate-construction",
-//       },
-//       {
-//         id: "finance-banking", // Added id
-//         label: "Finance & Banking",
-//         image: "/assets/serve5.png",
-//         href: "/industries/finance-banking",
-//       },
-//       // {
-//       //   id: "government-smart-cities", // Added id
-//       //   label: "Goverment & Smart Cities",
-//       //   image: "/assets/serve6.png",
-//       //   href: "/industries/government-smart-cities",
-//       // },
-//       // {
-//       //   id: "education-service", // Added id
-//       //   label: "Education Service",
-//       //   image: "/assets/serve7.png",
-//       //   href: "/industries/education-service",
-//       // },
-//       // {
-//       //   id: "logistic-transportation", // Added id
-//       //   label: "Logistic & Transportation",
-//       //   image: "/assets/serve8.png",
-//       //   href: "/industries/logistic-transportation",
-//       // },
-//       // {
-//       //   id: "hospitality-tourism", // Added id
-//       //   label: "Hospitality & Tourism",
-//       //   image: "/assets/serve9.png",
-//       //   href: "/industries/hospitality-tourism",
-//       // },
-//       // {
-//       //   id: "legal-compliance", // Added id
-//       //   label: "Legal & Compliance",
-//       //   image: "/assets/serve10.png",
-//       //   href: "/industries/legal-compliance",
-//       // },
-//     ],
-//   },
-// ];
+const aboutus = [
+  {
+    label: "Why Wealth",
+    image: "/assets/webdev.png",
+    href: "/services/aboutus",
+    id: "why-wealth", // Unique ID for submenu
+  },
+  {
+    label: "Our Statement",
+    image: "/assets/webdev.png",
+    href: "/about/our-statement",
+    id: "our-statemetn", // Unique ID for submenu
+  },
+  {
+    label: "Team",
+    image: "/assets/webdev.png",
+    href: "/about/team",
+    id: "team", // Unique ID for submenu
+  },
 
-// export const SidebarTabs = [
-//   { id: 1, label: "About Us", path: "/about-us" },
-//   { id: 5, label: "Our Work", path: "/our-work" },
-//   { id: 2, label: "Contact Us", path: "/contact-us" },
-//   { id: 3, label: "Privacy Policy", path: "/privacy-policy" },
-//   {
-//     id: 4,
-//     label: "Terms And Conditions",
-//     path: "/terms-and-conditions",
-//   },
-// ];
+  {
+    label: "Media",
+    image: "/assets/webdev.png",
+    href: "/about/media",
+    id: "media", // Unique ID for submenu
+  },
+];
+
+const pms = [
+  {
+    label: "PMS Overview",
+    image: "/assets/webdev.png",
+    href: "/pms/pms-overview",
+    id: "pms-overview", // Unique ID for submenu
+  },
+  {
+    label: "FAQs",
+    image: "/assets/webdev.png",
+    href: "/pms/faqs",
+    id: "faqs", // Unique ID for submenu
+  },
+  {
+    label: "Product",
+    image: "/assets/webdev.png",
+    href: "/pms/product",
+    id: "product", // Unique ID for submenu
+  },
+
+  {
+    label: "Analytics",
+    image: "/assets/webdev.png",
+    href: "/pms/analatics",
+    id: "analatics", // Unique ID for submenu
+  },
+];
+
+const aif = [
+  {
+    label: "AIF Overview",
+    image: "/assets/webdev.png",
+    href: "/aif/aif-overview",
+    id: "pms-overview", // Unique ID for submenu
+  },
+  {
+    label: "FAQs",
+    image: "/assets/webdev.png",
+    href: "/ait/faqs",
+    id: "faqs", // Unique ID for submenu
+  },
+  {
+    label: "Product",
+    image: "/assets/webdev.png",
+    href: "/aif/product",
+    id: "product", // Unique ID for submenu
+  },
+
+  {
+    label: "Analytics",
+    image: "/assets/webdev.png",
+    href: "/aif/analatics",
+    id: "analatics", // Unique ID for submenu
+  },
+];
+
+const reports = [
+  {
+    label: "PMS Reports",
+    image: "/assets/webdev.png",
+    href: "/reports/pms-reports",
+    id: "pms-reports", // Unique ID for submenu
+  },
+  {
+    label: "AIF Reports",
+    image: "/assets/webdev.png",
+    href: "/aif/aif-reports",
+    id: "aif-reports", // Unique ID for submenu
+  },
+  {
+    label: "Magzine",
+    image: "/assets/webdev.png",
+    href: "/reports/magzine",
+    id: "magzine", // Unique ID for submenu
+  },
+];
+
+const events = [
+  {
+    label: "Physical Events",
+    image: "/assets/webdev.png",
+    href: "/events/physical-events",
+    id: "physical-events", // Unique ID for submenu
+  },
+
+  {
+    label: "Virtual Events",
+    image: "/assets/webdev.png",
+    href: "/events/virtual-events",
+    id: "virtual-events", // Unique ID for submenu
+  },
+];
+
+export const services = [
+  {
+    title: "About Us",
+    link: aboutus,
+  },
+  {
+    title: "PMS",
+    links: pms,
+  },
+  {
+    title: "AIF",
+    links: aif,
+  },
+  {
+    title: "Reports",
+    links: reports,
+  },
+  {
+    title: "Events",
+    links: events,
+  },
+];
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Define menuItems with submenus for "Services" and "Industries"
+  const menuItems = [
+    { id: 1, name: "Home", path: "/" },
+    // { id: 2, name: "About Us", path: "/about-us" },
+    // { id: 3, name: "PMS", path: "/pms" },
+    // { id: 4, name: "AID", path: "/aif" },
+    // { id: 5, name: "Reports", path: "/reports" },
+    // { id: 6, name: "Events", path: "/events" },
+  ];
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -173,7 +188,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="relative font-[poppins]">
+    <div className="relative">
       <div
         className={`fixed top-[-20%] right-[-10%] h-full bg-gray-900 text-primary z-50 transform ${
           isOpen ? "w-[85%] md:w-3/4 right-0" : "w-0"
@@ -192,7 +207,10 @@ const Sidebar = () => {
                 className="w-2/4 filter invert"
               />
             </Link>
-            <p className="font-extrabold text-2xl mr-10" onClick={toggleSidebar}>
+            <p
+              className="font-extrabold text-2xl mr-10"
+              onClick={toggleSidebar}
+            >
               x
             </p>
           </div>
@@ -207,21 +225,21 @@ const Sidebar = () => {
             </Link>
             <Accordion
               sidebar={true}
-              services={[]}
+              services={services}
               handleLinkClick={handleLinkClick}
             />
-            {/* {SidebarTabs.map((item) => (
+            {menuItems?.map((item: any) => (
               <div key={item.id} className="relative group">
                 <Link
                   href={item.path}
-                  aria-label={item.label}
+                  aria-label={item.name}
                   onClick={handleLinkClick}
                   className="relative text-lg font-medium inline-block py-3 border-b w-full border-white/20 cursor-pointer"
                 >
-                  {item.label}
+                  {item.name}
                 </Link>
               </div>
-            ))} */}
+            ))}
             <div className="py-4">
               <p className="pb-2">Follow us at:</p>
               <SocialMediaLinks size={30} />

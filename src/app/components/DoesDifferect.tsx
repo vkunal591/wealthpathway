@@ -74,7 +74,7 @@ export default function DoesDifferect() {
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-40">
-      <h2 className="text-3xl lg:text-7xl w-full m-auto text-center mb-24">
+      <h2 className="text-5xl lg:text-7xl w-full m-auto text-center mb-24">
         How Dezerv does things differently
       </h2>
 
@@ -91,7 +91,7 @@ export default function DoesDifferect() {
               <span className="h-screen w-[1px] bg-gray-100 inline-block"></span>
             </div>
             <div className="w-10/12">
-              <div className=" h-fit bg-gray-50 rounded-3xl overflow-hidden  flex justify-center items-center gap-4">
+              <div className=" h-fit bg-gray-50 rounded-3xl overflow-hidden  flex flex-col lg:flex-row justify-center items-center gap-4">
                 <div className="w-full lg:w-1/2 p-10 flex flex-col items-start">
                   <h3 className="text-3xl font-bold text-black mb-8">
                     {data?.title}
@@ -100,7 +100,7 @@ export default function DoesDifferect() {
                     {data?.description}
                   </p>
                 </div>
-                <div className="w-full lg:w-1/2 h-[70vh]">
+                <div className="w-full lg:w-1/2 lg:h-[70vh]">
                   <Image
                     src={"/graph.svg"}
                     width={800}

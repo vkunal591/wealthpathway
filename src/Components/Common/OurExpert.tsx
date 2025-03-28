@@ -80,7 +80,7 @@ const experts: Profile[] = [
 ];
 export default function OurExpert() {
     return (
-        <div className='max-w-8xl m-auto '>
+        <div className='max-w-8xl m-auto p-4'>
             <h2 className='text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-24'>
                 Meet our team
                 of experts

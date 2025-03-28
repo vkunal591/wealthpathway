@@ -72,8 +72,8 @@ export default function CanHelp() {
         // Add more sections here as needed
     ];
     return (
-        <div className='max-w-8xl m-auto mb-44' >
-            <h2 className='text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-24 '>
+        <div className='max-w-8xl m-auto my-44' >
+            <h2 className='text-5xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-24 '>
                 How Dezerv
                 can help you
             </h2>
@@ -83,12 +83,12 @@ export default function CanHelp() {
                     <div key={index} className=''>
 
 
-                        <div className=' bg-gray-50 rounded-3xl overflow-hidden p-14'>
+                        <div className=' bg-gray-50 rounded-3xl overflow-hidden p-4 lg:p-14'>
                             <div className='w-full lg:w-1/2 p-4 mb-6'>
                                 <h3 className='text-3xl font-semibold text-[#4eb3a9] mb-6'>{data?.title}</h3>
                                 <p className='text-gray-900 text-6xl font-semibold'>{data?.description}</p>
                             </div>
-                            <div className='flex items-start justify-start ' >
+                            <div className='flex flex-col lg:flex-row items-start justify-start ' >
                                 <div className='w-full lg:w-1/2 space-y-4  p-10'>
                                     <ul className='text-3xl font-medium text-black w-full lg:w-3/4 mr-auto space-y-6 mb-16'>
                                         <li>    Evaluate your portfolio
@@ -113,7 +113,7 @@ export default function CanHelp() {
                                     </Link>
                                 </div>
                                 <div className="w-full lg:w-1/2">
-                                    <div className="h-96 bg-gray-100 text-center p-8 px-16 border border-gray-900 rounded-4xl w-full">
+                                    <div className="h-96 bg-gray-100 text-center lg:p-8 lg:px-16 border border-gray-900 rounded-4xl w-full">
                                         <Image
                                             src="/graph.svg"
                                             width={800}

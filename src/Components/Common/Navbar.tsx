@@ -220,7 +220,7 @@ export default function Navbar() {
       </div>
       <div className="w-3/5 items-center justify-between gap-4 hidden lg:flex">
         <ul className="hidden max-w-6xl lg:flex justify-between items-center text-gray-50">
-          {menuItems.map((item) => (
+          {menuItems?.map((item) => (
             <div
               key={item.name}
               className="relative group"
@@ -228,7 +228,7 @@ export default function Navbar() {
             >
               <Link href={item.path} className="border-none outline-none">
                 <li
-                  className={`mr-10 text-lg font-['urbanist'] ${
+                  className={`mr-10 text-lg ${
                     pathname === item.path
                       ? "border-b-4 border-grauy-100 text-gray-100 font-bold"
                       : "text-gray-300 hover:text-gray-100 transition duration-200"
@@ -251,7 +251,7 @@ export default function Navbar() {
                   onMouseLeave={handleMouseLeave} // Reset on mouse leave
                 >
                   <ul className="space-y-2 p-2 grid grid-cols-1 lg:grid-cols-2">
-                    {item.submenu.map((subItem: any) => (
+                    {item?.submenu?.map((subItem: any) => (
                       <li key={subItem.id}>
                         <Link
                           href={subItem.path}

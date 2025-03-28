@@ -38,7 +38,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           }`}
       >
         <div className="py-2 bg-gray-900 space-y-3 mt-2">
-          {content.map((link: any) => (
+          {content?.map((link: any) => (
             <li key={link.href} className="text-[15px] pl-4 list-disc">
               <Link
                 aria-label={link.label}

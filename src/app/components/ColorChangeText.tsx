@@ -23,7 +23,7 @@ export default function ColorChangeText({ text }: { text: string }) {
     }, [text]);
 
     return (
-        <div className=' flex flex-col items-center justify-center bg-black text-center p-4 lg:p-16'>
+        <div className=' flex flex-col items-center justify-center bg-black text-center p-4 lg:p-16 mb-44'>
             <p className='text-4xl md:text-5xl font-bold lg:w-3/5 m-auto text-left mb-20' ref={textRef}>
                 {text.split(' ').map((word, index) => (
                     <span key={index} className={`${textColors[index]} transition-colors duration-300`}> {word}</span>
