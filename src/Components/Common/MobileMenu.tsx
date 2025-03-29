@@ -194,7 +194,7 @@ const Sidebar = () => {
           isOpen ? "w-[85%] md:w-3/4 right-0" : "w-0"
         } transition-all duration-500 ease-in-out`}
       >
-        <div className="bg-gray-900 text-gray-50">
+        <div className="bg-gray-900 text-gray-800">
           <div className="flex p-3 shadow-md z-50 ">
             <Link href={"/"}>
               <Image
@@ -255,7 +255,7 @@ const Sidebar = () => {
       {isOpen && (
         <div
           onClick={toggleSidebar}
-          className="fixed inset-0 bg-black opacity-50 z-40"
+          className="fixed inset-0 bg-white opacity-50 z-40"
         ></div>
       )}
     </div>

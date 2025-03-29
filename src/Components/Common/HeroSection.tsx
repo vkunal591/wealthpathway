@@ -58,7 +58,7 @@ export default function HeroSection() {
   return (
     <div className="p-4 lg:p-16 max-w-7xl m-auto flex flex-col justify-end items-start h-[70vh] sm:h-[50vh] lg:h-screen">
       <motion.h1
-        className="text-4xl lg:text-7xl w-full lg:w-4/5 font-semibold text-gray-50 mb-10"
+        className="text-4xl lg:text-7xl w-full lg:w-4/5 font-semibold text-gray-800 mb-10"
         initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
         animate={controls} // Control animation with framer-motion controls
         transition={{ duration: 1.5 }} // Smooth transition

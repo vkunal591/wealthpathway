@@ -202,7 +202,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="flex items-center justify-between bg-[#0000008c] z-[5000] text-green-50 w-11/12 m-auto p-4 rounded-xl fixed left-1/2 -translate-x-1/2 top-7"
+      className="flex items-center justify-between bg-[#ededede8] z-[5000] text-green-50 w-11/12 m-auto p-4 rounded-xl fixed left-1/2 -translate-x-1/2 top-7"
       animate={controls}
     >
       <div className="w-1/2 lg:w-1/5 flex items-center justify-start">
@@ -214,12 +214,12 @@ export default function Navbar() {
             unoptimized
             priority
             alt="PMS & AIF Investments"
-            className="h-16 lg:h-auto filter invert"
+            className="h-16 lg:h-auto "
           />
         </Link>
       </div>
       <div className="w-3/5 items-center justify-between gap-4 hidden lg:flex">
-        <ul className="hidden max-w-6xl lg:flex justify-between items-center text-gray-50">
+        <ul className="hidden max-w-6xl lg:flex justify-between items-center text-gray-800">
           {menuItems?.map((item) => (
             <div
               key={item.name}
@@ -230,8 +230,8 @@ export default function Navbar() {
                 <li
                   className={`mr-10 text-lg ${
                     pathname === item.path
-                      ? "border-b-4 border-grauy-100 text-gray-100 font-bold"
-                      : "text-gray-300 hover:text-gray-100 transition duration-200"
+                      ? "border-b-4 border-gray-800 text-gray-800 font-bold"
+                      : "text-gray-700 hover:text-gray-900 transition duration-200"
                   }`}
                   onClick={(e: any) => {
                     if (item?.submenu) e?.preventDefault(); // Prevent link navigation to enable click behavior
@@ -279,13 +279,16 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="w-1/2 lg:w-2/5 flex justify-end lg:justify-center items-center">
-        <Link href={"/"} className="w-1/3 hidden lg:inline-block">
+        <Link
+          href={"/"}
+          className="w-1/3 hidden text-gray-700 hover:text-gray-900 lg:inline-block"
+        >
           Member Login
         </Link>
 
         <Link
           href={"/"}
-          className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base border bg-gray-50 text-gray-800 rounded-full items-center justify-center"
+          className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base bg-gray-800 text-gray-50 rounded-full items-center justify-center"
         >
           Review my portfolio
           <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />

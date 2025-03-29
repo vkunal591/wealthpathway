@@ -20,7 +20,7 @@ export default function DoesDifferect() {
       imageUrl: "/graph.svg",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
-      textColor: "text-gray-50",
+      textColor: "text-gray-800",
     },
     {
       id: "03",
@@ -39,7 +39,7 @@ export default function DoesDifferect() {
       imageUrl: "/graph.svg",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
-      textColor: "text-gray-50",
+      textColor: "text-gray-800",
     },
     {
       id: "05",
@@ -58,7 +58,7 @@ export default function DoesDifferect() {
       imageUrl: "/graph.svg",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
-      textColor: "text-gray-50",
+      textColor: "text-gray-800",
     },
     {
       id: "07",
@@ -73,8 +73,8 @@ export default function DoesDifferect() {
     // Add more sections here as needed
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-40">
-      <h2 className="text-5xl lg:text-7xl w-full m-auto text-center mb-24">
+    <div className="max-w-7xl m-auto p-4 lg:p-40 bg-white">
+      <h2 className="text-5xl lg:text-7xl text-gray-800 w-full m-auto text-center mb-24">
         How Dezerv does things differently
       </h2>
 
@@ -85,13 +85,13 @@ export default function DoesDifferect() {
               key={index}
               className="flex flex-col justify-center items-center gap-4"
             >
-              <span className="rounded-full bg-white p-4 h-16 w-16 text-black text-2xl">
+              <span className="rounded-full bg-gray-200 p-3.5 h-14 w-14 text-black text-2xl">
                 0{index + 1}
               </span>
-              <span className="h-screen w-[1px] bg-gray-100 inline-block"></span>
+              <span className="h-screen w-[1px] bg-gray-800 inline-block"></span>
             </div>
             <div className="w-10/12">
-              <div className=" h-fit bg-gray-50 rounded-3xl overflow-hidden  flex flex-col lg:flex-row justify-center items-center gap-4">
+              <div className=" h-fit bg-gray-200 border shadow border-gray-200 rounded-3xl overflow-hidden  flex flex-col lg:flex-row justify-center items-center gap-4">
                 <div className="w-full lg:w-1/2 p-10 flex flex-col items-start">
                   <h3 className="text-3xl font-bold text-black mb-8">
                     {data?.title}
@@ -111,11 +111,11 @@ export default function DoesDifferect() {
                 </div>
               </div>
 
-              <div className="bg-[#121212] rounded-3xl p-10 py-20">
-                <h3 className="text-3xl font-bold text-gray-50 mb-5 ">
+              <div className="bg-[#1a1616] rounded-3xl p-10 py-10 shadow">
+                <h3 className="text-3xl font-bold text-gray-100 mb-5 ">
                   Traditional wealth firms
                 </h3>
-                <p className="text-gray-500 text-4xl font-medium w-3/5">
+                <p className="text-gray-300 text-4xl font-medium w-3/5">
                   Your RM is busy searching for new clients & rarely tracks your
                   portfolio
                 </p>
