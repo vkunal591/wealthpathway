@@ -101,3 +101,83 @@ body {
   --char-index: 18;
 }
 /* Continue for more characters if needed... */
+
+
+
+
+
+
+
+
+
+.flex-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+.content-container {
+  margin-inline: auto;
+  width: 90vw;
+}
+
+.vertical-scroll-container {
+align-items: center;
+display: flex;
+flex-direction: column;
+flex: 1 1 50%;
+gap: 6rem 0;
+min-width: 400px;
+overflow-y: scroll;
+scrollbar-color: #3848a0 #1b2767;
+scroll-snap-type: y mandatory;  
+padding: 200px 20px;
+height: 400px;
+}
+.vertical-scroll-container img {
+scroll-snap-align: center;
+width: 400px;
+
+animation: slideInOut;
+animation-timeline: view();
+}
+/* old keyframes 
+@keyframes slideIn {
+from {
+  transform: scale(.8) translateY(100px); 
+  opacity: 0;
+}
+to { 
+  transform: scale(1) translateY(0); 
+  opacity: 1;
+}
+}
+@keyframes slideOut {
+from {
+  transform: scale(1) translateY(0); 
+  opacity: 1;    
+}
+to { 
+  transform: scale(.8) translateY(-100px); 
+  opacity: 0 
+}
+} */
+
+/* NEW target range in keyframes */
+@keyframes slideInOut {
+entry 0% {
+  transform: scale(.8) translateY(100px); 
+  opacity: 0;
+}
+entry 100% { 
+  transform: scale(1) translateY(0); 
+  opacity: 1;
+}
+exit 0% {
+  transform: scale(1) translateY(0); 
+  opacity: 1;    
+}
+exit 100% { 
+  transform: scale(.8) translateY(-100px); 
+  opacity: 0 
+}
+}

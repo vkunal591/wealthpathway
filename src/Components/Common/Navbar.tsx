@@ -17,13 +17,13 @@ const aboutus = [
   {
     name: "Our Statement",
     image: "/assets/webdev.png",
-    path: "/about/our-statement",
+    path: "/our-statement",
     id: "our-statemetn", // Unique ID for submenu
   },
   {
     name: "Team",
     image: "/assets/webdev.png",
-    path: "/about/team",
+    path: "/team",
     id: "team", // Unique ID for submenu
   },
 

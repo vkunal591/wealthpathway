@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cabin, Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Cabin, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Common/Navbar";
 import Footer from "@/Components/Common/Footer";

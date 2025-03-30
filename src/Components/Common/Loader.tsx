@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react";
 
 // Function to split the text into characters, including spaces, and wrap each one in a span element
