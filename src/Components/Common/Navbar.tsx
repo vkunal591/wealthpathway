@@ -11,7 +11,7 @@ const aboutus = [
   {
     name: "Why Wealth",
     image: "/assets/webdev.png",
-    path: "/services/aboutus",
+    path: "/why-wealth",
     id: "why-wealth", // Unique ID for submenu
   },
   {
@@ -202,7 +202,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="flex items-center justify-between bg-[#ededede8] z-[5000] text-green-50 w-11/12 m-auto p-4 rounded-xl fixed left-1/2 -translate-x-1/2 top-7"
+      className="flex items-center justify-between bg-[#ededede8] z-[5000] shadow-xl font-[poppins] text-green-50 w-11/12 m-auto p-4 rounded-xl fixed left-1/2 -translate-x-1/2 top-7"
       animate={controls}
     >
       <div className="w-1/2 lg:w-1/5 flex items-center justify-start">

@@ -48,10 +48,44 @@ export default function ClientProfileCard() {
       name: "Sudeep Goenka",
       position: "CEO ",
     },
+    {
+      title: "AI-Powered PMS Analytics",
+      description:
+        "“Dezerv brought simplicity and clarity to my investments.” ",
+      video: "/session3.mp4",
+      link: "/",
+      bgColor: "bg-[#F97316]",
+      textColor: "text-[#F97316]",
+      name: "Sudeep Goenka",
+      position: "CEO ",
+    },
+
+    {
+      title: "AI-Powered PMS Analytics",
+      description:
+        "“Dezerv brought simplicity and clarity to my investments.” ",
+      video: "/session3.mp4",
+      link: "/",
+      bgColor: "bg-[#F97316]",
+      textColor: "text-[#F97316]",
+      name: "Sudeep Goenka",
+      position: "CEO ",
+    },
+    {
+      title: "AI-Powered PMS Analytics",
+      description:
+        "“Dezerv brought simplicity and clarity to my investments.” ",
+      video: "/session3.mp4",
+      link: "/",
+      bgColor: "bg-[#F97316]",
+      textColor: "text-[#F97316]",
+      name: "Sudeep Goenka",
+      position: "CEO ",
+    },
   ];
 
   return (
-    <div className="container max-w-8xl mx-auto p-4">
+    <div className="mx-auto font-[poppins]">
       <div className="relative">
         <Swiper
           spaceBetween={10}
@@ -102,15 +136,15 @@ export default function ClientProfileCard() {
                     />
                     <div className="flex items-center justify-between p-4 absolute  bottom-0 w-full">
                       <div>
-                        <h2 className="text-xl">Jigme Butia</h2>
-                        <p className="text-gray-8000 text-sm">Client Partmer</p>
+                        <h2 className="text-xl uppercase text-gray-50">Jigme Butia</h2>
+                        <p className="text-gray-300 text-sm">Client Partmer</p>
                       </div>
-                      <IoLogoLinkedin className="text-3xl text-gray-400" />
+                      <IoLogoLinkedin className="text-3xl text-gray-300" />
                     </div>
                   </div>
                   <div className="p-4">
-                    <h2>Managing portfolio for</h2>
-                    <ul className="list-disc p-3 space-y-4 text-gray-300 text-sm">
+                    <h2 className="text-gray-50 text-lg">Managing portfolio for</h2>
+                    <ul className="list-disc p-3 lg:px-4 space-y-4 text-gray-300 text-sm">
                       <li>Founder of one of the largest healthcare chains</li>
                       <li>CEO of well known multi-national company</li>
                       <li>Founder of India&apos;s well-known unicorn</li>

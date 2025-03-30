@@ -82,7 +82,7 @@ const experts: Profile[] = [
 ];
 export default function OurExpert() {
     return (
-        <div className='max-w-8xl m-auto p-4 py-44'>
+        <div className='max-w-8xl m-auto p-4 py-16 font-[poppins]'>
             <h2 className='text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-24'>
                 Meet our team
                 of experts
@@ -93,7 +93,7 @@ export default function OurExpert() {
                 ))}
 
                 <div
-                    className={`bg-[#141414] hover:bg-white group shadow-lg rounded-3xl p-6 cursor-pointer`}
+                    className={`bg-[#efefef] hover:bg-white group border border-gray-300 shadow-lg rounded-3xl p-6 cursor-pointer`}
                 >
                     <div
                         className={`flex ${"items-center"
@@ -106,7 +106,7 @@ export default function OurExpert() {
                                 alt={'logo'}
                                 width={60}
                                 height={60}
-                                className={`rounded-full bg-gray-200 w-24 h-24 relative border border-gray-500`}
+                                className={`rounded-full bg-gray-200 w-24 h-24 relative left-5 border border-gray-500`}
                             />
 
 
@@ -115,7 +115,7 @@ export default function OurExpert() {
                                 alt={'logo'}
                                 width={60}
                                 height={60}
-                                className={`rounded-full bg-gray-200 w-24 h-24 relative left-[-3rem] border border-gray-500 `}
+                                className={`rounded-full bg-gray-200 w-24 h-24 relative left-[-2rem] lg:left-[-3rem] border border-gray-500 `}
                             />
 
                             <Image
@@ -123,7 +123,7 @@ export default function OurExpert() {
                                 alt={'logo'}
                                 width={60}
                                 height={60}
-                                className={`rounded-full bg-gray-200 w-24 h-24 relative left-[-6rem] border border-gray-500 `}
+                                className={`rounded-full hidden lg:block bg-gray-200 w-24 h-24 relative left-[-6rem] border border-gray-500 `}
                             />
                         </div>
 

@@ -49,7 +49,7 @@ export default function OurClients() {
   ];
 
   return (
-    <div className="container max-w-8xl mx-auto p-4 lg:p-10">
+    <div className="max-w-8xl mx-auto p-4 lg:p-16 font-[poppins]">
       <div className="relative">
         <Swiper
           spaceBetween={10}
@@ -57,7 +57,7 @@ export default function OurClients() {
           loop={true} // Optional: to make the swiper loop
           navigation={false}
           modules={[Navigation]} // Removed Pagination module
-          className="h-full"
+          className="h-full w-full"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             320: {
@@ -85,7 +85,9 @@ export default function OurClients() {
                   stiffness: 100,
                   damping: 25,
                   delay: index * 0.2, // Slight delay between each card animation
+                  
                 }}
+                className="p-4"
                 viewport={{ once: false }} // Trigger when scrolls in or out of view
               >
                 <ClientCard index={index} data={data} />

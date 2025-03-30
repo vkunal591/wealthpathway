@@ -32,7 +32,7 @@ const ProfileCard: React.FC<Profile> = ({
 
   return (
     <div
-      className={`bg-[#141414] hover:bg-white group shadow-lg rounded-3xl ${
+      className={`bg-[#efefef] hover:bg-white group border border-gray-300 shadow-lg rounded-3xl ${
         isOpen ? "p-6 lg:p-16  bg-white" : "p-6"
       } cursor-pointer`}
       onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +55,7 @@ const ProfileCard: React.FC<Profile> = ({
           >
             {name}
           </h2>
-          <p className="text-gray-8000 font-semibold">{role}</p>
+          <p className="text-gray-600 font-semibold">{role}</p>
         </div>
         <div className="ml-auto">
           {isOpen ? (

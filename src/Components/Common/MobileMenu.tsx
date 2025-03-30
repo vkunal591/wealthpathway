@@ -188,7 +188,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative font-[poppins]">
       <div
         className={`fixed top-[-20%] right-[-10%] h-full bg-gray-900 text-primary z-50 transform ${
           isOpen ? "w-[85%] md:w-3/4 right-0" : "w-0"
@@ -250,7 +250,7 @@ const Sidebar = () => {
       <IoIosMenu
         size={30}
         onClick={toggleSidebar}
-        className="lg:hidden text-white"
+        className="lg:hidden text-gray-800"
       />
       {isOpen && (
         <div

@@ -73,8 +73,8 @@ export default function DoesDifferect() {
     // Add more sections here as needed
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-40 bg-white">
-      <h2 className="text-5xl lg:text-7xl text-gray-800 w-full m-auto text-center mb-24">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 bg-white font-[poppins] ">
+      <h2 className="text-5xl lg:text-7xl text-gray-800 w-full m-auto text-center mb-16">
         How Dezerv does things differently
       </h2>
 
@@ -96,11 +96,11 @@ export default function DoesDifferect() {
                   <h3 className="text-3xl font-bold text-black mb-8">
                     {data?.title}
                   </h3>
-                  <p className="text-gray-900 text-5xl font-medium">
+                  <p className="text-gray-700 text-5xl font-medium">
                     {data?.description}
                   </p>
                 </div>
-                <div className="w-full lg:w-1/2 lg:h-[70vh]">
+                <div className="w-full lg:w-1/2 lg:h- 2xl:h-auto">
                   <Image
                     src={"/graph.svg"}
                     width={800}
@@ -115,7 +115,7 @@ export default function DoesDifferect() {
                 <h3 className="text-3xl font-bold text-gray-100 mb-5 ">
                   Traditional wealth firms
                 </h3>
-                <p className="text-gray-300 text-4xl font-medium w-3/5">
+                <p className="text-gray-400 text-4xl font-medium w-3/5">
                   Your RM is busy searching for new clients & rarely tracks your
                   portfolio
                 </p>

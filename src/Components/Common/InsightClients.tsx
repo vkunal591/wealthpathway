@@ -4,12 +4,12 @@ import { IoArrowForward } from 'react-icons/io5'
 
 export default function InsightClients() {
     return (
-        <div className='max-w-8xl m-auto p-4 lg:p-24'>
-            <h2 className='text-3xl lg:text-7xl w-full lg:w-4/5 m-auto text-center mb-24'>
+        <div className='max-w-8xl m-auto p-4 lg:p-16 font-[poppins]'>
+            <h2 className='text-3xl lg:text-7xl w-full lg:w-4/5 m-auto text-center mb-16'>
                 Insights for our clients
             </h2>
 
-            <div className='flex items-center gap-6'>
+            <div className='flex flex-col lg:flex-row items-center gap-6'>
 
                 {
                     Array(3).fill(null).map((data, index) => (

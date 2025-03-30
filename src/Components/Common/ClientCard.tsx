@@ -16,9 +16,9 @@ export default function ClientCard({ data, index }: any) {
   return (
     <div
       key={index}
-      className="h-[80vh] 2xl:h-auto w-full scale-x-100 bg-gray-50 rounded-3xl  flex flex-col lg:flex-row items-center justify-center text-center shadow-lg overflow-hidden"
+      className="h-[80vh] 2xl:h-auto w-full scale-x-100 capitalize bg-gray-50 rounded-3xl border-2 border-gray-400 shadow flex flex-col lg:flex-row items-center justify-center text-center overflow-hidden"
     >
-      <div className="w-full h-76 lg:h-full relative">
+      <div className="w-full lg:w-2/5 h-76 lg:h-full relative">
         <video
           ref={videoRef}
           className="w-full object-cover h-full rounded-lg"
@@ -30,8 +30,8 @@ export default function ClientCard({ data, index }: any) {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="mt-4 px-4 h-[40vh]">
-        <p className="text-gray-900 text-left  text-4xl md:text-6xl mb-8">
+      <div className="mt-4 px-4 w-full lg:w-3/5 h-[40vh]">
+        <p className="text-gray-800 text-left  text-4xl md:text-5xl font-semibold mb-8">
           {data?.description ||
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus totam nisi sapiente laudantium asperiores culpa officiis molestias laboriosam amet consectetur inventore placeat unde in odio, obcaecati quibusdam et saepe?"}
         </p>

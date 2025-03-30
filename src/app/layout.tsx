@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cabin, Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Common/Navbar";
 import Footer from "@/Components/Common/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "700"], // Choose the weights you need
+  variable: "--font-poppins", // Define a CSS variable for use in Tailwind
+  display: "swap",
 });
 
-  const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-  });
+const cabin = Cabin({
+  variable: "--font-cabin", // Custom CSS variable
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"], // Optional: include styles like italic if needed
+});
 
 export const metadata: Metadata = {
   title: "PMS & AIF Investments",
@@ -27,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${cabin.variable} antialiased`}
       >
         <Navbar />
         {children}
