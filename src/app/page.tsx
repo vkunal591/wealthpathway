@@ -1,5 +1,5 @@
 // app/page.tsx (or pages/index.tsx if using the `pages` directory)
-'use client'
+"use client";
 
 import { useState, useEffect } from "react";
 import HeroSection from "@/Components/Common/HeroSection";
@@ -35,7 +35,13 @@ export default function Home() {
     <div className="bg-white">
       <HeroSection />
       <OurClients />
-      <ColorChangeText text="Traditional wealth management is broken & you need a better way to manage your money. Using unbiased data driven decisions, we ensure your investment journey is successful so you can focus on what matters most to you" />
+      <ColorChangeText
+        text="Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions.
+<br>
+Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies.
+<br>
+At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations."
+      />
 
       <DoesDifferect />
 

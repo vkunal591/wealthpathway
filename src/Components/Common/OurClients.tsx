@@ -100,13 +100,13 @@ export default function OurClients() {
         <div className="flex justify-between top-1/2 absolute z-10 space-x-4 w-full">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className="p-3 rounded-full bg-gray-50 transition"
+            className="p-3 rounded-full bg-gray-50 border border-gray-300 transition"
           >
             <AiOutlineLeft className="text-xl text-gray-800" />
           </button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className="p-3 rounded-full bg-gray-50 transition"
+            className="p-3 rounded-full bg-gray-50 border border-gray-300 transition"
           >
             <AiOutlineRight className="text-xl text-gray-800" />
           </button>

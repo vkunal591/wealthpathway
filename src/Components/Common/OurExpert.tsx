@@ -12,78 +12,62 @@ interface Profile {
     managedAmount: string;
     boardMembership: string;
     currentManagement: string;
+    linkedin:string;
     quote: string;
     imageUrl: string;
 }
 
 const experts: Profile[] = [
     {
-        name: 'Vaibhav Porwal',
-        role: 'Co-founder, PMS Principal officer',
+        name: 'Sarah Johnson',
+        role: 'Chief Investment Officer',
         experience: '20+ Years',
         managedAmount: '₹25,000+ Crores',
         boardMembership: '5 of India’s largest family offices',
         currentManagement: 'PMS Strategies',
+        linkedin:"https://linkedin.com/in/sarahjohnson",
         quote:
-            'Investing involves a mix of skill, knowledge and luck. Recognising this duality and staying rational is what matters most.',
+            'With over 15 years of experience in portfolio management, Sarah leads our investment strategy with a focus on sustainable long-term growth.',
         imageUrl: '/logo.png',
     },
     {
-        name: 'Pratik Bagaria',
-        role: 'Public equity, PMS fund manager',
+        name: 'Michael Chen',
+        role: 'Head of Research',
         experience: '15+ Years',
         managedAmount: '₹10,000+ Crores',
         boardMembership: 'Multiple family offices',
         currentManagement: 'Equity Strategies',
-        quote: 'A disciplined and research-backed approach leads to sustainable wealth creation.',
+        linkedin:"https://linkedin.com/in/michaelchen",
+        quote: 'Michael brings deep analytical expertise and a data-driven approach to our investment research process.',
         imageUrl: '/logo.png',
     },
     {
-        name: 'Pratik Bagaria',
-        role: 'Public equity, PMS fund manager',
+        name: 'Dr. Raj Patel',
+        role: 'Risk Management Director',
         experience: '15+ Years',
         managedAmount: '₹10,000+ Crores',
         boardMembership: 'Multiple family offices',
         currentManagement: 'Equity Strategies',
-        quote: 'A disciplined and research-backed approach leads to sustainable wealth creation.',
+        linkedin:"https://linkedin.com/in/rajpatel",
+        quote: 'An expert in quantitative analysis, Raj ensures our portfolios maintain optimal risk-adjusted returns.',
         imageUrl: '/logo.png',
     },
     {
-        name: 'Pratik Bagaria',
-        role: 'Public equity, PMS fund manager',
+        name: 'Emma Thompson',
+        role: 'Client Relations Head',
         experience: '15+ Years',
         managedAmount: '₹10,000+ Crores',
         boardMembership: 'Multiple family offices',
         currentManagement: 'Equity Strategies',
-        quote: 'A disciplined and research-backed approach leads to sustainable wealth creation.',
+        linkedin:"https://linkedin.com/in/emmathompson",
+        quote: 'Emma leads our client service team, ensuring personalized attention and support for every investor.',
         imageUrl: '/logo.png',
     },
-    {
-        name: 'Pratik Bagaria',
-        role: 'Public equity, PMS fund manager',
-        experience: '15+ Years',
-        managedAmount: '₹10,000+ Crores',
-        boardMembership: 'Multiple family offices',
-        currentManagement: 'Equity Strategies',
-        quote: 'A disciplined and research-backed approach leads to sustainable wealth creation.',
-        imageUrl: '/logo.png',
-    },
-    {
-        name: 'Pratik Bagaria',
-        role: 'Public equity, PMS fund manager',
-        experience: '15+ Years',
-        managedAmount: '₹10,000+ Crores',
-        boardMembership: 'Multiple family offices',
-        currentManagement: 'Equity Strategies',
-        quote: 'A disciplined and research-backed approach leads to sustainable wealth creation.',
-        imageUrl: '/logo.png',
-    },
-
 ];
 export default function OurExpert() {
     return (
         <div className='max-w-8xl m-auto p-4 py-16 font-[poppins]'>
-            <h2 className='text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-24'>
+            <h2 className='text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-gray-800 text-center mb-24'>
                 Meet our team
                 of experts
             </h2>
@@ -127,7 +111,7 @@ export default function OurExpert() {
                             />
                         </div>
 
-                        <div className="ml-auto flex items-center group-hover:text-black gap-2 text-xl">
+                        <div className="ml-auto flex items-center text-gray-800 group-hover:text-black gap-2 text-xl">
                             See all members <IoArrowForward className="text-3xl group-hover:text-black" />
                         </div>
                     </div>

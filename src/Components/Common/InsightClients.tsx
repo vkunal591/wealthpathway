@@ -5,7 +5,7 @@ import { IoArrowForward } from 'react-icons/io5'
 export default function InsightClients() {
     return (
         <div className='max-w-8xl m-auto p-4 lg:p-16 font-[poppins]'>
-            <h2 className='text-3xl lg:text-7xl w-full lg:w-4/5 m-auto text-center mb-16'>
+            <h2 className='text-3xl lg:text-7xl w-full lg:w-4/5 m-auto text-center text-gray-800 mb-16'>
                 Insights for our clients
             </h2>
 

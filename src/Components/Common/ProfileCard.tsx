@@ -14,6 +14,7 @@ interface Profile {
   managedAmount: string;
   boardMembership: string;
   currentManagement: string;
+  linkedin: string;
   quote: string;
   imageUrl: string;
 }
@@ -27,6 +28,7 @@ const ProfileCard: React.FC<Profile> = ({
   currentManagement,
   quote,
   imageUrl,
+  linkedin,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,7 +52,7 @@ const ProfileCard: React.FC<Profile> = ({
         <div className={`${isOpen ? "hidden" : "block"}`}>
           <h2
             className={`font-semibold group-hover:text-black ${
-              isOpen ? "text-4xl text-black" : "text-3xl"
+              isOpen ? "text-4xl text-gray-800" : "text-3xl text-gray-800"
             }`}
           >
             {name}
@@ -61,7 +63,7 @@ const ProfileCard: React.FC<Profile> = ({
           {isOpen ? (
             <IoClose className="text-3xl text-black" />
           ) : (
-            <IoAdd className="text-3xl group-hover:text-black" />
+            <IoAdd className="text-3xl text-black group-hover:text-black" />
           )}
         </div>
       </div>
@@ -77,13 +79,13 @@ const ProfileCard: React.FC<Profile> = ({
         <div className="w-full lg:w-1/3">
           <h2
             className={`font-semibold group-hover:text-black ${
-              isOpen ? "text-3xl text-black" : "text-xl"
+              isOpen ? "text-3xl text-gray-800" : "text-xl text-gray-800"
             }`}
           >
             {name}
           </h2>
-          <p className="text-gray-8000 text-sm mb-2 font-semibold">{role}</p>
-          <Link href={"/"}>
+          <p className="text-gray-600 text-sm mb-2 font-semibold">{role}</p>
+          <Link href={linkedin}>
             <LiaLinkedin className="text-gray-300 text-4xl" />
           </Link>
           <p className={`text-gray-700 font-medium ${isOpen ? "" : "hidden"}`}>

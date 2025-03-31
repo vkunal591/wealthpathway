@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -57,15 +57,25 @@ export default function HeroSection() {
   }, [controls]);
 
   return (
-    <div className="p-4 lg:p-16 max-w-7xl m-auto font-[poppins] flex flex-col justify-end items-start h-[60vh] sm:h-[50vh] lg:h-screen">
+    <div className="p-4 lg:p-16 lg:pt-40 max-w-7xl m-auto font-[poppins] flex flex-col justify-end items-start h-[60vh] sm:h-[50vh] lg:h-auto">
       <motion.h1
         className="text-5xl lg:text-7xl w-full lg:w-4/5 font-semibold text-gray-800 mb-10"
         initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
         animate={controls} // Control animation with framer-motion controls
         transition={{ duration: 1.5 }} // Smooth transition
       >
-        PMS & AIF Investments
+        India&apos;s Premier Alternative Investments Platform
       </motion.h1>
+      <motion.p
+        className="text-base w-full lg:w-4/5 font-semibold text-gray-600 mb-10"
+        initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
+        animate={controls} // Control animation with framer-motion controls
+        transition={{ duration: 1.5 }} // Smooth transition
+      >
+        Discover curated PMS and AIF opportunities with Wealth1&apos;s expert
+        guidance in Portfolio Management Services and Alternative Investment
+        Funds.
+      </motion.p>
       <motion.div
         className="border-[2px] border-gray-50 rounded-full"
         initial={{ opacity: 0 }}
@@ -73,7 +83,7 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <Link
-          href={"/"}
+          href={"/why-wealth"}
           className="p-3.5 px-6 font-bold text-lg border border-gray-900 shadow-xl bg-gray-50 text-gray-800 rounded-full flex items-center justify-center"
         >
           Start your journey

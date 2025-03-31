@@ -5,77 +5,40 @@ export default function DoesDifferect() {
   const sections = [
     {
       id: "01",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
-      imageUrl: "/graph.svg",
+      title: "AI-Powered PMS Analytics",
+      description:
+        "Wealth1's cutting-edge technology transforms PMS and AIF investment decisions with data-driven insights.",
+      imageUrl: "/aigraph.gif",
       imageAlt: "Graph Image",
       bgColor: "bg-gray-50",
       textColor: "text-black",
     },
     {
       id: "02",
-      title: "Traditional wealth firms",
+      title: "Alternative Investments Access",
       description:
-        "Your RM is busy searching for new clients & rarely tracks your portfolio",
-      imageUrl: "/graph.svg",
+        "Direct access to top-performing PMS strategies and AIF opportunities through Wealth1's exclusive platform.",
+      imageUrl: "/aianalist.svg",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
       textColor: "text-gray-800",
     },
     {
       id: "03",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
-      imageUrl: "/graph.svg",
-      imageAlt: "Graph Image",
-      bgColor: "bg-gray-50",
-      textColor: "text-black",
-    },
-    {
-      id: "04",
-      title: "Traditional wealth firms",
+      title: "Expert PMS Guidance",
       description:
-        "Your RM is busy searching for new clients & rarely tracks your portfolio",
-      imageUrl: "/graph.svg",
-      imageAlt: "Another Graph Image",
-      bgColor: "bg-[#121212]",
-      textColor: "text-gray-800",
-    },
-    {
-      id: "05",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
+        "Dedicated relationship managers at Wealth1 provide personalized Alternative Investment advisory services.",
       imageUrl: "/graph.svg",
       imageAlt: "Graph Image",
       bgColor: "bg-gray-50",
       textColor: "text-black",
-    },
-    {
-      id: "06",
-      title: "Traditional wealth firms",
-      description:
-        "Your RM is busy searching for new clients & rarely tracks your portfolio",
-      imageUrl: "/graph.svg",
-      imageAlt: "Another Graph Image",
-      bgColor: "bg-[#121212]",
-      textColor: "text-gray-800",
-    },
-    {
-      id: "07",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
-      imageUrl: "/graph.svg",
-      imageAlt: "Graph Image",
-      bgColor: "bg-gray-50",
-      textColor: "text-black",
-    },
-
-    // Add more sections here as needed
+    }
+    
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 bg-white font-[poppins] ">
       <h2 className="text-5xl lg:text-7xl text-gray-800 w-full m-auto text-center mb-16">
-        How Dezerv does things differently
+        How Wealth 1 does things differently
       </h2>
 
       <div className="contianer space-y-8">
@@ -100,13 +63,14 @@ export default function DoesDifferect() {
                     {data?.description}
                   </p>
                 </div>
-                <div className="w-full lg:w-1/2 lg:h- 2xl:h-auto">
+                <div className="w-full lg:w-1/2 lg:h- 2xl:h-auto p-4">
                   <Image
-                    src={"/graph.svg"}
+                    src={data?.image || "/graph.svg"}
                     width={800}
                     height={800}
-                    alt=""
-                    className=" object-cover object-center"
+                    alt="GIF Image"
+                    className="object-cover h-full rounded-2xl  object-center"
+                    unoptimized={true}
                   />
                 </div>
               </div>

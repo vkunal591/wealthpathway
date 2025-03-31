@@ -5,10 +5,10 @@ export default function DedicatedPartner() {
     return (
         <div className='max-w-8xl m-auto p-4 lg:p-16 font-[poppins]'>
             <div className='flex flex-col lg:flex-row items-start w-full m-auto'>
-                <h2 className='text-3xl lg:text-6xl w-full lg:w-3/5 mr-auto text-left mb-4 lg:mb-24'>
+                <h2 className='text-3xl lg:text-6xl w-full lg:w-3/5 text-gray-800 mr-auto text-left mb-4 lg:mb-24'>
                     Dedicated client partners you can trust
                 </h2>
-                <ul className='space-y-20 w-full lg:w-2/5 mb-4'>
+                <ul className='space-y-20 w-full lg:w-2/5 mb-4 text-gray-800'>
                     <li className='flex items-center text-xl gap-2'>
                         <span className='w-5 h-5 inline-block rounded-full relative border-4 border-double border-gray-900 bg-white'>
                             <span className='inlne-block w-[1px] h-10 bg-gray-500 absolute left-1.5 top-9 rounded-full'>

@@ -7,8 +7,13 @@ export default function CanHelp() {
   const sections = [
     {
       id: "01",
-      title: "EXISTING INVESTMENTS",
-      description: "Analyse & improve your current portfolio",
+      title: "Portfolio Management Services",
+      description: "Expert-managed portfolios tailored to your goals",
+      list: [
+        "Customized investment strategies",
+        "Active portfolio monitoring",
+        "Optimized asset allocation",
+      ],
       imageUrl: "/graph.svg",
       imageAlt: "Graph Image",
       bgColor: "bg-gray-50",
@@ -16,9 +21,13 @@ export default function CanHelp() {
     },
     {
       id: "02",
-      title: "Traditional wealth firms",
-      description:
-        "Your RM is busy searching for new clients & rarely tracks your portfolio",
+      title: "Alternative Investment Funds",
+      description: "Access to exclusive investment opportunities",
+      list: [
+        "Private equity and hedge funds",
+        "Real estate and commodities",
+        "Venture capital investments",
+      ],
       imageUrl: "/graph.svg",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
@@ -26,8 +35,13 @@ export default function CanHelp() {
     },
     {
       id: "03",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
+      title: "Risk Management",
+      description: "Sophisticated risk assessment and mitigation",
+      list: [
+        "Comprehensive risk analysis",
+        "Market volatility assessment",
+        "Portfolio diversification strategies",
+      ],
       imageUrl: "/graph.svg",
       imageAlt: "Graph Image",
       bgColor: "bg-gray-50",
@@ -35,54 +49,33 @@ export default function CanHelp() {
     },
     {
       id: "04",
-      title: "Traditional wealth firms",
+      title: "Portfolio Review",
       description:
-        "Your RM is busy searching for new clients & rarely tracks your portfolio",
+        "In-depth analysis and optimization of your existing investments",
+      list: [
+        "Performance evaluation",
+        "Investment strategy adjustments",
+        "Fee and cost analysis",
+      ],
       imageUrl: "/graph.svg",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
       textColor: "text-gray-800",
     },
-    {
-      id: "05",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
-      imageUrl: "/graph.svg",
-      imageAlt: "Graph Image",
-      bgColor: "bg-gray-50",
-      textColor: "text-black",
-    },
-    {
-      id: "06",
-      title: "Traditional wealth firms",
-      description:
-        "Your RM is busy searching for new clients & rarely tracks your portfolio",
-      imageUrl: "/graph.svg",
-      imageAlt: "Another Graph Image",
-      bgColor: "bg-[#121212]",
-      textColor: "text-gray-800",
-    },
-    {
-      id: "07",
-      title: "Wealth",
-      description: "We track the market’s impact on your portfolio daily",
-      imageUrl: "/graph.svg",
-      imageAlt: "Graph Image",
-      bgColor: "bg-gray-50",
-      textColor: "text-black",
-    },
-
-    // Add more sections here as needed
   ];
+
   return (
     <div className="max-w-8xl m-auto my-16">
       <h2 className="text-5xl lg:text-7xl w-full lg:w-3/5 m-auto text-center text-gray-700 mb-16 font-semibold ">
-        How Dezerv can help you
+        Comprehensive Investment Solutions
       </h2>
 
       <div className="w-full space-y-8 ">
         {sections.map((data: any, index: any) => (
-          <div key={index} className="shadow-2xl border border-gray-300 rounded-2xl">
+          <div
+            key={index}
+            className="shadow-2xl border border-gray-300 rounded-2xl"
+          >
             <div className=" bg-gray-50 rounded-3xl overflow-hidden p-4 lg:p-14">
               <div className="w-full lg:w-4/5 p-4 mb-6">
                 <h3 className="text-3xl font-semibold text-[#4eb3a9] mb-6">
@@ -95,11 +88,15 @@ export default function CanHelp() {
               <div className="flex flex-col lg:flex-row items-start justify-start ">
                 <div className="w-full lg:w-1/2 space-y-4  p-10">
                   <ul className="text-2xl font-medium text-black w-full lg:w-3/4 mr-auto space-y-6 mb-16">
-                    <li> Evaluate your portfolio v/s current market</li>
-                    <li>Check your portfolio for risk and diversification</li>
-                    <li>
-                      Get all your questions answered for free in a 1-1 call
-                    </li>
+                    {data?.list?.map((li: any, index: any) => (
+                      <li
+                        key={index}
+                        className="text-gray-800 text-2xl font-medium text
+                      "
+                      >
+                        {li}
+                      </li>
+                    ))}
                   </ul>
                   <Link
                     href={"/"}

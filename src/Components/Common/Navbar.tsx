@@ -219,7 +219,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="w-3/5 items-center justify-between gap-4 hidden lg:flex">
-        <ul className="hidden max-w-6xl lg:flex justify-between items-center text-gray-800">
+        <ul className="hidden max-w-6xl lg:flex justify-between items-center gap-8 text-gray-800">
           {menuItems?.map((item) => (
             <div
               key={item.name}
@@ -228,7 +228,7 @@ export default function Navbar() {
             >
               <Link href={item.path} className="border-none outline-none">
                 <li
-                  className={`mr-10 text-lg ${
+                  className={`m-auto text-lg ${
                     pathname === item.path
                       ? "border-b-4 border-gray-800 text-gray-800 font-bold"
                       : "text-gray-700 hover:text-gray-900 transition duration-200"
