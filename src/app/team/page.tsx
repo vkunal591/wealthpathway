@@ -3,6 +3,7 @@ import HeroSection from '@/Components/Common/HeroSection'
 import React, { useEffect, useState } from 'react'
 import TeamSection from './components/TeamSection'
 import Loader from '@/Components/Common/Loader';
+import Footer from '@/Components/Common/Footer';
 
 export default function Page() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -22,9 +23,10 @@ export default function Page() {
   }
 
   return (
-    <div>
+    <div className='bg-white text-gray-800'>
         <HeroSection />
         <TeamSection />
+        <Footer />
     </div>
   )
 }

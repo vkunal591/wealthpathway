@@ -1,9 +1,10 @@
-"use client"
-import HeroSection2 from '@/Components/Common/HeroSection2'
-import React, { useEffect, useState } from 'react'
-import WhyCard from './components/WhyCard'
-import OurFounders from './components/OurFounders'
-import Loader from '@/Components/Common/Loader';
+"use client";
+import HeroSection2 from "@/Components/Common/HeroSection2";
+import React, { useEffect, useState } from "react";
+import WhyCard from "./components/WhyCard";
+import OurFounders from "./components/OurFounders";
+import Loader from "@/Components/Common/Loader";
+import Footer from "@/Components/Common/Footer";
 
 const dummyData = {
   founders: [
@@ -76,7 +77,6 @@ const dummyData = {
   ],
 };
 
-
 export default function Page() {
   const [loading, setLoading] = useState(true);
 
@@ -95,14 +95,14 @@ export default function Page() {
   }
 
   return (
-    <div>
-        <HeroSection2 />
-        <WhyCard />
-        <OurFounders  title={"Founders"} data={dummyData?.founders} />
-        <OurFounders  title={"Investments"} data={dummyData?.investors} />
-        <OurFounders  title={"Techoly Experrs"} data={dummyData?.technology} />
-        <OurFounders  title={"Client Partners"} data={dummyData?.clientPartners} />
-
+    <div className="bg-white text-gray-800">
+      <HeroSection2 />
+      <WhyCard />
+      <OurFounders title={"Founders"} data={dummyData?.founders} />
+      <OurFounders title={"Investments"} data={dummyData?.investors} />
+      <OurFounders title={"Techoly Experrs"} data={dummyData?.technology} />
+      <OurFounders title={"Client Partners"} data={dummyData?.clientPartners} />
+      <Footer />
     </div>
-  )
+  );
 }

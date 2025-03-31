@@ -8,7 +8,7 @@ import { IoLogoLinkedin } from 'react-icons/io'
 
 export default function Footer() {
     return (
-        <div className='p-4 lg:p-20 font-[poppins]'>
+        <div className='p-4 lg:p-20 font-[poppins] bg-white text-gray-800'>
             <div className='flex justify-between items-center mb-6'>
                 <Link href={"/"}>
                     <Image
@@ -21,7 +21,7 @@ export default function Footer() {
                         className="h-16 lg:h-auto "
                     />
                 </Link>
-                <div className='flex items-center gap-4 text-2xl text-gray-600'>
+                <div className='flex items-center gap-4 text-2xl text-gray-800'>
 
                     <Link href={"/"}>
                         <IoLogoLinkedin />

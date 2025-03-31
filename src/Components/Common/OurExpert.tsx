@@ -87,7 +87,7 @@ export default function OurExpert() {
                 Meet our team
                 of experts
             </h2>
-            <div className='grid grid-cols-1 gap-8 w-full lg:w-4/5 m-auto'>
+            <div className='grid grid-cols-1 gap-8 w-full m-auto'>
                 {experts.map((expert, index) => (
                     <ProfileCard key={index} {...expert} />
                 ))}

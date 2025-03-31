@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -55,22 +54,22 @@ export default function ScrollSections() {
   return (
     <div className="relative w-full h-screen flex flex-col items-center">
       {/* Navigation Bar with Active Indicator */}
-      <div className="w-full bg-gray-100/90 p-4 flex justify-center z-50">
-        <div className="flex space-x-14 relative">
+      <div className="w-full bg-black/90 p-4 flex justify-center z-50">
+        <div className="flex space-x-6 relative">
           {sections.map((title, i) => (
             <button
               key={i}
               onClick={() => smoothScrollTo(i)}
               className={cn(
                 "relative text-gray-400 transition-colors duration-300",
-                activeIndex === i ? "text-gray-800 font-bold" : ""
+                activeIndex === i ? "text-white font-bold" : ""
               )}
             >
               {title}
               {activeIndex === i && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-gray-800"
+                  className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-white"
                 />
               )}
             </button>
@@ -81,13 +80,13 @@ export default function ScrollSections() {
       {/* Smooth Scrollable Section Container */}
       <div
         ref={containerRef}
-        className="relative w-full h-full overflow-y-auto snap-y snap-mandatory scroll-smooth  scrollbar-hide"
+        className="relative w-full h-full overflow-y-auto snap-y snap-mandatory scroll-smooth scrollbar-hide"
       >
         {sections.map((title, i) => (
           <section
             key={i}
             id={`section-${i}`}
-            className="h-screen flex items-center justify-center bg-white text-gray-800 border-b border-gray-700 snap-start"
+            className="h-screen flex items-center justify-center bg-black text-white border-b border-gray-700 snap-start"
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -97,7 +96,6 @@ export default function ScrollSections() {
             >
               <h1 className="text-4xl font-bold">{title}</h1>
               <p className="mt-4 text-gray-400">Content for {title}</p>
-             
             </motion.div>
           </section>
         ))}

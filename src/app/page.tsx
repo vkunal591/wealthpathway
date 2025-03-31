@@ -12,6 +12,7 @@ import OurExpert from "@/Components/Common/OurExpert";
 import DedicatedPartner from "@/Components/Common/DedicatedPartner";
 import InsightClients from "@/Components/Common/InsightClients";
 import GetInTouch from "@/Components/Common/GetInTouch";
+import Footer from "@/Components/Common/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ export default function Home() {
       <DedicatedPartner />
       <InsightClients />
       <GetInTouch />
+      <Footer />
     </div>
   );
 }

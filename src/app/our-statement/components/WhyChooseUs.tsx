@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
         }
     ]
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 font-[poppins]">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 font-[poppins] text-gray-800">
       <h2 className="text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-8">
         Why Choose Us
       </h2>

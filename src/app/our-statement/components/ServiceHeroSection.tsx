@@ -57,7 +57,7 @@ export default function ServiceHeroSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [controls]);
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 ">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pt-40">
       <div className="flex flex-col lg:flex-row items-center  lg:h-[70vh]">
         <div>
           <motion.h1
@@ -77,7 +77,7 @@ export default function ServiceHeroSection() {
             Dezerv PMS Services strives to beat returns of the market index
           </motion.p>
           <motion.div
-            className="border-[2px] border-gray-50 rounded-full"
+            className=""
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
