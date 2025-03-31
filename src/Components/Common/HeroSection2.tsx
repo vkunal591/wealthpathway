@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -57,7 +57,7 @@ export default function HeroSection2() {
   }, [controls]);
 
   return (
-    <div className="p-4 lg:p-16 max-w-7xl m-auto font-[poppins] flex flex-col justify-end items-start h-[60vh] sm:h-[50vh] lg:h-screen">
+    <div className="p-4 lg:p-16 max-w-7xl m-auto  flex flex-col justify-end items-start h-[60vh] sm:h-[50vh] lg:h-screen">
       <motion.h1
         className="text-5xl lg:text-7xl w-full text-center font-semibold text-gray-800 mb-10"
         initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
@@ -72,7 +72,9 @@ export default function HeroSection2() {
         animate={controls} // Control animation with framer-motion controls
         transition={{ duration: 1.5 }} // Smooth transition
       >
-        Experience the perfect blend of human expertise and artificial intelligence, delivering superior investment solutions tailored to your needs.
+        Experience the perfect blend of human expertise and artificial
+        intelligence, delivering superior investment solutions tailored to your
+        needs.
       </motion.p>
       <motion.div
         className="border-[2px] border-gray-50 w-full text-center flex justify-center items-center rounded-full"

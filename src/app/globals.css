@@ -22,15 +22,31 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 
 /* Define the animation to fade in and fade out each character smoothly */
 @keyframes fadeInOut {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.3;
   }
@@ -38,68 +54,89 @@ body {
 
 .char {
   display: inline-block;
-  animation: fadeInOut 1.3s ease-in-out infinite; /* Infinite loop with smooth transition */
-  animation-delay: calc(0.1s * var(--char-index)); /* Delay each character */
+  animation: fadeInOut 1.3s ease-in-out infinite;
+  /* Infinite loop with smooth transition */
+  animation-delay: calc(0.1s * var(--char-index));
+  /* Delay each character */
 }
 
 /* Adding delay for each character, so they fade smoothly one after another */
 .char:nth-child(1) {
   --char-index: 0;
 }
+
 .char:nth-child(2) {
   --char-index: 1;
 }
+
 .char:nth-child(3) {
   --char-index: 2;
 }
+
 .char:nth-child(4) {
   --char-index: 3;
 }
+
 .char:nth-child(5) {
   --char-index: 4;
 }
+
 .char:nth-child(6) {
   --char-index: 5;
 }
+
 .char:nth-child(7) {
   --char-index: 6;
 }
+
 .char:nth-child(8) {
   --char-index: 7;
 }
+
 .char:nth-child(9) {
   --char-index: 8;
 }
+
 .char:nth-child(10) {
   --char-index: 9;
 }
+
 .char:nth-child(11) {
   --char-index: 10;
 }
+
 .char:nth-child(12) {
   --char-index: 11;
 }
+
 .char:nth-child(13) {
   --char-index: 12;
 }
+
 .char:nth-child(14) {
   --char-index: 13;
 }
+
 .char:nth-child(15) {
   --char-index: 14;
 }
+
 .char:nth-child(16) {
   --char-index: 15;
 }
+
 .char:nth-child(17) {
   --char-index: 16;
 }
+
 .char:nth-child(18) {
   --char-index: 17;
 }
+
 .char:nth-child(19) {
   --char-index: 18;
 }
+
 /* Continue for more characters if needed... */
 
 
@@ -115,31 +152,34 @@ body {
   display: flex;
   gap: 2rem;
 }
+
 .content-container {
   margin-inline: auto;
   width: 90vw;
 }
 
 .vertical-scroll-container {
-align-items: center;
-display: flex;
-flex-direction: column;
-flex: 1 1 50%;
-gap: 6rem 0;
-min-width: 400px;
-overflow-y: scroll;
-scrollbar-color: #3848a0 #1b2767;
-scroll-snap-type: y mandatory;  
-padding: 200px 20px;
-height: 400px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  gap: 6rem 0;
+  min-width: 400px;
+  overflow-y: scroll;
+  scrollbar-color: #3848a0 #1b2767;
+  scroll-snap-type: y mandatory;
+  padding: 200px 20px;
+  height: 400px;
 }
-.vertical-scroll-container img {
-scroll-snap-align: center;
-width: 400px;
 
-animation: slideInOut;
-animation-timeline: view();
+.vertical-scroll-container img {
+  scroll-snap-align: center;
+  width: 400px;
+
+  animation: slideInOut;
+  animation-timeline: view();
 }
+
 /* old keyframes 
 @keyframes slideIn {
 from {
@@ -164,20 +204,23 @@ to {
 
 /* NEW target range in keyframes */
 @keyframes slideInOut {
-entry 0% {
-  transform: scale(.8) translateY(100px); 
-  opacity: 0;
-}
-entry 100% { 
-  transform: scale(1) translateY(0); 
-  opacity: 1;
-}
-exit 0% {
-  transform: scale(1) translateY(0); 
-  opacity: 1;    
-}
-exit 100% { 
-  transform: scale(.8) translateY(-100px); 
-  opacity: 0 
-}
+  entry 0% {
+    transform: scale(.8) translateY(100px);
+    opacity: 0;
+  }
+
+  entry 100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  exit 0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  exit 100% {
+    transform: scale(.8) translateY(-100px);
+    opacity: 0
+  }
 }

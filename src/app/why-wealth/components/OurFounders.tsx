@@ -4,10 +4,9 @@ import { LiaLinkedin } from "react-icons/lia";
 import { BsTwitter } from "react-icons/bs";
 import Link from "next/link";
 
-
 export default function OurFounders({ title, data }: any) {
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 font-[poppins]">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 ">
       <h2 className="capitalize text-4xl  font-semibold text-gray-700 mb-8">
         {title}
       </h2>
@@ -27,7 +26,9 @@ export default function OurFounders({ title, data }: any) {
               />
               <div className="flex flex-col items- justify-between bg-[#181818] p-4 absolute    bottom-0 w-full">
                 <div className="w-full text-center flex justify-between items-center">
-                  <p className="text-base text-gray-500 ">{content?.position}</p>
+                  <p className="text-base text-gray-500 ">
+                    {content?.position}
+                  </p>
                   <div className="text-blue-500 flex gap-4">
                     <Link href={"/"}>
                       <BsTwitter />

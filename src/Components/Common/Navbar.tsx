@@ -156,7 +156,7 @@ export default function Navbar() {
     { name: "About Us", path: "/about-us", submenu: aboutus },
     { name: "PMS", path: "/pms", submenu: pms },
     {
-      name: "AID",
+      name: "AIF",
       path: "/aif",
       submenu: aif,
     },
@@ -202,13 +202,13 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="flex items-center justify-between bg-[#ededede8] z-[5000] shadow-xl font-[poppins] text-green-50 w-11/12 m-auto p-4 rounded-xl fixed left-1/2 -translate-x-1/2 top-7"
+      className="flex items-center justify-between bg-[#ededede8] z-[5000] shadow-xl text-green-50 w-11/12 m-auto p-4 rounded-xl fixed left-1/2 -translate-x-1/2 top-7"
       animate={controls}
     >
       <div className="w-1/2 lg:w-1/5 flex items-center justify-start">
         <Link href={"/"}>
           <Image
-            src={"/logo.png"}
+            src={"/logo2.png"}
             width={150}
             height={70}
             unoptimized
@@ -228,7 +228,7 @@ export default function Navbar() {
             >
               <Link href={item.path} className="border-none outline-none">
                 <li
-                  className={`m-auto text-lg ${
+                  className={`m-auto text-lg hover:text-gray-900  transition-all ease-in-out ${
                     pathname === item.path
                       ? "border-b-4 border-gray-800 text-gray-800 font-bold"
                       : "text-gray-700 hover:text-gray-900 transition duration-200"
@@ -245,7 +245,7 @@ export default function Navbar() {
               {/* Submenu */}
               {item.submenu && (
                 <div
-                  className={`absolute top-20 left-[-20rem] w-[40vw] mt-2 rounded-2xl bg-gray-50 text-gray-800 shadow-lg ${
+                  className={`absolute top-20 left-[-15rem] w-[35vw] mt-2 rounded-2xl bg-gray-50 text-gray-800 shadow-lg ${
                     activeSubmenuId === item.name ? "block" : "hidden"
                   }`}
                   onMouseLeave={handleMouseLeave} // Reset on mouse leave
@@ -286,13 +286,22 @@ export default function Navbar() {
           Member Login
         </Link>
 
-        <Link
-          href={"/"}
-          className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base bg-gray-800 text-gray-50 rounded-full items-center justify-center"
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+            boxShadow: "0px 5px 15px gray",
+          }}
+          whileTap={{ scale: 0.95 }}
+          className="rounded-full"
         >
-          Review my portfolio
-          <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
-        </Link>
+          <Link
+            href={"/"}
+            className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
+          >
+            Contact Us
+            <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
+          </Link>
+        </motion.div>
         <Sidebar />
       </div>
     </motion.nav>

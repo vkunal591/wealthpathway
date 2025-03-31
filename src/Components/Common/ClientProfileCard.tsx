@@ -85,7 +85,7 @@ export default function ClientProfileCard() {
   ];
 
   return (
-    <div className="mx-auto font-[poppins]">
+    <div className="mx-auto">
       <div className="relative">
         <Swiper
           spaceBetween={10}

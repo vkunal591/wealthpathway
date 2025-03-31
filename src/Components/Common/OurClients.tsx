@@ -49,7 +49,7 @@ export default function OurClients() {
   ];
 
   return (
-    <div className="max-w-8xl mx-auto p-4 lg:p-16 font-[poppins]">
+    <div className="max-w-8xl mx-auto p-4 lg:p-16">
       <div className="relative">
         <Swiper
           spaceBetween={10}

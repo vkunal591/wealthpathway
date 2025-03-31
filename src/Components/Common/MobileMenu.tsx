@@ -188,7 +188,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="relative font-[poppins]">
+    <div className="relative ">
       <div
         className={`fixed top-[-20%] right-[-10%] h-full bg-gray-900 text-primary z-50 transform ${
           isOpen ? "w-[85%] md:w-3/4 right-0" : "w-0"
@@ -208,13 +208,13 @@ const Sidebar = () => {
               />
             </Link>
             <p
-              className="font-extrabold text-2xl mr-10"
+              className="font-extrabold text-gray-50  text-2xl mr-10"
               onClick={toggleSidebar}
             >
               x
             </p>
           </div>
-          <div className="p-4 pb-40 bg-gray-900 overflow-auto h-screen">
+          <div className="p-4 pb-40 bg-gray-900 text-gray-50 overflow-auto h-screen">
             <Link
               href={"/"}
               aria-label={"Home"}

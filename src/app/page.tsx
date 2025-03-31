@@ -3,16 +3,13 @@
 
 import { useState, useEffect } from "react";
 import HeroSection from "@/Components/Common/HeroSection";
-import OurClients from "@/Components/Common/OurClients";
 import Loader from "@/Components/Common/Loader"; // Assuming you have a Loader component
 import ColorChangeText from "./components/ColorChangeText";
 import DoesDifferect from "./components/DoesDifferect";
 import CanHelp from "./components/CanHelp";
-import OurExpert from "@/Components/Common/OurExpert";
 import DedicatedPartner from "@/Components/Common/DedicatedPartner";
-import InsightClients from "@/Components/Common/InsightClients";
 import GetInTouch from "@/Components/Common/GetInTouch";
-import Footer from "@/Components/Common/Footer";
+
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -34,23 +31,24 @@ export default function Home() {
   return (
     <div className="bg-white">
       <HeroSection />
-      <OurClients />
+      {/* <OurClients /> */}
       <ColorChangeText
-        text="Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions.
-<br>
-Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies.
-<br>
-At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations."
+        text={[
+          "Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions.",
+          "Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies.",
+          "At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations.",
+        ]}
       />
-
       <DoesDifferect />
-
-      <CanHelp />
-      <OurExpert />
       <DedicatedPartner />
+      <GetInTouch /> 
+      <CanHelp />
+
+      {/*
       <InsightClients />
-      <GetInTouch />
-      <Footer />
+      <OurExpert />
+      */}
+      {/* <Footer /> */}
     </div>
   );
 }

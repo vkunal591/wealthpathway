@@ -8,11 +8,11 @@ import { IoLogoLinkedin } from 'react-icons/io'
 
 export default function Footer() {
     return (
-        <div className='p-4 lg:p-20 font-[poppins] bg-white text-gray-800'>
+        <div className='p-4 lg:p-20 bg-white text-gray-800'>
             <div className='flex justify-between items-center mb-6'>
                 <Link href={"/"}>
                     <Image
-                        src={"/logo.png"}
+                        src={"/logo2.png"}
                         width={150}
                         height={70}
                         unoptimized
@@ -24,7 +24,7 @@ export default function Footer() {
                 <div className='flex items-center gap-4 text-2xl text-gray-800'>
 
                     <Link href={"/"}>
-                        <IoLogoLinkedin />
+                        <IoLogoLinkedin className='text-3xl' />
                     </Link>
 
                     <Link href={"/"}>
@@ -46,8 +46,8 @@ export default function Footer() {
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-5'>
-                <div className='col-span-2 m-auto lg:w-4/5'>
-                    <p className='text-4xl font-medium mb-4'>
+                <div className='col-span-2 mr-auto lg:w-4/5'>
+                    <p className='text-3xl font-medium mb-4'>
                         You are building India’s future, we would like to build yours.
                     </p>
                     <div className='text-lg mb-8'>
@@ -137,7 +137,7 @@ export default function Footer() {
             </div>
 
 
-            <div className='rounded-3xl flex flex-col lg:flex-row gap-6 py-10 my-16 bg-gray-800 p-8 '>
+            <div className='rounded-3xl flex flex-col lg:flex-row items-center justify-center gap-6 py-10 my-16 bg-gray-800 p-8 '>
                 {["/iso.svg", "/secure.svg", "/privet.svg"].map((data, index) => (
                     <div key={index}>
                         <Image
@@ -145,20 +145,19 @@ export default function Footer() {
                             width={800}
                             height={800}
                             alt=''
-                            className='w-10 h-10 rounded-full mb-2'
+                            className='w-10 h-10 m-auto rounded-full mb-2'
                         />
-                        <h3 className='text-xl text-gray-50'>ISO 27001 Certified</h3>
-                        <p className='w-4/5 text-sm text-gray-300'>Compliant with international data standards</p>
+                        <h3 className='text-xl text-center text-gray-50'>ISO 27001 Certified</h3>
+                        <p className='w-4/5 text-sm text-center m-auto text-gray-300'>Compliant with international data standards</p>
                     </div>))}
 
             </div>
 
             <div className='space-y-4'>
                 <p>
-                    ©2021-2025 Dezerv. All Rights Reserved
+                    ©2021-2025 Welth 1. All Rights Reserved
                 </p>
-                <p>Dezerv Investments Private Limited is a Portfolio Manager with SEBI Registration no. INP000007377. An Investment Manager to Category - I AIF-VCF-Angel Fund with SEBI Registration no. IN/AIF1/22-23/1066 and Category II AIF - Dezerv Alternatives Trust with SEBI Registration no. IN/AIF2/23-24/1345.</p>
-                <p>Mutual Fund distribution services are offered through Dezerv Distribution Services Pvt. Limited. AMFI Registration No.: ARN -248439. Mutual fund investments are subject to market risks, read all scheme related documents carefully. Terms and conditions of the website are applicable. Privacy policy of the website is applicable.</p>
+                <p>With Wealth1&apos;s expertise in PMS and AIF, investors can access India&apos;s most promising Alternative Investment opportunities with confidence.</p>
             </div>
         </div>
     )
