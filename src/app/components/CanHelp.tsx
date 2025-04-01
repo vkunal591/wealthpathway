@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import Footer from "@/Components/Common/Footer";
 
 const sections = [
   {
@@ -16,10 +16,7 @@ const sections = [
       "Active portfolio monitoring",
       "Optimized asset allocation",
     ],
-    imageUrl: "/graph.svg",
-    imageAlt: "Graph Image",
-    bgColor: "bg-gray-50",
-    textColor: "text-black",
+    imageUrl: "/manage.png",
   },
   {
     id: "02",
@@ -30,10 +27,7 @@ const sections = [
       "Real estate and commodities",
       "Venture capital investments",
     ],
-    imageUrl: "/graph.svg",
-    imageAlt: "Another Graph Image",
-    bgColor: "bg-[#121212]",
-    textColor: "text-gray-800",
+    imageUrl: "/fund.png",
   },
   {
     id: "03",
@@ -44,37 +38,27 @@ const sections = [
       "Market volatility assessment",
       "Portfolio diversification strategies",
     ],
-    imageUrl: "/graph.svg",
-    imageAlt: "Graph Image",
-    bgColor: "bg-gray-50",
-    textColor: "text-black",
+    imageUrl: "/risk.png",
   },
   {
     id: "04",
     title: "Portfolio Review",
-    description:
-      "In-depth analysis and optimization of your existing investments",
+    description: "In-depth analysis and optimization of your existing investments",
     list: [
       "Performance evaluation",
       "Investment strategy adjustments",
       "Fee and cost analysis",
     ],
-    imageUrl: "/graph.svg",
-    imageAlt: "Another Graph Image",
-    bgColor: "bg-[#121212]",
-    textColor: "text-gray-800",
+    imageUrl: "/portfolio.png",
   },
 ];
 
 export default function CanHelp() {
   const [, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const isScrolling = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isScrolling.current) return;
-
       const container = containerRef.current;
       if (!container) return;
 
@@ -95,19 +79,109 @@ export default function CanHelp() {
     return () => container?.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
-    <div className="max-w-8xl m-auto">
-      <p className="text-sm text-gray-500 mb-2 font-semibold text-center ">
+    <div className="max-w-7xl m-auto p-4 lg:p-16">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-sm text-gray-500 mb-2 font-semibold text-center"
+      >
         Our Services
-      </p>
-      <h2 className="text-3xl lg:text-4xl text-gray-800 w-full lg:w-3/5 font-semibold m-auto text-center mb-4">
+      </motion.p>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-3xl lg:text-4xl text-gray-800 w-full lg:w-3/5 font-semibold m-auto text-center mb-4"
+      >
         Comprehensive Investment Solutions
-      </h2>
-      <p className="text-base text-gray-500 font-semibold text-center mb-2">
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="text-base text-gray-500 font-semibold text-center mb-4"
+      >
         Discover our curated selection of alternative investment opportunities
-      </p>
-      <div className="relative w-full h-[75vh] flex flex-col items-center">
+      </motion.p>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {sections.map((data, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+            whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
+            viewport={{ once: true }}
+            className="shadow-xl p-4 w-full border border-gray-300 rounded-2xl bg-white overflow-hidden transform transition-all"
+          >
+            <div className="rounded-2xl overflow-hidden h-full flex flex-col justify-between">
+              <div className="w-full">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-72 bg-gray-200 text-center lg:p-4 border border-gray-300 rounded-2xl w-full mb-4"
+                >
+                  <Image
+                    src={data.imageUrl}
+                    width={800}
+                    height={800}
+                    alt=""
+                    className="object-contain m-auto rounded-2xl w-full h-full"
+                  />
+                </motion.div>
+              </div>
+
+              <div className="w-full p-2">
+                <h3 className="text-base font-semibold text-[#4eb3a9] mb-2">
+                  {data.title}
+                </h3>
+                <p className="text-gray-900 text-2xl font-semibold">
+                  {data.description}
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start justify-start">
+                <div className="w-full space-y-2 px-2">
+                  <ul className="text-2xl text-black w-full space-y-2 mb-6">
+                    {data.list.map((li, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="text-gray-800 text-sm"
+                      >
+                        {li}
+                      </motion.li>
+                    ))}
+                  </ul>
+
+                  <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
+                    <Link
+                      href={"/"}
+                      className="p-3.5 lg:px-4 font-bold text-center flex text-base border bg-gray-800 text-gray-100 rounded-full items-center justify-center transition-all duration-300 hover:bg-gray-900"
+                    >
+                      Review my portfolio
+                      <IoIosArrowRoundForward className="text-2xl font-extrabold ml-2" />
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+   {/* <div className="relative w-full h-[75vh] flex flex-col items-center">
         <div
           ref={containerRef}
           className="relative w-full h-full overflow-y-auto snap-y snap-mandatory scroll-smooth   no-scrollbar"
@@ -164,7 +238,4 @@ export default function CanHelp() {
           ))}
           <Footer />
         </div>
-      </div>
-    </div>
-  );
-}
+      </div> */}

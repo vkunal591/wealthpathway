@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/Components/Common/Navbar";
+import Footer from "@/Components/Common/Footer";
 
 export const metadata: Metadata = {
   title: "PMS & AIF Investments",
@@ -17,7 +18,7 @@ export default function RootLayout({
       <body className={` antialiased`}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

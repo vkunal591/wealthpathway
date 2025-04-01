@@ -41,14 +41,14 @@ export default function Home() {
       />
       <DoesDifferect />
       <DedicatedPartner />
-      <GetInTouch /> 
       <CanHelp />
+      <GetInTouch /> 
 
       {/*
       <InsightClients />
       <OurExpert />
       */}
-      {/* <Footer /> */}
+      {/* <Footer /> */}  
     </div>
   );
 }

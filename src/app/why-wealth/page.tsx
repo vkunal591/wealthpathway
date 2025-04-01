@@ -1,81 +1,81 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import WhyCard from "./components/WhyCard";
-import OurFounders from "./components/OurFounders";
 import Loader from "@/Components/Common/Loader";
 import Footer from "@/Components/Common/Footer";
 import HeroSection from "@/Components/Common/HeroSection";
+import InvestmentJourney from "./components/InvestmentJourney";
 
-const dummyData = {
-  founders: [
-    {
-      name: "John Doe",
-      position: "Co-Founder & CEO",
-      image: "/user.png",
-    },
-    {
-      name: "Jane Smith",
-      position: "Co-Founder & CTO",
-      image: "/user.png",
-    },
-    {
-      name: "Mike Johnson",
-      position: "Co-Founder & COO",
-      image: "/user.png",
-    },
-  ],
-  investors: [
-    {
-      name: "Alice Brown",
-      position: "Investor",
-      image: "/user.png",
-    },
-    {
-      name: "Robert Wilson",
-      position: "Investor",
-      image: "/user.png",
-    },
-    {
-      name: "Emily Davis",
-      position: "Investor",
-      image: "/user.png",
-    },
-  ],
-  technology: [
-    {
-      name: "React.js",
-      position: "Frontend Framework",
-      image: "/user.png",
-    },
-    {
-      name: "Next.js",
-      position: "Full-stack Framework",
-      image: "/user.png",
-    },
-    {
-      name: "Node.js",
-      position: "Backend Runtime",
-      image: "/user.png",
-    },
-  ],
-  clientPartners: [
-    {
-      name: "Tech Corp",
-      position: "Partner Company",
-      image: "/user.png",
-    },
-    {
-      name: "Innovate Ltd.",
-      position: "Partner Company",
-      image: "/user.png",
-    },
-    {
-      name: "Future Solutions",
-      position: "Partner Company",
-      image: "/user.png",
-    },
-  ],
-};
+// const dummyData = {
+//   founders: [
+//     {
+//       name: "John Doe",
+//       position: "Co-Founder & CEO",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Jane Smith",
+//       position: "Co-Founder & CTO",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Mike Johnson",
+//       position: "Co-Founder & COO",
+//       image: "/user.png",
+//     },
+//   ],
+//   investors: [
+//     {
+//       name: "Alice Brown",
+//       position: "Investor",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Robert Wilson",
+//       position: "Investor",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Emily Davis",
+//       position: "Investor",
+//       image: "/user.png",
+//     },
+//   ],
+//   technology: [
+//     {
+//       name: "React.js",
+//       position: "Frontend Framework",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Next.js",
+//       position: "Full-stack Framework",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Node.js",
+//       position: "Backend Runtime",
+//       image: "/user.png",
+//     },
+//   ],
+//   clientPartners: [
+//     {
+//       name: "Tech Corp",
+//       position: "Partner Company",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Innovate Ltd.",
+//       position: "Partner Company",
+//       image: "/user.png",
+//     },
+//     {
+//       name: "Future Solutions",
+//       position: "Partner Company",
+//       image: "/user.png",
+//     },
+//   ],
+// };
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
@@ -105,10 +105,12 @@ export default function Page() {
         image={"/why.png"}
       />
       <WhyCard />
-      <OurFounders title={"Founders"} data={dummyData?.founders} />
+      <InvestmentJourney />
+
+      {/* <OurFounders title={"Founders"} data={dummyData?.founders} />
       <OurFounders title={"Investments"} data={dummyData?.investors} />
       <OurFounders title={"Techoly Experrs"} data={dummyData?.technology} />
-      <OurFounders title={"Client Partners"} data={dummyData?.clientPartners} />
+      <OurFounders title={"Client Partners"} data={dummyData?.clientPartners} /> */}
       <Footer />
     </div>
   );

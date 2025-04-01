@@ -1,8 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function HeroSection({
@@ -11,19 +11,48 @@ export default function HeroSection({
   description,
   link,
   image,
-}: any) {
+}: {
+  subtitle?: string;
+  title?: string;
+  description?: string;
+  link?: string;
+  image?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const isInView = useInView(textRef, { once: false, margin: "-50px" });
+
   return (
-    <div className="p-4 lg:p-16 lg:pt-40 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start h-screen">
-      <div className="w-full lg:w-1/2">
-        <p className="text-sm text-gray-500 mb-2 font-semibold relative">
+    <div
+      ref={ref}
+      className="p-4 lg:p-16 lg:pt-40 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start h-screen"
+    >
+      <motion.div style={{ opacity }} ref={textRef} className="w-full lg:w-1/2">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-sm text-gray-500 mb-2 font-semibold relative"
+        >
           {subtitle || "Wealth1 - Your AIF & PMS Partner"}
-        </p>
-        <h1 className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-gray-800 mb-6">
-          {title || "India&apos;s Premier Alternative Investments Platform"}
-        </h1>
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-gray-800 mb-6"
+        >
+          {title || "India's Premier Alternative Investments Platform"}
+        </motion.h1>
         <p className="text-base w-full lg:w-4/5 font-semibold text-gray-600 mb-10">
           {description ||
-            "Discover curated PMS and AIF opportunities with Wealth1&apos;s expert guidance in Portfolio Management Services and Alternative Investment Funds."}
+            "Discover curated PMS and AIF opportunities with Wealth 1 expert guidance in Portfolio Management Services and Alternative Investment Funds."}
         </p>
         <motion.div
           whileHover={{
@@ -41,13 +70,13 @@ export default function HeroSection({
             <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
           </Link>
         </motion.div>
-      </div>
+      </motion.div>
       <div className="w-full lg:w-1/2">
         <Image
           src={image || "/property.png"}
           width={900}
           height={900}
-          alt="Inversment"
+          alt="Investment"
           className="object-contain w-2/3 m-auto"
         />
       </div>
