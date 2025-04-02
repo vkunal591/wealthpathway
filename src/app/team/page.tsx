@@ -1,9 +1,8 @@
-"use client"
-import HeroSection from '@/Components/Common/HeroSection'
-import React, { useEffect, useState } from 'react'
-import TeamSection from './components/TeamSection'
-import Loader from '@/Components/Common/Loader';
-import Footer from '@/Components/Common/Footer';
+"use client";
+
+import React, { useEffect, useState } from "react";
+import TeamSection from "./components/TeamSection";
+import Loader from "@/Components/Common/Loader";
 
 export default function Page() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -23,10 +22,8 @@ export default function Page() {
   }
 
   return (
-    <div className='bg-white text-gray-800'>
-        <HeroSection />
-        <TeamSection />
-        <Footer />
+    <div className="bg-white text-gray-800 lg:pt-36">
+      <TeamSection />
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function ChangeTextColor({text}:{text:string }) {
+export default function ChangeTextColor({text,className}:{text:string,className?:string }) {
   const [textColors, setTextColors] = useState<string[]>([]);
   const textRef = React.useRef<HTMLDivElement>(null);
 
@@ -27,7 +27,7 @@ export default function ChangeTextColor({text}:{text:string }) {
 
   return (
     <p
-      className="text-xl md:text-xl font-semibold lg:w-4/5 m-auto text-center mb-16"
+      className={`text-xl md:text-xl font-semibold lg:w-4/5 m-auto text-center ${className || "mb-16"}`}
       ref={textRef}
     >
       {text.split(" ").map((word, index) => (

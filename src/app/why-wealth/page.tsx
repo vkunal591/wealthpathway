@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from "react";
 import WhyCard from "./components/WhyCard";
 import Loader from "@/Components/Common/Loader";
-import Footer from "@/Components/Common/Footer";
 import HeroSection from "@/Components/Common/HeroSection";
 import InvestmentJourney from "./components/InvestmentJourney";
+import Performance from "./components/Performance";
+import Advantage from "./components/Advantage";
+import ReadyForManage from "./components/ReadyForManage";
 
 // const dummyData = {
 //   founders: [
@@ -97,7 +99,7 @@ export default function Page() {
   return (
     <div className="bg-white text-gray-800">
       <HeroSection
-      subtitle={"Why choose us?"}
+        subtitle={"Why choose us?"}
         title={"Why Choose Wealth1 for Your Investment Journey?"}
         description={
           "Experience the perfect blend of human expertise and artificial intelligence, delivering superior investment solutions tailored to your needs."
@@ -106,12 +108,13 @@ export default function Page() {
       />
       <WhyCard />
       <InvestmentJourney />
-
+      <Performance />
+      <Advantage />
+      <ReadyForManage />
       {/* <OurFounders title={"Founders"} data={dummyData?.founders} />
       <OurFounders title={"Investments"} data={dummyData?.investors} />
       <OurFounders title={"Techoly Experrs"} data={dummyData?.technology} />
       <OurFounders title={"Client Partners"} data={dummyData?.clientPartners} /> */}
-      <Footer />
     </div>
   );
 }

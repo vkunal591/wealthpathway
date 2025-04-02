@@ -1,10 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ServiceHeroSection from "./components/ServiceHeroSection";
-import WhyChooseUs from "./components/WhyChooseUs";
+import WhyChooseUs from "./components/OurMission";
 import Loader from "@/Components/Common/Loader";
-import ScrollSections from "../components/ScrollerSection";
+import OurStatement from "./components/OurStatement";
+import ChangeTextColor from "../components/ChangeTextColor";
+import OurPromise from "./components/OurPromise";
+import OurApproach from "./components/OurApproach";
+import OurStandard from "./components/OurStandard";
+import OurVision from "./components/OurVision";
 
 export default function Page() {
   // Renamed from `page` to `Page`
@@ -26,9 +30,17 @@ export default function Page() {
 
   return (
     <div className="bg-white text-gray-800">
-      <ServiceHeroSection />
+      <OurStatement />
+      <ChangeTextColor
+        className="mb-4"
+        text="At Wealth1, we believe that alternative investments like Portfolio Management Services (PMS) and Alternative Investment Funds (AIFs) are not just products — they are powerful tools that, when curated right, can shape long-term wealth."
+      />
+      <ChangeTextColor text="As a next-generation distributor, we exist to simplify, personalize, and humanize the process of investing in PMS and AIFs for investors across India and the world." />
       <WhyChooseUs />
-      <ScrollSections />
+      <OurPromise />
+      <OurApproach />
+      <OurStandard />
+      <OurVision />
     </div>
   );
 }

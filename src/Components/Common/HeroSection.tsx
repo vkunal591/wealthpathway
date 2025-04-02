@@ -54,22 +54,22 @@ export default function HeroSection({
           {description ||
             "Discover curated PMS and AIF opportunities with Wealth 1 expert guidance in Portfolio Management Services and Alternative Investment Funds."}
         </p>
-        <motion.div
-          whileHover={{
-            scale: 1.1,
-            boxShadow: "0px 5px 15px gray",
-          }}
-          whileTap={{ scale: 0.95 }}
-          className="rounded-full w-2/3"
-        >
-          <Link
-            href={link || "/"}
-            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 5px 15px gray",
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="rounded-full w-2/3"
           >
-            Explore Alternative Investments
-            <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
-          </Link>
-        </motion.div>
+            <Link
+              href={link || "/"}
+              className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
+            >
+              Explore Alternative Investments
+              <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
+            </Link>
+          </motion.div>
       </motion.div>
       <div className="w-full lg:w-1/2">
         <Image

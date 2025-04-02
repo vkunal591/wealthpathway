@@ -7,15 +7,14 @@ import { LiaLinkedin } from "react-icons/lia";
 export default function TeamSection() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-center mb-4">
-        Meet our team
+      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-4">
+        Meet Our Team
       </h2>
-      <p className="text-gray-500 text-base w-full lg:w-3/5 m-auto text-center mb-4">
+      <p className="text-gray-500 text-base w-full lg:w-3/5 m-auto text-center mb-8">
         Our experienced professionals bring together decades of expertise in
         investment management, research, and client service to deliver
         exceptional value to our investors.
       </p>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {Array(4)
           .fill(null)
@@ -26,7 +25,7 @@ export default function TeamSection() {
             >
               <div className="w-full">
                 <Image
-                  src={"/logo.png"}
+                  src={"/sarah.png"}
                   width={900}
                   height={900}
                   alt=""
@@ -44,10 +43,10 @@ export default function TeamSection() {
               </div>
               <div className="flex items-center gap-4">
                 <Link href={""} className="flex items-center">
-                  <LiaLinkedin /> Linkedin
+                  <LiaLinkedin className="mr-1 text-2xl" /> Linkedin
                 </Link>
                 <Link href={""} className="flex items-center">
-                  <FaEnvelope /> Email
+                  <FaEnvelope className="mr-1" /> Email
                 </Link>
               </div>
             </div>
