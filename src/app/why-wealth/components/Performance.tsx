@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import ChartComponent from "./ChartComponent";
 
 export default function Performance() {
   return (
@@ -12,13 +12,14 @@ export default function Performance() {
         approaches      
       </p>
       <div className="w-full">
-        <Image
+        {/* <Image
           src={"/graf.jpg"}
           width={500}
           height={300}
           alt=""
           className="object-cover w-full h-full object-center"
-        />
+        /> */}
+        <ChartComponent />
       </div>
     </div>
   );
