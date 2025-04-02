@@ -14,21 +14,21 @@ export default function OurStatement() {
         Commitment
       </p>
       <motion.div
-          whileHover={{
-            scale: 1.1,
-            boxShadow: "0px 5px 15px gray",
-          }}
-          whileTap={{ scale: 0.95 }}
-          className="rounded-full w-1/3 m-auto"
+        whileHover={{
+          scale: 1.1,
+          boxShadow: "0px 5px 15px gray",
+        }}
+        whileTap={{ scale: 0.95 }}
+        className="rounded-full w-1/3 m-auto"
+      >
+        <Link
+          href={"/"}
+          className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
         >
-          <Link
-            href={"/"}
-            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
-          >
-            Explore Alternative Investments
-            <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
-          </Link>
-        </motion.div>
+          Explore Alternative Investments
+          <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
+        </Link>
+      </motion.div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 export default function OurVision() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:px-16">
-      <div className="w-full lg:w-4/5 bg-blue-900 p-10 rounded-2xl  m-auto">
+      <div className="w-full lg:w-4/5 bg-blue-950 p-10 rounded-2xl  m-auto">
         <h2 className="capitalize text-4xl text-center  font-semibold text-gray-50 mb-4">
           The Wealth1 Vision
         </h2>

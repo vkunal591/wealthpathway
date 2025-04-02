@@ -194,7 +194,7 @@ const Sidebar = () => {
           isOpen ? "w-[85%] md:w-3/4 right-0" : "w-0"
         } transition-all duration-500 ease-in-out`}
       >
-        <div className="bg-gray-900 text-gray-800">
+        <div className="bg-gray-900 text-blue-900">
           <div className="flex p-3 shadow-md z-50 ">
             <Link href={"/"}>
               <Image
@@ -250,7 +250,7 @@ const Sidebar = () => {
       <IoIosMenu
         size={30}
         onClick={toggleSidebar}
-        className="lg:hidden text-gray-800"
+        className="lg:hidden text-blue-900"
       />
       {isOpen && (
         <div

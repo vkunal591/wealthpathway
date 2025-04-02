@@ -136,14 +136,18 @@ export default function ClientProfileCard() {
                     />
                     <div className="flex items-center justify-between p-4 absolute  bottom-0 w-full">
                       <div>
-                        <h2 className="text-xl uppercase text-gray-50">Jigme Butia</h2>
+                        <h2 className="text-xl uppercase text-gray-50">
+                          Jigme Butia
+                        </h2>
                         <p className="text-gray-300 text-sm">Client Partmer</p>
                       </div>
                       <IoLogoLinkedin className="text-3xl text-gray-300" />
                     </div>
                   </div>
                   <div className="p-4">
-                    <h2 className="text-gray-50 text-lg">Managing portfolio for</h2>
+                    <h2 className="text-gray-50 text-lg">
+                      Managing portfolio for
+                    </h2>
                     <ul className="list-disc p-3 lg:px-4 space-y-4 text-gray-300 text-sm">
                       <li>Founder of one of the largest healthcare chains</li>
                       <li>CEO of well known multi-national company</li>
@@ -162,13 +166,13 @@ export default function ClientProfileCard() {
             onClick={() => swiperRef.current?.slidePrev()}
             className="p-3 rounded-full bg-gray-50 transition"
           >
-            <AiOutlineLeft className="text-xl text-gray-800" />
+            <AiOutlineLeft className="text-xl text-blue-900" />
           </button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
             className="p-3 rounded-full bg-gray-50 transition"
           >
-            <AiOutlineRight className="text-xl text-gray-800" />
+            <AiOutlineRight className="text-xl text-blue-900" />
           </button>
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function HeroSection2() {
   return (
     <div className="p-4 lg:p-16 max-w-7xl m-auto  flex flex-col justify-end items-start h-[60vh] sm:h-[50vh] lg:h-screen">
       <motion.h1
-        className="text-5xl lg:text-7xl w-full text-center font-semibold text-gray-800 mb-10"
+        className="text-5xl lg:text-7xl w-full text-center font-semibold text-blue-900 mb-10"
         initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
         animate={controls} // Control animation with framer-motion controls
         transition={{ duration: 1.5 }} // Smooth transition
@@ -67,7 +67,7 @@ export default function HeroSection2() {
         Why Choose Wealth1 for Your Investment Journey?
       </motion.h1>
       <motion.p
-        className="text-lg lg:text-lg w-full text-center font-medium text-gray-800 mb-10"
+        className="text-lg lg:text-lg w-full text-center font-medium text-blue-900 mb-10"
         initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
         animate={controls} // Control animation with framer-motion controls
         transition={{ duration: 1.5 }} // Smooth transition
@@ -84,7 +84,7 @@ export default function HeroSection2() {
       >
         <Link
           href={"/"}
-          className="p-3.5 px-6 m-auto font-bold text-lg border border-gray-900 shadow-xl bg-gray-50 text-gray-800 rounded-full flex items-center justify-center"
+          className="p-3.5 px-6 m-auto font-bold text-lg border border-gray-900 shadow-xl bg-gray-50 text-blue-900 rounded-full flex items-center justify-center"
         >
           Start your journey
           <IoIosArrowRoundForward className="text-3xl font-extrabold" />

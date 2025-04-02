@@ -63,14 +63,14 @@ export default function ScrollSections() {
               onClick={() => smoothScrollTo(i)}
               className={cn(
                 "relative text-gray-400 transition-colors duration-300",
-                activeIndex === i ? "text-gray-800 font-bold" : ""
+                activeIndex === i ? "text-blue-900 font-bold" : ""
               )}
             >
               {title}
               {activeIndex === i && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-gray-800"
+                  className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-blue-950"
                 />
               )}
             </button>
@@ -87,7 +87,7 @@ export default function ScrollSections() {
           <section
             key={i}
             id={`section-${i}`}
-            className="h-screen flex items-center justify-center bg-white text-gray-800 border-b border-gray-700 snap-start"
+            className="h-screen flex items-center justify-center bg-white text-blue-900 border-b border-gray-700 snap-start"
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -97,7 +97,6 @@ export default function ScrollSections() {
             >
               <h1 className="text-4xl font-bold">{title}</h1>
               <p className="mt-4 text-gray-400">Content for {title}</p>
-             
             </motion.div>
           </section>
         ))}

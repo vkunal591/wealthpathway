@@ -61,7 +61,7 @@ export default function ServiceHeroSection() {
       <div className="flex flex-col lg:flex-row items-center  lg:h-[70vh]">
         <div>
           <motion.h1
-            className="text-4xl lg:text-7xl w-full lg:w-4/5 font-semibold text-gray-800 mb-10"
+            className="text-4xl lg:text-7xl w-full lg:w-4/5 font-semibold text-blue-900 mb-10"
             initial={{ opacity: 0, y: -50 }} // Initially off-screen and invisible
             animate={controls} // Control animation with framer-motion controls
             transition={{ duration: 1.5 }} // Smooth transition
@@ -84,7 +84,7 @@ export default function ServiceHeroSection() {
           >
             <Link
               href={"/"}
-              className="p-3.5 px-6 w-1/2 font-bold text-lg border border-gray-900 bg-gray-50 text-gray-800 rounded-full flex items-center justify-center"
+              className="p-3.5 px-6 w-1/2 font-bold text-lg border border-gray-900 bg-gray-50 text-blue-900 rounded-full flex items-center justify-center"
             >
               Start your journey
               <IoIosArrowRoundForward className="text-3xl font-extrabold" />

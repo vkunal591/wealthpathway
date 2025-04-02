@@ -10,7 +10,7 @@ export default function ColorChangeText({ text }: { text: string[] }) {
         The Wealth1 Story
       </p>
 
-      <h2 className="text-2xl lg:text-4xl text-gray-800 w-full lg:w-3/5 font-semibold m-auto text-center mb-8">
+      <h2 className="text-2xl lg:text-4xl text-blue-900 w-full lg:w-3/5 font-semibold m-auto text-center mb-8">
         Unlocking Alpha Through <br /> PMS & AIF
       </h2>
 
@@ -26,7 +26,7 @@ export default function ColorChangeText({ text }: { text: string[] }) {
           className="rounded-full w-16 h-16"
         />
         <div className="text-left">
-          <h2 className="text-3xl font-semibold text-gray-800">
+          <h2 className="text-3xl font-semibold text-blue-900">
             Sarah Johnson
           </h2>
           <p className="text-gray-600 font-semibold text-xl">

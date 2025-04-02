@@ -31,7 +31,7 @@ export default function ClientCard({ data, index }: any) {
         </video>
       </div>
       <div className="mt-4 px-4 w-full lg:w-3/5 h-[40vh]">
-        <p className="text-gray-800 text-left  text-4xl md:text-5xl font-semibold mb-8">
+        <p className="text-blue-900 text-left  text-4xl md:text-5xl font-semibold mb-8">
           {data?.description ||
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus totam nisi sapiente laudantium asperiores culpa officiis molestias laboriosam amet consectetur inventore placeat unde in odio, obcaecati quibusdam et saepe?"}
         </p>
@@ -39,7 +39,7 @@ export default function ClientCard({ data, index }: any) {
           <h2 className="text-xl text-gray-900 font-semibold">
             {data?.name || "Name"}
           </h2>
-          <h3 className="text-sm md:text-base text-gray-8000">
+          <h3 className="text-sm md:text-base text-blue-9000">
             {data?.position || "Position"}
           </h3>
         </div>

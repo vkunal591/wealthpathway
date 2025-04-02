@@ -52,7 +52,7 @@ const ProfileCard: React.FC<Profile> = ({
         <div className={`${isOpen ? "hidden" : "block"}`}>
           <h2
             className={`font-semibold group-hover:text-black ${
-              isOpen ? "text-4xl text-gray-800" : "text-3xl text-gray-800"
+              isOpen ? "text-4xl text-blue-900" : "text-3xl text-blue-900"
             }`}
           >
             {name}
@@ -79,7 +79,7 @@ const ProfileCard: React.FC<Profile> = ({
         <div className="w-full lg:w-1/3">
           <h2
             className={`font-semibold group-hover:text-black ${
-              isOpen ? "text-3xl text-gray-800" : "text-xl text-gray-800"
+              isOpen ? "text-3xl text-blue-900" : "text-xl text-blue-900"
             }`}
           >
             {name}
@@ -94,27 +94,27 @@ const ProfileCard: React.FC<Profile> = ({
         </div>
         {isOpen && (
           <div>
-            <div className="mt-4 grid grid-cols-2 gap-4 text-gray-800">
+            <div className="mt-4 grid grid-cols-2 gap-4 text-blue-900">
               <div>
-                <p className="text-base mb-2 font-medium text-gray-8000">
+                <p className="text-base mb-2 font-medium text-blue-9000">
                   Experience managing money
                 </p>
                 <p className="text-xl font-bold">{experience}</p>
               </div>
               <div>
-                <p className="text-base mb-2 font-medium text-gray-8000">
+                <p className="text-base mb-2 font-medium text-blue-9000">
                   Previously managed
                 </p>
                 <p className="text-xl font-bold">{managedAmount}</p>
               </div>
               <div>
-                <p className="text-base mb-2 font-medium text-gray-8000">
+                <p className="text-base mb-2 font-medium text-blue-9000">
                   On investment board of
                 </p>
                 <p className="text-xl font-bold">{boardMembership}</p>
               </div>
               <div>
-                <p className="text-base mb-2 font-medium text-gray-8000">
+                <p className="text-base mb-2 font-medium text-blue-9000">
                   Currently manages
                 </p>
                 <p className="text-xl font-bold">{currentManagement}</p>

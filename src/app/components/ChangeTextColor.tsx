@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-export default function ChangeTextColor({text,className}:{text:string,className?:string }) {
+export default function ChangeTextColor({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   const [textColors, setTextColors] = useState<string[]>([]);
   const textRef = React.useRef<HTMLDivElement>(null);
 
@@ -10,12 +16,15 @@ export default function ChangeTextColor({text,className}:{text:string,className?
         const rect = textRef.current.getBoundingClientRect();
         const scrollPercent = Math.max(
           0,
-          Math.min(1, (window.innerHeight / 0.8 - rect.top) / window.innerHeight)
+          Math.min(
+            1,
+            (window.innerHeight / 0.8 - rect.top) / window.innerHeight
+          )
         );
         console.log(window?.innerHeight, rect.top, scrollPercent);
         const words = text.split(" ") || [];
         const newColors = words.map((_, i) =>
-          i / words.length < scrollPercent ? "text-gray-800" : "text-gray-400"
+          i / words.length < scrollPercent ? "text-blue-900" : "text-gray-400"
         );
         setTextColors(newColors);
       }
@@ -27,7 +36,9 @@ export default function ChangeTextColor({text,className}:{text:string,className?
 
   return (
     <p
-      className={`text-xl md:text-xl font-semibold lg:w-4/5 m-auto text-center ${className || "mb-16"}`}
+      className={`text-xl md:text-xl font-semibold lg:w-4/5 m-auto text-center ${
+        className || "mb-16"
+      }`}
       ref={textRef}
     >
       {text.split(" ").map((word, index) => (

@@ -70,7 +70,7 @@ const experts: Profile[] = [
 export default function OurExpert() {
   return (
     <div className="max-w-8xl m-auto p-4 py-16">
-      <h2 className="text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-gray-800 text-center mb-24">
+      <h2 className="text-3xl lg:text-7xl w-full lg:w-3/5 m-auto text-blue-900 text-center mb-24">
         Meet our team of experts
       </h2>
       <div className="grid grid-cols-1 gap-8 w-full m-auto">
@@ -108,7 +108,7 @@ export default function OurExpert() {
               />
             </div>
 
-            <div className="ml-auto flex items-center text-gray-800 group-hover:text-black gap-2 text-xl">
+            <div className="ml-auto flex items-center text-blue-900 group-hover:text-black gap-2 text-xl">
               See all members{" "}
               <IoArrowForward className="text-3xl group-hover:text-black" />
             </div>

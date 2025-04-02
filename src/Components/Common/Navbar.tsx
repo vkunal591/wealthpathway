@@ -219,7 +219,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="w-3/5 items-center justify-between gap-4 hidden lg:flex">
-        <ul className="hidden max-w-6xl lg:flex justify-between items-center gap-8 text-gray-800">
+        <ul className="hidden max-w-6xl lg:flex justify-between items-center gap-8 text-blue-900">
           {menuItems?.map((item) => (
             <div
               key={item.name}
@@ -230,7 +230,7 @@ export default function Navbar() {
                 <li
                   className={`m-auto text-lg hover:text-gray-900  transition-all ease-in-out ${
                     pathname === item.path
-                      ? "border-b-4 border-gray-800 text-gray-800 font-bold"
+                      ? "border-b-4 border-blue-900 text-blue-900 font-bold"
                       : "text-gray-700 hover:text-gray-900 transition duration-200"
                   }`}
                   onClick={(e: any) => {
@@ -245,7 +245,7 @@ export default function Navbar() {
               {/* Submenu */}
               {item.submenu && (
                 <div
-                  className={`absolute top-20 left-[-15rem] w-[35vw] mt-2 rounded-2xl bg-gray-50 text-gray-800 shadow-lg ${
+                  className={`absolute top-20 left-[-15rem] w-[35vw] mt-2 rounded-2xl bg-gray-50 text-blue-900 shadow-lg ${
                     activeSubmenuId === item.name ? "block" : "hidden"
                   }`}
                   onMouseLeave={handleMouseLeave} // Reset on mouse leave
@@ -296,7 +296,7 @@ export default function Navbar() {
         >
           <Link
             href={"/"}
-            className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
+            className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
           >
             Contact Us
             <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />

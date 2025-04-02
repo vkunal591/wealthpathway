@@ -29,7 +29,7 @@ export default function Page() {
   }
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-blue-900">
       <OurStatement />
       <ChangeTextColor
         className="mb-4"

@@ -17,7 +17,7 @@ export default function GetInTouch() {
           </p>
           <Link
             href={"/"}
-            className="p-3.5 px-6 lg:w-2/3 font-bold text-lg border border-gray-900 bg-gray-50 text-gray-800 rounded-full flex items-center justify-center"
+            className="p-3.5 px-6 lg:w-2/3 font-bold text-lg border border-gray-900 bg-gray-50 text-blue-900 rounded-full flex items-center justify-center"
           >
             <IoCallOutline className="text-2xl mr-2 font-extrabold" />
             Schedule a Consultation

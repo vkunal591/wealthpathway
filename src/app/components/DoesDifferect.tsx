@@ -25,7 +25,7 @@ export default function DoesDifferect() {
       imageUrl: "/alter.png",
       imageAlt: "Another Graph Image",
       bgColor: "bg-[#121212]",
-      textColor: "text-gray-800",
+      textColor: "text-blue-900",
     },
     {
       id: "03",
@@ -46,7 +46,7 @@ export default function DoesDifferect() {
         How To Different
       </p>
 
-      <h2 className="text-2xl lg:text-4xl text-gray-800 w-full lg:w-3/5 font-semibold m-auto text-center mb-10">
+      <h2 className="text-2xl lg:text-4xl text-blue-900 w-full lg:w-3/5 font-semibold m-auto text-center mb-10">
         How Wealth 1 does things differently
       </h2>
       <div className="contianer space-y-8">
@@ -59,7 +59,7 @@ export default function DoesDifferect() {
               <span className="rounded-full bg-gray-200 p-3.5 h-14 w-14 text-black text-2xl">
                 0{index + 1}
               </span>
-              <span className="h-[80vh] w-[1px] bg-gray-800 inline-block"></span>
+              <span className="h-[80vh] w-[1px] bg-blue-950 inline-block"></span>
             </div>
             <div className="w-10/12">
               <div className=" h-fit bg-gray-200 border shadow border-gray-200 rounded-3xl overflow-hidden  flex flex-col lg:flex-row justify-center items-center gap-4">

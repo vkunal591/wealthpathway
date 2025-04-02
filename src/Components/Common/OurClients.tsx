@@ -38,7 +38,8 @@ export default function OurClients() {
     },
     {
       title: "AI-Powered PMS Analytics",
-      description: "“Dezerv brought simplicity and clarity to my investments.” ",
+      description:
+        "“Dezerv brought simplicity and clarity to my investments.” ",
       video: "/session3.mp4",
       link: "/",
       bgColor: "bg-[#F97316]",
@@ -85,7 +86,6 @@ export default function OurClients() {
                   stiffness: 100,
                   damping: 25,
                   delay: index * 0.2, // Slight delay between each card animation
-                  
                 }}
                 className="p-4"
                 viewport={{ once: false }} // Trigger when scrolls in or out of view
@@ -102,13 +102,13 @@ export default function OurClients() {
             onClick={() => swiperRef.current?.slidePrev()}
             className="p-3 rounded-full bg-gray-50 border border-gray-300 transition"
           >
-            <AiOutlineLeft className="text-xl text-gray-800" />
+            <AiOutlineLeft className="text-xl text-blue-900" />
           </button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
             className="p-3 rounded-full bg-gray-50 border border-gray-300 transition"
           >
-            <AiOutlineRight className="text-xl text-gray-800" />
+            <AiOutlineRight className="text-xl text-blue-900" />
           </button>
         </div>
       </div>

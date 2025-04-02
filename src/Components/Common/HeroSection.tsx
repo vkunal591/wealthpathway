@@ -46,7 +46,7 @@ export default function HeroSection({
           initial={{ opacity: 0 }}
           animate={{ opacity: isInView ? 1 : 0.5 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-gray-800 mb-6"
+          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-blue-900 mb-6"
         >
           {title || "India's Premier Alternative Investments Platform"}
         </motion.h1>
@@ -54,22 +54,22 @@ export default function HeroSection({
           {description ||
             "Discover curated PMS and AIF opportunities with Wealth 1 expert guidance in Portfolio Management Services and Alternative Investment Funds."}
         </p>
-          <motion.div
-            whileHover={{
-              scale: 1.1,
-              boxShadow: "0px 5px 15px gray",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="rounded-full w-2/3"
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+            boxShadow: "0px 5px 15px gray",
+          }}
+          whileTap={{ scale: 0.95 }}
+          className="rounded-full w-2/3"
+        >
+          <Link
+            href={link || "/"}
+            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
           >
-            <Link
-              href={link || "/"}
-              className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
-            >
-              Explore Alternative Investments
-              <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
-            </Link>
-          </motion.div>
+            Explore Alternative Investments
+            <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
+          </Link>
+        </motion.div>
       </motion.div>
       <div className="w-full lg:w-1/2">
         <Image

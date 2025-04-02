@@ -93,7 +93,7 @@ export default function CanHelp() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl lg:text-4xl text-gray-800 w-full lg:w-3/5 font-semibold mx-auto text-center mb-4"
+        className="text-3xl lg:text-4xl text-blue-900 w-full lg:w-3/5 font-semibold mx-auto text-center mb-4"
       >
         Comprehensive Investment Solutions
       </motion.h2>
@@ -134,7 +134,7 @@ export default function CanHelp() {
                 <p className="text-gray-900 text-2xl font-semibold">
                   {data.description}
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-gray-800">
+                <ul className="mt-4 space-y-2 text-sm text-blue-900">
                   {data.list.map((li, i) => (
                     <li key={i}>{li}</li>
                   ))}
@@ -142,7 +142,7 @@ export default function CanHelp() {
                 <div className="mt-6">
                   <Link
                     href="/"
-                    className="p-3 text-base font-bold flex items-center justify-center border bg-gray-800 text-white rounded-full transition hover:bg-gray-900"
+                    className="p-3 text-base font-bold flex items-center justify-center border bg-blue-950 text-white rounded-full transition hover:bg-gray-900"
                   >
                     Review my portfolio
                     <IoIosArrowRoundForward className="text-2xl ml-2" />

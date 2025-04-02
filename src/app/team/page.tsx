@@ -22,7 +22,7 @@ export default function Page() {
   }
 
   return (
-    <div className="bg-white text-gray-800 lg:pt-36">
+    <div className="bg-white text-blue-900 lg:pt-36">
       <TeamSection />
     </div>
   );

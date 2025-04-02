@@ -24,7 +24,7 @@ export default function ReadyForManage() {
       >
         <Link
           href={"/"}
-          className="p-3 lg:px-8 w-full m-auto font-semibold text-center hidden lg:flex text-sm bg-gray-800 text-gray-50 rounded-full items-center justify-center transition-all"
+          className="p-3 lg:px-8 w-full m-auto font-semibold text-center hidden lg:flex text-sm bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
         >
           Explore Alternative Investments
           <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />

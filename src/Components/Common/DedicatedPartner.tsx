@@ -11,15 +11,15 @@ export default function DedicatedPartner() {
           <p className="text-sm text-gray-500 mb-2 font-semibold text-center">
             Why Choose PMS with Wealth1
           </p>
-          <h2 className="text-3xl lg:text-4xl font-semibold  text-gray-800 mr-auto text-center mb-4 ">
+          <h2 className="text-3xl lg:text-4xl font-semibold  text-blue-900 mr-auto text-center mb-4 ">
             Dedicated client partners you can trust
           </h2>
           <p className="text-base text-gray-500 mb-8 font-semibold text-center w-full">
-            Experience the evolution of sophisticated investing with Wealth1\&apos;s
-            PMS and AIF solutions
+            Experience the evolution of sophisticated investing with
+            Wealth1\&apos;s PMS and AIF solutions
           </p>
         </div>
-        <ul className=" w-full lg:w-4/5 m-auto text-gray-800 grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16">
+        <ul className=" w-full lg:w-4/5 m-auto text-blue-900 grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16">
           <li className="flex flex-col items-center text-xl gap-2 font-semibold">
             <span className="w-32 h-32 flex items-center justify-center font-semibold text-2xl rounded-full relative border-4 border-double border-gray-900 bg-white">
               {/* <span className="inlne-block w-[1px] h-10 bg-gray-500 absolute left-1.5 top-9 rounded-full"></span> */}
@@ -42,7 +42,7 @@ export default function DedicatedPartner() {
           </li>
         </ul>
 
-        <ul className=" w-full lg:w-4/5 m-auto mb-4 text-gray-800 grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <ul className=" w-full lg:w-4/5 m-auto mb-4 text-blue-900 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <li className="flex flex-col items-center text-xl gap-2 font-semibold">
             <span className="w-32 h-32 flex items-center justify-center font-semibold text-6xl rounded-full relative border-4 border-double border-gray-900 bg-white">
               {/* <span className="inlne-block w-[1px] h-10 bg-gray-500 absolute left-1.5 top-9 rounded-full"></span> */}
@@ -84,7 +84,6 @@ export default function DedicatedPartner() {
   );
 }
 
-
 // "use client";
 // import React, { useRef } from "react";
 // import { motion, useScroll, useTransform } from "framer-motion";
@@ -117,7 +116,7 @@ export default function DedicatedPartner() {
 //             initial={{ opacity: 0, y: 20 }}
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 1, ease: "easeOut" }}
-//             className="text-3xl lg:text-4xl font-semibold text-gray-800 text-center mb-4"
+//             className="text-3xl lg:text-4xl font-semibold text-blue-900 text-center mb-4"
 //           >
 //             Dedicated client partners you can trust
 //           </motion.h2>

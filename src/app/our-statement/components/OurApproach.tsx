@@ -20,7 +20,7 @@ export default function OurApproach() {
     },
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16  text-gray-800">
+    <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
       <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-8">
         Our Approach
       </h2>
