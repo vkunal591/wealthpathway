@@ -7,22 +7,22 @@ export default function InvestmentJourney() {
     {
       title: "Selection",
       description: "Choose from curated investment options",
-      image:"/icon0.png"
+      image:"/selection.webp"
     },
     {
       title: "Consultation",
       description: "Get expert guidance from our team",
-      image:"/icon1.png"
+      image:"/consultation.webp"
     },
     {
       title: "Portfolio Tracking",
       description: "Monitor your investments in real-time",
-      image:"/icon3.png"
+      image:"/portfolio.webp"
     },
     {
       title: "Ongoing Support",
       description: "Receive continuous assistance and updates",
-      image:"/secure.png"
+      image:"/support.webp"
     },
   ];
   return (
@@ -40,14 +40,14 @@ export default function InvestmentJourney() {
           content.map((data: any, index: any) => (
             <div
               key={index}
-              className="hover:shadow-xl transition-all ease-in-out p-4 py-6 relative"
+              className="hover:shadow-xl text-center transition-all ease-in-out p-4 py-6 relative"
             >
               <Image
                 src={data?.image || `/icon${index}.png`}
                 width={900}
                 height={900}
                 alt=""
-                className="w-16 h-16 mb-4  filter  invert-25"
+                className="w-32 h-32 w-auto m-auto mb-4 "
               />
               <GiBottomRight3dArrow className="absolute right-0 rotate-[-45deg]" />
               <h2 className="text-lg font-bold mb-3 text-gray-700">
