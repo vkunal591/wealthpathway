@@ -5,9 +5,9 @@ import React from "react";
 
 export default function HeaderSection() {
   return (
-    <div className="max-w-7xl m-auto h-[80vh] bg-white">
-      <div className="w-full h-full pt-40 bg-gradient-to-r from-[#024CAA]/10 via-[#024CAA]-50 to-white">
-        <p className="p-1 mb-4 text-sm font-semibold border border-blue-900/10 bg-blue-950/10 rounded-full w-fit m-auto px-4 text-[#272829]">
+    <div className="max-w-7xl m-auto h-[90vh] bg-white">
+      <div className="w-full h-full pt-40 bg-gradient-to-r from-blue-900/10 via-blue-900/10 to-blue-50/10">
+        <p className="p-1 mb-4 text-xs font-semibold border border-blue-900/10 bg-blue-950/10 rounded-full w-fit m-auto px-4 text-blue-900">
           Wealth1 Premium PMS
         </p>
           <h2 className="capitalize text-4xl text-center  font-bold text-blue-900 mb-4">

@@ -44,8 +44,8 @@ export default function WhyInvest() {
           },
         ].map((data, index) => (
           <div key={index} className="border border-gray-300 rounded-2xl shadow p-6">
-            <h3 className="text-xl text-black mb-4 font-semibold">{data?.title}</h3>
-            <p className="text-base text-gray-600">{data?.description}</p>
+            <h3 className="text-xl text-blue-900 mb-4 font-semibold">{data?.title}</h3>
+            <p className="text-sm text-gray-600">{data?.description}</p>
           </div>
         ))}
       </div>

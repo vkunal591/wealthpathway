@@ -61,6 +61,12 @@ const pms = [
     path: "/pms/analatics",
     id: "analatics", // Unique ID for submenu
   },
+  {
+    name: "Stallion",
+    image: "/assets/webdev.png",
+    path: "/pms/stallion",
+    id: "stallion", // Unique ID for submenu
+  },
 ];
 
 const aif = [
