@@ -70,6 +70,18 @@ const pms = [
     href: "/pms/analatics",
     id: "analatics", // Unique ID for submenu
   },
+  {
+    name: "Stallion",
+    image: "/assets/webdev.png",
+    path: "/pms/stallion",
+    id: "stallion", // Unique ID for submenu
+  },
+  {
+    name: "INVasset",
+    image: "/assets/webdev.png",
+    path: "/pms/invassest",
+    id: "invassest", // Unique ID for submenu
+  },
 ];
 
 const aif = [

@@ -67,6 +67,12 @@ const pms = [
     path: "/pms/stallion",
     id: "stallion", // Unique ID for submenu
   },
+  {
+    name: "INVasset",
+    image: "/assets/webdev.png",
+    path: "/pms/invassest",
+    id: "invassest", // Unique ID for submenu
+  },
 ];
 
 const aif = [
@@ -262,7 +268,11 @@ export default function Navbar() {
                         <Link
                           href={subItem.path}
                           onClick={handleLinkClick}
-                          className="px-4 py-2 text-base text-gray-700 rounded-xl hover:bg-gray-200 flex justify-start items-center gap-4"
+                          className={`px-4 py-2 text-base ${
+                            pathname == "/pms/invassest"
+                              ? "text-[#0A2B58]"
+                              : "text-gray-700"
+                          } rounded-xl hover:bg-gray-200 flex justify-start items-center gap-4`}
                         >
                           {/* <span className="text-3xl rounded-full p-3 group-hover:bg-white">
                             <Image
@@ -302,7 +312,9 @@ export default function Navbar() {
         >
           <Link
             href={"/"}
-            className="p-3 lg:px-8 font-bold text-center hidden lg:flex text-base bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
+            className={`p-3 lg:px-8 font-bold text-center hidden lg:flex text-base ${
+              pathname === "/pms/invassest" ? "bg-[#B28C3D]" : "bg-blue-950"
+            } text-gray-50 rounded-full items-center justify-center transition-all`}
           >
             Contact Us
             <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />

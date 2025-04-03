@@ -1,0 +1,340 @@
+"use client";
+import React, { useState } from "react";
+import { BsCheck2Circle } from "react-icons/bs";
+import { FiDollarSign, FiUserCheck } from "react-icons/fi";
+import { GoGraph } from "react-icons/go";
+import { IoTimerOutline } from "react-icons/io5";
+import { LuShieldHalf } from "react-icons/lu";
+import { SlBadge } from "react-icons/sl";
+
+const data = [
+  {
+    icon: "briefcase",
+    value: "Consistent Performance",
+    label: "Real-time analysis of 170+ parameters",
+  },
+  {
+    icon: "calendar",
+    value: "Risk Management",
+    label: "Drawdowns capped within 20%",
+  },
+  {
+    icon: "graph",
+    value: "Growth Focus",
+    label: "Shifts based on market phases",
+  },
+  {
+    icon: "chartPie",
+    value: "Expert Management",
+    label: "30+ years of market wisdom",
+  },
+];
+
+const data2 = [
+  {
+    icon: "briefcase",
+    value: "Minimum Investment",
+    value1: "₹50 Lakhs",
+    label: "As per SEBI regulations",
+  },
+  {
+    icon: "calendar",
+    value: "Investment Horizon",
+    value1: "3-5 Years",
+    label: "Recommended minimum period",
+  },
+  {
+    icon: "graph",
+    value: "Fee Structure",
+    label: "Expected over long term",
+    value1: "18-28% CAGR",
+  },
+];
+
+const data3 = {
+  title: "Performance of INVasset PMS",
+  description:
+    "INVasset PMS aims to deliver consistent returns through a data-driven approach while actively managing risk. Performance metrics are updated monthly.",
+  label: " Stallion PMS Returns",
+  content: [
+    {
+      label: "Since Inception (Projected CAGR)	",
+      value: "18-28%",
+    },
+    {
+      label: "Maximum Drawdown",
+      value: "< 20%",
+    },
+    {
+      label: "Churn Ratio",
+      value: "< 0.5",
+    },
+    {
+      label: "Beta Management",
+      value: "Dynamic",
+    },
+  ],
+};
+
+const iconMap: any = {
+  briefcase: SlBadge,
+  calendar: LuShieldHalf,
+  graph: GoGraph,
+  chartPie: FiUserCheck,
+};
+
+const iconMap2: any = {
+  briefcase: FiDollarSign,
+  calendar: IoTimerOutline,
+  graph: GoGraph,
+};
+
+const sections = [
+  {
+    id: "overview",
+    title: "Overview",
+    content: (
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <h2 className="text-3xl font-bold text-[#B28C3D]">
+            Overview of INVasset PMS
+          </h2>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            INVasset PMS is a SEBI-registered Portfolio Management Service
+            (INP000006907) that combines over 30 years of market wisdom with
+            next-generation data science. This quant-based strategy is built to
+            generate consistent alpha while managing downside risk through every
+            market cycle.
+          </p>
+          <p className="mt-2 text-gray-600">
+            Powered by the proprietary INVasset AAID (Advanced Algorithms for
+            Investment Decisions) model, the fund continuously tracks over 1,500
+            companies across 170+ parameters in real time. This system-driven
+            strategy eliminates emotional biases and ensures that all investment
+            decisions are rooted in data, logic, and structure.
+          </p>
+          <button className="mt-6 px-6 py-3 bg-gold text-gray-50 rounded-full bg-gradient-to-r from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50 font-semibold shadow-md">
+            Learn More
+          </button>
+        </div>
+        <div className="shadow p-6 rounded-md">
+          <h2 className="text-xl font-semibold text-gray-900">
+            Investment Focus
+          </h2>
+          <ul className="mt-4 space-y-2 text-gray-600">
+            <li className="flex items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" /> Adapts dynamically
+              to market phases—shifting from value to quality, from growth to
+              safety
+            </li>
+            <li className="flex items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" /> Focuses on scalable
+              businesses with strong capital efficiency
+            </li>
+            <li className="flex items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" />
+              Holds 15–25 high-conviction stocks with low churn ratio
+            </li>
+            <li className="flex items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" />
+              Includes capital protection protocols for market downturns
+            </li>
+            <li className="flex items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" />
+              Aims to keep drawdowns under 20% during corrections
+            </li>
+            <li className="flex items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" />
+              Combines fundamental analysis with advanced quantitative
+              techniques
+            </li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "why-choose",
+    title: "Why Choose Stallion",
+    content: (
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <h2 className="text-3xl font-bold text-[#B28C3D]">
+            Why Choose INVasset PMS?
+          </h2>
+          <p className="mt-4 text-gray-600 leading-relaxed mb-4">
+            INVasset PMS takes a unique approach to portfolio management by
+            combining the wisdom of experienced market professionals with
+            cutting-edge algorithmic decision-making. The strategy focuses on
+            consistent performance with active risk management across all market
+            conditions.
+          </p>
+          <div className="rounded-2xl bg-[#B28C3D]/30 p-4">
+            <h3 className="text-xl font-bold text-[#0A2B58]">
+              INVasset&apos;s Strategic Edge
+            </h3>
+            <p className="mt-2 text-gray-600">
+              The proprietary AAID (Advanced Algorithms for Investment
+              Decisions) system continuously analyzes over 1,500 companies
+              across 170+ parameters. This data-driven approach removes
+              emotional biases from investment decisions, allowing the portfolio
+              to adapt dynamically to changing market conditions and capture
+              opportunities across market cycles.
+            </p>
+          </div>
+        </div>
+        <div className="shadow p-6 rounded-md">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            Investment Focus
+          </h2>
+          <div className="grid grid-cols-2 gap-4">
+            {data.map((item, index) => {
+              const IconComponent = iconMap[item.icon];
+              return (
+                <div
+                  key={index}
+                  className="border border-gray-300 shadow rounded-xl p-4 w-full h-auto flex flex-col items-center justify-start"
+                >
+                  <div className="w-full flex justify-start mb-2">
+                    {IconComponent && (
+                      <IconComponent className="text-3xl text-[#B28C3D]" />
+                    )}
+                  </div>
+                  <div className="text-left w-full">
+                    <h2 className="text-sm text-[#0A2B58] mb-2 font-semibold">
+                      {item.value}
+                    </h2>
+                    <p className="text-xs text-gray-500 ">{item.label}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "key-features",
+    title: "Key Features",
+    content: (
+      <div className="p-6 rounded-md">
+        <h2 className="text-xl font-semibold text-[#B28C3D] mb-4">
+          Key Features of INVasset PMS
+        </h2>
+        <div className="grid grid-cols-3 gap-4">
+          {data2.map((item: any, index: any) => {
+            const IconComponent = iconMap2[item.icon];
+            return (
+              <div
+                key={index}
+                className="border border-gray-300 shadow rounded-xl p-4 w-full h-auto flex flex-col items-center justify-start"
+              >
+                <div className="w-full flex justify-start mb-2">
+                  {IconComponent && (
+                    <IconComponent className="text-3xl text-[#B28C3D]" />
+                  )}
+                </div>
+                <div className="text-left w-full">
+                  <h2 className="text-lg text-[#0A2B58] mb-2 font-semibold">
+                    {item?.value}
+                  </h2>
+                  <p className="text-sm font-semibold text-gray-500 ">
+                    {item?.value1}
+                  </p>
+                  <p className="text-xs text-gray-500 ">{item?.label}</p>
+
+                  <p className="text-sm font-semibold text-gray-500 ">
+                    {item?.value2}
+                  </p>
+                  <p className="text-xs text-gray-500 ">{item?.label1}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "performance",
+    title: "Performance",
+    content: (
+      <div>
+        <div className="mb-5 text-center">
+          <h2 className="text-3xl font-bold text-[#B28C3D]">{data3?.title}</h2>
+          <p className="mt-4 w-4/5 m-auto text-gray-600 leading-relaxed">
+            {data3?.description}
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-8 ">
+          <div className="rounded-2xl shadow-lg overflow-hidden">
+            <h2 className="bg-[#B28C3D]  text-white p-4 text-left">
+              {data3?.label}
+            </h2>
+            {data3?.content?.map((content: any, index: any) => (
+              <p
+                key={index}
+                className="flex justify-between items-center text-sm text-gray-900 p-4 border-b border-gray-100"
+              >
+                <span>{content?.label} </span>
+                <span className="text-[#0A2B58]">{content?.value}</span>
+              </p>
+            ))}
+          </div>
+          <div className="rounded-2xl shadow-lg overflow-hidden">
+            <h2 className="bg-[#B28C3D]  text-white p-4 text-left">
+              {" "}
+              Investment Approach
+            </h2>
+            <div className="p-4">
+              <p className="text-xs mb-2">Focus</p>
+              <p className="text-2xl font-bold mb-2">
+                Performance with Protection
+              </p>
+              <p className="text-sm font-semibold text-gray-800 mb-2">
+                Risk Management Philosophy
+              </p>
+              <p className="text-sm text-gray-600">
+                INVasset PMS follows a disciplined, data-driven approach to
+                portfolio management with built-in risk protection mechanisms.
+                The strategy adapts to changing market conditions, ensuring
+                consistent performance with controlled volatility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+];
+
+export default function DetailsCard() {
+  const [activeSection, setActiveSection] = useState("overview");
+
+  return (
+    <div className="max-w-7xl m-auto p-14 lg:p-16 text-[#0A2B58]">
+      {/* Navigation Buttons */}
+      <div className="flex space-x-6 pb-4">
+        {sections.map((section) => (
+          <button
+            key={section.id}
+            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 outline-0  hover:from-[#B28C3D]/90 hover:via-[#B28C3D]/80 hover:to-[#B28C3D]/90 hover:text-white transition-color ease-in-out ${
+              activeSection === section.id
+                ? "bg-gradient-to-r from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50  text-gray-50 font-bold shadow-md"
+                : "bg-gradient-to-r from-[#B28C3D]/20 via-[#B28C3D]/20 to-[#B28C3D]/10  border-gray-50 text-[#0A2B58]"
+            }`}
+            onClick={() => setActiveSection(section.id)}
+          >
+            {section.title}
+          </button>
+        ))}
+      </div>
+
+      {/* Dynamic Content */}
+      <div className="bg-transparent p-8 mt-4 ">
+        {sections.find((section) => section.id === activeSection)?.content}
+      </div>
+    </div>
+  );
+}
