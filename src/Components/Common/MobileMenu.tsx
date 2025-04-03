@@ -71,15 +71,15 @@ const pms = [
     id: "analatics", // Unique ID for submenu
   },
   {
-    name: "Stallion",
+    label: "Stallion",
     image: "/assets/webdev.png",
-    path: "/pms/stallion",
+    href: "/pms/stallion",
     id: "stallion", // Unique ID for submenu
   },
   {
-    name: "INVasset",
+    label: "INVasset",
     image: "/assets/webdev.png",
-    path: "/pms/invassest",
+    href: "/pms/invassest",
     id: "invassest", // Unique ID for submenu
   },
 ];

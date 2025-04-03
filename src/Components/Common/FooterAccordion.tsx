@@ -34,23 +34,25 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         </div>
       </button>
       <div
-        className={`duration-200 ease-linear ${!isOpen ? "max-h-0 overflow-y-hidden" : "max-h-auto"
-          }`}
+        className={`duration-200 ease-linear ${
+          !isOpen ? "max-h-0 overflow-y-hidden" : "max-h-auto"
+        }`}
       >
         <div className="py-2 bg-gray-900 space-y-3 mt-2">
-          {content?.map((link: any) => (
-            <li key={link.href} className="text-[15px] pl-4 list-disc">
-              <Link
-                aria-label={link.label}
-                className="hover:underline"
-                href={link.href}
-                onClick={handleLinkClick && handleLinkClick}
-                passHref
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {content &&
+            content?.map((link: any, index: any) => (
+              <li key={index} className="text-[15px] pl-4 list-disc">
+                <Link
+                  aria-label={link?.label}
+                  className="hover:underline"
+                  href={link?.href||"/"}
+                  onClick={handleLinkClick && handleLinkClick}
+                  passHref
+                >
+                  {link?.label}
+                </Link>
+              </li>
+            ))}
         </div>
       </div>
     </div>
@@ -68,11 +70,11 @@ const Accordion = ({
 }) => {
   return (
     <div className={`w-full mx-auto ${!sidebar && "pb-4 md:hidden"}`}>
-      {services.map((service: any) => (
-        <React.Fragment key={service.title}>
+      {services.map((service: any,index:any) => (
+        <React.Fragment key={index}>
           <AccordionItem
-            title={service.title}
-            content={service.links}
+            title={service?.title}
+            content={service?.links}
             handleLinkClick={handleLinkClick}
           />
         </React.Fragment>
