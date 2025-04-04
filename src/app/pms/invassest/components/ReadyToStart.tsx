@@ -10,7 +10,7 @@ export default function ReadyToStart() {
         Ready to Start Your Investment Journey?
       </h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-8">
-        Start your investment journey in Stallion PMS with Wealth1 today! Our
+        Start your investment journey in INVasset PMS with Wealth1 today! Our
         team of experts is ready to assist you.
       </p>
       <div className="flex justify-center items-center m-auto gap-4 ">
@@ -26,7 +26,7 @@ export default function ReadyToStart() {
             href={"/"}
             className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-base bg-[#B28C3D] text-gray-50 rounded-full items-center justify-center transition-all"
           >
-            Schedule a consultation with wealth1
+            Schedule a consultation with Wealth1
           </Link>
         </motion.div>
 

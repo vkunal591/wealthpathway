@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { BsCheck2Circle } from "react-icons/bs";
-import { FiDollarSign, FiUserCheck } from "react-icons/fi";
+import { FiUserCheck } from "react-icons/fi";
 import { GoGraph } from "react-icons/go";
 import { IoTimerOutline } from "react-icons/io5";
 import { LuShieldHalf } from "react-icons/lu";
+import { MdCurrencyRupee } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 
 const data = [
@@ -34,7 +35,7 @@ const data2 = [
   {
     icon: "briefcase",
     value: "Minimum Investment",
-    value1: "$50 Lakhs",
+    value1: "₹50 Lakhs",
     label: "As per SEBI regulations",
   },
   {
@@ -103,7 +104,7 @@ const iconMap: any = {
 };
 
 const iconMap2: any = {
-  briefcase: FiDollarSign,
+  briefcase: MdCurrencyRupee,
   calendar: IoTimerOutline,
   graph: GoGraph,
 };
@@ -113,8 +114,8 @@ const sections = [
     id: "overview",
     title: "Overview",
     content: (
-      <div className="grid grid-cols-2 gap-4">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+        <div className="self-start">
           <h2 className="text-2xl font-bold text-[#0A2B58]">
             INVasset Growth Fund PMS is an Award-Winning, SEBI-registered
             Quant-based Portfolio Management Service for HNIs & NRIs.
@@ -137,30 +138,30 @@ const sections = [
             Learn More
           </button>
         </div>
-        <div className="shadow p-6 rounded-md">
+        <div className="self-start shadow p-6 rounded-md">
           <h2 className="text-xl font-semibold text-[#0A2B58]">
             Investment Focus
           </h2>
           <ul className="mt-4 space-y-2 text-gray-600">
             <li className="flex items-center gap-2">
-              <BsCheck2Circle className="text-[#B28C3D]" /> Adapts dynamically
-              to market phases—shifting from value to quality, from growth to
-              safety
+              <BsCheck2Circle className="text-[#B28C3D]" />
+              Adapts dynamically to market phases—shifting from value to
+              quality, from growth to safety
             </li>
             <li className="flex items-center gap-2">
-              <BsCheck2Circle className="text-[#B28C3D]" /> Focuses on scalable
-              businesses with strong capital efficiency
+              <BsCheck2Circle className="text-[#B28C3D]" />
+              Focuses on scalable businesses with strong capital efficiency
             </li>
             <li className="flex items-center gap-2">
               <BsCheck2Circle className="text-[#B28C3D]" />
               Holds 15–25 high-conviction stocks with low churn ratio
             </li>
-            <li className=" items-center gap-2 hidden">
+            <li className="hidden items-center gap-2">
               <BsCheck2Circle className="text-[#B28C3D]" />
               Includes capital protection protocols for market downturns
             </li>
-            <li className=" items-center gap-2 hidden">
-              <BsCheck2Circle className="text-[#B28C3D] hidden" />
+            <li className="hidden items-center gap-2">
+              <BsCheck2Circle className="text-[#B28C3D]" />
               Aims to keep drawdowns under 20% during corrections
             </li>
             <li className="flex items-center gap-2">
@@ -287,7 +288,7 @@ const sections = [
             {data3?.description}
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-8 ">
+        <div className="grid grid-cols-1 gap-8 mb-4 ">
           <div className="rounded-2xl shadow-lg overflow-hidden">
             <h2 className="bg-[#B28C3D]  text-white p-4 text-left">
               {data3?.label}
@@ -300,7 +301,7 @@ const sections = [
             {data3?.content?.map((content: any, index: any) => (
               <p
                 key={index}
-                className="grid grid-cols-3 gap-2 text-sm text-gray-900 p-4 border-b border-gray-100"
+                className="grid grid-cols-3 gap-2 text-sm text-gray-900 p-4 border-b border-gray-200"
               >
                 <span className="font-semibold">{content?.label} </span>
                 <span
@@ -310,36 +311,18 @@ const sections = [
                       : "text-[#0A2B58]"
                   }`}
                 >
-                  {content?.value}{" %"}
+                  {content?.value}
+                  {" %"}
                 </span>
                 <span className="text-[#0A2B58]">
-                  {content?.value2}{" %"}
+                  {content?.value2}
+                  {" %"}
                 </span>
               </p>
             ))}
           </div>
-          <div className="rounded-2xl shadow-lg overflow-hidden">
-            <h2 className="bg-[#B28C3D]  text-white p-4 text-left">
-              {" "}
-              Investment Approach
-            </h2>
-            <div className="p-4">
-              <p className="text-xs mb-2">Focus</p>
-              <p className="text-2xl font-bold mb-2">
-                Performance with Protection
-              </p>
-              <p className="text-sm font-semibold text-gray-800 mb-2">
-                Risk Management Philosophy
-              </p>
-              <p className="text-sm text-gray-600">
-                INVasset PMS follows a disciplined, data-driven approach to
-                portfolio management with built-in risk protection mechanisms.
-                The strategy adapts to changing market conditions, ensuring
-                consistent performance with controlled volatility.
-              </p>
-            </div>
-          </div>
         </div>
+        <p className="text-center text-gray-600 w-full">Desclimer *</p>
       </div>
     ),
   },
@@ -349,7 +332,7 @@ export default function DetailsCard() {
   const [activeSection, setActiveSection] = useState("overview");
 
   return (
-    <div className="max-w-7xl m-auto p-14 lg:p-16 text-[#0A2B58]">
+    <div className="max-w-7xl m-auto p-14 lg:p-16 lg:pb-0 text-[#0A2B58]">
       {/* Navigation Buttons */}
       <div className="flex space-x-6 pb-4">
         {sections.map((section) => (

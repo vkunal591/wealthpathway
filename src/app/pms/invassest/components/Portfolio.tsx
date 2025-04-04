@@ -56,7 +56,7 @@ export default function Portfolio() {
         Portfolio Allocation
       </h2>
       <p className="text-base text-gray-500 mb-6 font-semibold text-center w-full lg:w-4/5 m-auto">
-        Stallion PMS invests in a balanced mix of industry leaders and emerging
+      INVasset PMS invests in a balanced mix of industry leaders and emerging
         monopolies to ensure sustainable returns.
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

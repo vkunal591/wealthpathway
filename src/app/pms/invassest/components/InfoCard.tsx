@@ -35,7 +35,7 @@ export default function InfoCard() {
     },
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 text-blue-900">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0 text-blue-900">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {data.map((item, index) => {
           const IconComponent = iconMap[item.icon];

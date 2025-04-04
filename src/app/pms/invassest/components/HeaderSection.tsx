@@ -10,8 +10,8 @@ export default function HeaderSection() {
         <p className="p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit m-auto px-4 text-[#0A2B58] ">
           Wealth1 Premium PMS
         </p>
-        <h2 className="capitalize text-4xl text-center  font-bold text-[#B28C3D] mb-4">
-          INVasset PMS – Quantitative Portfolio Management Strategy
+        <h2 className="capitalize text-4xl text-center  font-bold text-[#0A2B58] mb-4">
+        Inavaseest Growth fund Pms -- Quant- driven
         </h2>
         <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
           A data-driven Portfolio Management Service combining market wisdom

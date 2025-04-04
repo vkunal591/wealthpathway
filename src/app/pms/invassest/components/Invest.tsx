@@ -7,7 +7,7 @@ export default function Invest() {
   return (
     <div className="container mx-auto px-6 lg:p-16 lg:pt-0 space-y-4 ">
       <h2 className="text-3xl font-bold text-center text-[#0A2B58]">
-        How to Invest in INVasset PMS
+        How to Invest in INVasset Growth PMS{" "}
       </h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-8">
         A simple process to begin your investment journey with INVasset PMS.
@@ -15,7 +15,7 @@ export default function Invest() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="rounded-2xl p-4 border border-gray-300 shadow-lg">
           <h3 className="text-[#0A2B58] text-xl font-semibold mb-4">
-            Fund Manager, INVasset PMS
+            Eligibility for INVasset PMS
           </h3>
           <ul className="mt-4 space-y-4 grid grid-cols-2 text-gray-600 mb-4">
             <li className="flex items-center gap-2">
