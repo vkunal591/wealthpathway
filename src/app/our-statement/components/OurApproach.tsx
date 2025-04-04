@@ -21,13 +21,13 @@ export default function OurApproach() {
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
         Our Approach
       </h2>
-      <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
         Data-Driven, People-Focused
       </p>
-      <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
         While we use advanced technology to analyze portfolios, compare returns,
         and assess risk metrics, we never lose sight of the human behind the
         numbers.
@@ -51,7 +51,7 @@ export default function OurApproach() {
               {/* <h2 className="text-2xl text-gray-700 mb-2 font-semibold">
                 {item?.value}
               </h2> */}
-              <p className="text-sm text-gray-500 mb-4">{item?.label}</p>
+              <p className="text-sm text-[#0A2B58] mb-4">{item?.label}</p>
             </div>
           </div>
         ))}

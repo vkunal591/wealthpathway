@@ -5,10 +5,10 @@ import { FaFile } from "react-icons/fa6";
 
 export default function LegalInfo() {
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 ">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
         <div className="rounded-2xl p-4 border border-gray-300 shadow-lg  bg-white">
-          <h3 className="text-[#B28C3D] text-xl font-semibold mb-4">
+          <h3 className="text-[#0A2B58] text-xl font-semibold mb-4">
             Legal and Regulatory Information
           </h3>
           <ul className="mt-4 text-[#0A2B58] mb-4">
@@ -29,29 +29,29 @@ export default function LegalInfo() {
             </li>
           </ul>
         </div>
-        <div className="rounded-2xl p-4 border border-gray-300 shadow-lg bg-white">
-          <h3 className="text-[#B28C3D]  text-xl font-semibold mb-4">
+        <div className="rounded-2xl p-4 border border-gray-300 shadow-lg bg-white hidden">
+          <h3 className="text-[#0A2B58]  text-xl font-semibold mb-4">
             Download Resources
           </h3>
           <div className="">
             {[
               {
-                title: "INVasset PMS Presentation",
-                description: "PDF, 2.4 MB",
+                title: "",
+                description: "",
               },
-              {
-                title: "INVasset PMS Factsheet",
-                description: "PDF, 1.8 MB",
-              },
+              // {
+              //   title: "INVasset PMS Factsheet",
+              //   description: "PDF, 1.8 MB",
+              // },
       
             ].map((data, index) => (
               <div
                 key={index}
-                className="p-2 px-4 flex items-center group hover:bg-[#B28C3D]/10 bg-gray-100 rounded-2xl mb-2 justify-start gap-4"
+                className="p-2 px-4  items-center group hover:bg-[#B28C3D]/10 bg-gray-100 rounded-2xl mb-2 justify-start gap-4 hidden"
               >
                 <Link
-                  href={"/"}
-                  target="blank"
+                  href={""}
+                  // target="blank"
                   className="flex items-center gap-4"
                 >
                   <div>

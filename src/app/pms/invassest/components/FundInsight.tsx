@@ -29,7 +29,7 @@ export default function FundInsight() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16">
       <div className="rounded-2xl m-auto shadow border-l-4 border-gray-300  border border-l-[#B28C3D] p-6">
-        <h3 className="text-3xl font-semibold text-[#B28C3D] mb-4">
+        <h3 className="text-3xl font-semibold text-[#0A2B58] mb-4">
           Fund Manager&apos;s Philosophy
         </h3>
         <div>

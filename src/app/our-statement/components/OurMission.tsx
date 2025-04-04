@@ -23,14 +23,14 @@ export default function OurMission() {
     },
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-8">
+    <div className="max-w-7xl m-auto p-4 lg:p-16  text-[#0A2B58]">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-4">
         Our Mission
       </h2>
-      <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
         Elevating Investor Confidence Through Knowledge & Access
       </p>
-      <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] font-semibold text-center w-full lg:w-4/5 m-auto mb-8">
         Our mission is to bridge the gap between great investment products and
         the investors who deserve them. We aim to
       </p>
@@ -46,14 +46,14 @@ export default function OurMission() {
                 width={900}
                 height={900}
                 alt=""
-                className="object-contain m-auto w-16 h-16 object-center"
+                className="object-contain m-auto w-16 h-16 filter  object-center"
               />
             </div>
             <div className="text-center">
               {/* <h2 className="text-2xl text-gray-700 mb-2 font-semibold">
                 {item?.value}
               </h2> */}
-              <p className="text-sm text-gray-500 mb-4">{item?.label}</p>
+              <p className="text-sm text-[#0A2B58] mb-4">{item?.label}</p>
             </div>
           </div>
         ))}

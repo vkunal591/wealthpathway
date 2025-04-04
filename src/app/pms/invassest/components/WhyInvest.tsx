@@ -3,7 +3,7 @@ import React from "react";
 export default function WhyInvest() {
   return (
     <div className="container mx-auto p-4 lg:p-16 space-y-4 ">
-      <h2 className="text-3xl font-bold text-center text-[#B28C3D]">
+      <h2 className="text-3xl font-bold text-center text-[#0A2B58]">
         Why Invest in INVasset PMS with Wealth1
       </h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-4">

@@ -6,7 +6,7 @@ import { CgMail } from "react-icons/cg";
 export default function Invest() {
   return (
     <div className="container mx-auto px-6 lg:p-16 lg:pt-0 space-y-4 ">
-      <h2 className="text-3xl font-bold text-center text-[#B28C3D]">
+      <h2 className="text-3xl font-bold text-center text-[#0A2B58]">
         How to Invest in INVasset PMS
       </h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-8">
@@ -40,7 +40,7 @@ export default function Invest() {
               Partnership Firms
             </li>
           </ul>
-          <p className="text-gray-800 flex items-center justify-start gap-2 text-sm">
+          <p className="text-gray-800 flex items-center justify-start gap-2 mt-auto text-sm">
             <CgMail className="text-[#B28C3D]" /> For Assistance, Email:{" "}
             <Link href={"mailto:contact@wealth1.com"}>
               <b>contact@wealth1.com</b>{" "}
@@ -78,14 +78,14 @@ export default function Invest() {
                 key={index}
                 className="p-2 flex items-center justify-start gap-4"
               >
-                <div className="text-xl font-semibold bg-[#B28C3D]/10 w-10 h-10 text-[#B28C3D] flex justify-center items-center rounded-full">
+                <div className="text-lg font-semibold bg-[#B28C3D]/10 w-10 h-10 p-3 text-[#B28C3D] flex justify-center items-center rounded-full">
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="text-lg text-[#0A2B58] font-semibold">
+                  <h3 className="text-base text-[#0A2B58] font-semibold">
                     {data?.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{data?.description}</p>
+                  <p className="text-xs text-gray-600">{data?.description}</p>
                 </div>
               </div>
             ))}

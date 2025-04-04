@@ -26,13 +26,13 @@ export default function OurPromise() {
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
         Our Promise
       </h2>
-      <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
         Unbiased, Uncompromised, Unmatched
       </p>
-      <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
         We are not here to push products. We are here to guide you through a sea
         of options and help you choose the ones truly aligned with your
         financial future.
@@ -56,7 +56,7 @@ export default function OurPromise() {
               {/* <h2 className="text-2xl text-gray-700 mb-2 font-semibold">
                 {item?.value}
               </h2> */}
-              <p className="text-base text-gray-500 mb-4">{item?.label}</p>
+              <p className="text-base text-[#0A2B58] mb-4">{item?.label}</p>
             </div>
           </div>
         ))}

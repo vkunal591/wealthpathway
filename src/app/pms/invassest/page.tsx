@@ -13,14 +13,18 @@ import ReadyToStart from "./components/ReadyToStart";
 export default function page() {
   return (
     <div className="bg-white">
-      <HeaderSection />
+      <div className="bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
+        <HeaderSection />
+      </div>{" "}
       <InfoCard />
       <DetailsCard />
       <Portfolio />
       <FundInsight />
       <Invest />
       <Faq />
-      <LegalInfo />
+      <div className="bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
+        <LegalInfo />
+      </div>
       <WhyInvest />
       <ReadyToStart />
     </div>

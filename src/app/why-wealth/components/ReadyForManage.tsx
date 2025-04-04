@@ -6,7 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 export default function ReadyForManage() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
         Ready to Experience the Future of Wealth Management?
       </h2>
       <p className="text-base text-gray-500 mb-8 font-semibold text-center w-full">
@@ -24,7 +24,7 @@ export default function ReadyForManage() {
       >
         <Link
           href={"/"}
-          className="p-3 lg:px-8 w-full m-auto font-semibold text-center hidden lg:flex text-sm bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
+          className="p-3 lg:px-8 w-full m-auto font-semibold text-center hidden lg:flex text-sm bg-[#B28C3D] text-gray-50 rounded-full items-center justify-center transition-all"
         >
           Explore Alternative Investments
           <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />

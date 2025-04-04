@@ -7,10 +7,10 @@ import { LiaLinkedin } from "react-icons/lia";
 export default function TeamSection() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-4">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-4">
         Meet Our Team
       </h2>
-      <p className="text-gray-500 text-base w-full lg:w-3/5 m-auto text-center mb-8">
+      <p className="text-[#0A2B58] text-base w-full lg:w-3/5 m-auto text-center mb-8">
         Our experienced professionals bring together decades of expertise in
         investment management, research, and client service to deliver
         exceptional value to our investors.
@@ -23,7 +23,7 @@ export default function TeamSection() {
               key={index}
               className="border border-gray-300 shadow rounded  p-4 w-full"
             >
-              <div className="w-full">
+              <div className="w-full mb-4">
                 <Image
                   src={"/sarah.png"}
                   width={900}
@@ -33,20 +33,20 @@ export default function TeamSection() {
                 />
               </div>
               <div>
-                <h2 className="text-2xl text-gray-700 mb-2">John Doe</h2>
-                <p className="text-sm text-green-500 mb-4">Ceo, Founder</p>
-                <p className="text-base text-gray-500 mb-4">
+                <h2 className="text-2xl text-[#0A2B58] font-semibold mb-2">John Doe</h2>
+                <p className="text-sm text-[#B28C3D] mb-4">Ceo, Founder</p>
+                <p className="text-base text-[#0A2B58]/70 mb-4">
                   With over 15 years of experience in portfolio management,
                   Sarah leads our investment strategy with a focus on
                   sustainable long-term growth.
                 </p>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 text-[#B28C3D]">
                 <Link href={""} className="flex items-center">
-                  <LiaLinkedin className="mr-1 text-2xl" /> Linkedin
+                  <LiaLinkedin className="mr-1 text-[#B28C3D] text-2xl" /> Linkedin
                 </Link>
                 <Link href={""} className="flex items-center">
-                  <FaEnvelope className="mr-1" /> Email
+                  <FaEnvelope className="mr-1 text-[#B28C3D]" /> Email
                 </Link>
               </div>
             </div>

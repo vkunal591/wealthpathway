@@ -22,7 +22,7 @@ const  content = [
 export default function WhyCard() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl  font-semibold text-gray-700 mb-8">
+      <h2 className="capitalize text-4xl  font-semibold text-[#B28C3D] mb-8">
         Why Wealth 1
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -39,7 +39,7 @@ export default function WhyCard() {
                 alt=""
                 className="w-32 h-32 mb-4 m-auto  "
               />
-              <h2 className="text-lg font-bold mb-3 text-gray-700">
+              <h2 className="text-lg font-bold mb-3 text-[#B28C3D]">
                 {data?.name}
               </h2>
               <p className="text-sm text-gray-500">

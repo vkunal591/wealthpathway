@@ -27,7 +27,7 @@ export default function InvestmentJourney() {
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-gray-700 mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
         Your Investment Journey With Us
       </h2>
       <p className="text-base text-gray-500 mb-8 font-semibold text-center w-full">
@@ -50,7 +50,7 @@ export default function InvestmentJourney() {
                 className="w-32 h-32 w-auto m-auto mb-4 "
               />
               <GiBottomRight3dArrow className="absolute right-0 rotate-[-45deg]" />
-              <h2 className="text-lg font-bold mb-3 text-gray-700">
+              <h2 className="text-lg font-bold mb-3 text-[#B28C3D]">
                 {data?.title}
               </h2>
               <p className="text-sm text-gray-500">{data?.description}</p>

@@ -46,7 +46,7 @@ export default function HeroSection({
           initial={{ opacity: 0 }}
           animate={{ opacity: isInView ? 1 : 0.5 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-blue-900 mb-6"
+          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-[#B28C3D] mb-6"
         >
           {title || "India's Premier Alternative Investments Platform"}
         </motion.h1>
@@ -64,7 +64,7 @@ export default function HeroSection({
         >
           <Link
             href={link || "/"}
-            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-blue-950 text-gray-50 rounded-full items-center justify-center transition-all"
+            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-[#B28C3D] text-gray-50 rounded-full items-center justify-center transition-all"
           >
             Explore Alternative Investments
             <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />

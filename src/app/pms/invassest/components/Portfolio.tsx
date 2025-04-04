@@ -1,5 +1,5 @@
 import React from "react";
-import { FiDollarSign } from "react-icons/fi";
+import { FiBriefcase } from "react-icons/fi";
 import { GoGraph } from "react-icons/go";
 import { LuBuilding, LuUsersRound } from "react-icons/lu";
 
@@ -46,13 +46,13 @@ export default function Portfolio() {
 
   const iconMap: any = {
     briefcase: LuBuilding,
-    calendar: FiDollarSign,
+    calendar: FiBriefcase,
     graph: LuUsersRound,
     chartPie: GoGraph,
   };
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16">
-      <h2 className="capitalize text-3xl text-center  font-bold text-[#B28C3D] mb-4">
+      <h2 className="capitalize text-3xl text-center  font-bold text-[#0A2B58] mb-4">
         Portfolio Allocation
       </h2>
       <p className="text-base text-gray-500 mb-6 font-semibold text-center w-full lg:w-4/5 m-auto">

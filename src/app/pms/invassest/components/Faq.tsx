@@ -12,7 +12,7 @@ export default function Faq() {
   };
   return (
     <div className="container mx-auto px-6 lg:p-16 lg:pt-0 space-y-4 ">
-      <h2 className="text-3xl font-bold text-center text-[#B28C3D]">
+      <h2 className="text-3xl font-bold text-center text-[#0A2B58]">
         Frequently Asked Questions
       </h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-4">

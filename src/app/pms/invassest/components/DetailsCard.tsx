@@ -34,7 +34,7 @@ const data2 = [
   {
     icon: "briefcase",
     value: "Minimum Investment",
-    value1: "₹50 Lakhs",
+    value1: "$50 Lakhs",
     label: "As per SEBI regulations",
   },
   {
@@ -46,7 +46,7 @@ const data2 = [
   {
     icon: "graph",
     value: "Fee Structure",
-    label: "Expected over long term",
+    label: "Expected CAGR",
     value1: "18-28% CAGR",
   },
 ];
@@ -55,23 +55,42 @@ const data3 = {
   title: "Performance of INVasset PMS",
   description:
     "INVasset PMS aims to deliver consistent returns through a data-driven approach while actively managing risk. Performance metrics are updated monthly.",
-  label: " Stallion PMS Returns",
+  label: " Performance Metrics",
   content: [
     {
-      label: "Since Inception (Projected CAGR)	",
-      value: "18-28%",
+      label: "1 Month	",
+      value: "-10.1",
+      value2: "-7.7",
     },
     {
-      label: "Maximum Drawdown",
-      value: "< 20%",
+      label: "3 Months	",
+      value: "-18.9",
+      value2: "-12.1",
     },
     {
-      label: "Churn Ratio",
-      value: "< 0.5",
+      label: "6 Months	",
+      value: "-15.5",
+      value2: "-16.1",
     },
     {
-      label: "Beta Management",
-      value: "Dynamic",
+      label: "1 Year	",
+      value: "6.2",
+      value2: "-0.4",
+    },
+    {
+      label: "2 Years (CAGR)	",
+      value: "28.4",
+      value2: "17.8",
+    },
+    {
+      label: "3 Years (CAGR)	",
+      value: "18.7",
+      value2: "12.7",
+    },
+    {
+      label: "Since Inception (CAGR)",
+      value: "30.3",
+      value2: "19.0",
     },
   ],
 };
@@ -96,29 +115,30 @@ const sections = [
     content: (
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <h2 className="text-3xl font-bold text-[#B28C3D]">
-            Overview of INVasset PMS
+          <h2 className="text-2xl font-bold text-[#0A2B58]">
+            INVasset Growth Fund PMS is an Award-Winning, SEBI-registered
+            Quant-based Portfolio Management Service for HNIs & NRIs.
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            INVasset PMS is a SEBI-registered Portfolio Management Service
-            (INP000006907) that combines over 30 years of market wisdom with
-            next-generation data science. This quant-based strategy is built to
-            generate consistent alpha while managing downside risk through every
-            market cycle.
+            With ₹800 Crores+ AUM and 100% Skin in the game, their portfolio
+            strategy is the culmination of 32 years of market experience, now
+            coded into a proprietary algorithm that analyses over 1,500 listed
+            companies across 170+ financial and technical parameters in
+            real-time. It’s not a black box. It’s a clear, rules-based system
+            developed by experts with decades of skin in the game.
           </p>
           <p className="mt-2 text-gray-600">
-            Powered by the proprietary INVasset AAID (Advanced Algorithms for
-            Investment Decisions) model, the fund continuously tracks over 1,500
-            companies across 170+ parameters in real time. This system-driven
-            strategy eliminates emotional biases and ensures that all investment
-            decisions are rooted in data, logic, and structure.
+            What sets INVasset apart is their quant-based, algorithm-driven
+            investment strategy. They don’t guess, they calculate. They don’t
+            time the market— they trust their time-tested model. Their decisions
+            are powered by data, not driven by emotions.
           </p>
           <button className="mt-6 px-6 py-3 bg-gold text-gray-50 rounded-full bg-gradient-to-r from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50 font-semibold shadow-md">
             Learn More
           </button>
         </div>
         <div className="shadow p-6 rounded-md">
-          <h2 className="text-xl font-semibold text-gray-900">
+          <h2 className="text-xl font-semibold text-[#0A2B58]">
             Investment Focus
           </h2>
           <ul className="mt-4 space-y-2 text-gray-600">
@@ -135,12 +155,12 @@ const sections = [
               <BsCheck2Circle className="text-[#B28C3D]" />
               Holds 15–25 high-conviction stocks with low churn ratio
             </li>
-            <li className="flex items-center gap-2">
+            <li className=" items-center gap-2 hidden">
               <BsCheck2Circle className="text-[#B28C3D]" />
               Includes capital protection protocols for market downturns
             </li>
-            <li className="flex items-center gap-2">
-              <BsCheck2Circle className="text-[#B28C3D]" />
+            <li className=" items-center gap-2 hidden">
+              <BsCheck2Circle className="text-[#B28C3D] hidden" />
               Aims to keep drawdowns under 20% during corrections
             </li>
             <li className="flex items-center gap-2">
@@ -155,11 +175,11 @@ const sections = [
   },
   {
     id: "why-choose",
-    title: "Why Choose Stallion",
+    title: "Why choose Invasset",
     content: (
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <h2 className="text-3xl font-bold text-[#B28C3D]">
+          <h2 className="text-3xl font-bold text-[#0A2B58]">
             Why Choose INVasset PMS?
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed mb-4">
@@ -219,7 +239,7 @@ const sections = [
     title: "Key Features",
     content: (
       <div className="p-6 rounded-md">
-        <h2 className="text-xl font-semibold text-[#B28C3D] mb-4">
+        <h2 className="text-xl font-semibold text-[#0A2B58] mb-4">
           Key Features of INVasset PMS
         </h2>
         <div className="grid grid-cols-3 gap-4">
@@ -262,7 +282,7 @@ const sections = [
     content: (
       <div>
         <div className="mb-5 text-center">
-          <h2 className="text-3xl font-bold text-[#B28C3D]">{data3?.title}</h2>
+          <h2 className="text-3xl font-bold text-[#0A2B58]">{data3?.title}</h2>
           <p className="mt-4 w-4/5 m-auto text-gray-600 leading-relaxed">
             {data3?.description}
           </p>
@@ -272,13 +292,29 @@ const sections = [
             <h2 className="bg-[#B28C3D]  text-white p-4 text-left">
               {data3?.label}
             </h2>
+            <p className="grid grid-cols-3 gap-2 text-sm text-gray-900 p-4 border-b border-gray-100">
+              <span>{"Period"} </span>
+              <span className="text-[#0A2B58]">{"Abakkus EOA"}</span>
+              <span className="text-[#0A2B58]">{"BSE 500 TRI"}</span>
+            </p>
             {data3?.content?.map((content: any, index: any) => (
               <p
                 key={index}
-                className="flex justify-between items-center text-sm text-gray-900 p-4 border-b border-gray-100"
+                className="grid grid-cols-3 gap-2 text-sm text-gray-900 p-4 border-b border-gray-100"
               >
-                <span>{content?.label} </span>
-                <span className="text-[#0A2B58]">{content?.value}</span>
+                <span className="font-semibold">{content?.label} </span>
+                <span
+                  className={`${
+                    Number(content.value) < 0
+                      ? "text-[#B28C3D]"
+                      : "text-[#0A2B58]"
+                  }`}
+                >
+                  {content?.value}{" %"}
+                </span>
+                <span className="text-[#0A2B58]">
+                  {content?.value2}{" %"}
+                </span>
               </p>
             ))}
           </div>

@@ -97,7 +97,7 @@ export default function Page() {
   }
 
   return (
-    <div className="bg-white text-blue-900">
+    <div className="bg-white text-[#0A2B58]">
       <HeroSection
         subtitle={"Why choose us?"}
         title={"Why Choose Wealth1 for Your Investment Journey?"}
