@@ -4,7 +4,7 @@ export default function WhyInvest() {
   return (
     <div className="container mx-auto p-4 lg:p-16 space-y-4 ">
       <h2 className="text-3xl font-bold text-center text-[#0A2B58]">
-        Why Invest in INVasset PMS with Wealth1
+      Why Invest in INVasset Growth PMS with Wealth1
       </h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-4">
         Wealth1 offers investors direct access to top-tier PMS strategies like
@@ -43,7 +43,7 @@ export default function WhyInvest() {
           },
         ].map((data, index) => (
           <div key={index} className="border border-gray-300 rounded-2xl shadow p-6">
-            <h3 className="text-xl text-blue-900 mb-4 font-semibold">{data?.title}</h3>
+            <h3 className="text-xl text-[#0A2B58] mb-4 font-semibold">{data?.title}</h3>
             <p className="text-sm text-gray-600">{data?.description}</p>
           </div>
         ))}

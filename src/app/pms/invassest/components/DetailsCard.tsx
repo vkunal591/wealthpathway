@@ -46,7 +46,7 @@ const data2 = [
   },
   {
     icon: "graph",
-    value: "Fee Structure",
+    value: "Expected CAGR",
     label: "Expected CAGR",
     value1: "18-28% CAGR",
   },
@@ -79,17 +79,17 @@ const data3 = {
       value2: "-0.4",
     },
     {
-      label: "2 Years (CAGR)	",
+      label: "2 Years ",
       value: "28.4",
       value2: "17.8",
     },
     {
-      label: "3 Years (CAGR)	",
+      label: "3 Years	",
       value: "18.7",
       value2: "12.7",
     },
     {
-      label: "Since Inception (CAGR)",
+      label: "Since Inception ",
       value: "30.3",
       value2: "19.0",
     },
@@ -144,7 +144,7 @@ const sections = [
           </h2>
           <ul className="mt-4 space-y-2 text-gray-600">
             <li className="flex items-center gap-2">
-              <BsCheck2Circle className="text-[#B28C3D]" />
+              <BsCheck2Circle className="text-[#B28C3D] text-2xl" />
               Adapts dynamically to market phases—shifting from value to
               quality, from growth to safety
             </li>
@@ -295,7 +295,7 @@ const sections = [
             </h2>
             <p className="grid grid-cols-3 gap-2 text-sm text-gray-900 p-4 border-b border-gray-100">
               <span>{"Period"} </span>
-              <span className="text-[#0A2B58]">{"Abakkus EOA"}</span>
+              <span className="text-[#0A2B58]">{"Portfolio"}</span>
               <span className="text-[#0A2B58]">{"BSE 500 TRI"}</span>
             </p>
             {data3?.content?.map((content: any, index: any) => (
@@ -322,7 +322,13 @@ const sections = [
             ))}
           </div>
         </div>
-        <p className="text-center text-gray-600 w-full">Desclimer *</p>
+        <p className="text-center text-gray-600 w-full">Disclaimer *</p>
+        <p className="text-center text-gray-600 w-full">
+          Returns Up To one year are absolute and above one year are CAGR
+        </p>
+        <p className="text-center text-gray-600 w-full">
+          Data as pulled from SEBI. Data as of Feb 2025.
+        </p>
       </div>
     ),
   },
