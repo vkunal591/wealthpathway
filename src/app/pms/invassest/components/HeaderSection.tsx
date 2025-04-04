@@ -5,8 +5,8 @@ import React from "react";
 
 export default function HeaderSection() {
   return (
-    <div className="max-w-7xl m-auto h-[90vh] flex flex-col items-center">
-      <div className="w-full h-full pt-40 ">
+    <div className="max-w-7xl m-auto h-auto flex flex-col items-center">
+      <div className="w-full h-full pt-40  pb-10">
         <p className="p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit m-auto px-4 text-[#0A2B58] ">
           Wealth1 Premium PMS
         </p>

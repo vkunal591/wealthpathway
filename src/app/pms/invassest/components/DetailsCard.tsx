@@ -306,15 +306,21 @@ const sections = [
                 <span className="font-semibold">{content?.label} </span>
                 <span
                   className={`${
-                    Number(content.value) < 0
+                    Number(content?.value) > 0
                       ? "text-[#B28C3D]"
                       : "text-[#0A2B58]"
                   }`}
                 >
-                  {content?.value}
-                  {" %"}
+                  {Number(content?.value).toFixed(1)} %
                 </span>
-                <span className="text-[#0A2B58]">
+
+                <span
+                  className={`${
+                    Number(content.value2) > 0
+                      ? "text-[#B28C3D]"
+                      : "text-[#0A2B58]"
+                  }`}
+                >
                   {content?.value2}
                   {" %"}
                 </span>
@@ -322,11 +328,13 @@ const sections = [
             ))}
           </div>
         </div>
-        <p className="text-center text-gray-600 w-full">Disclaimer *</p>
-        <p className="text-center text-gray-600 w-full">
+        <p className="text-left text-xs text-gray-500 ml-5 w-full">
+          Disclaimer *
+        </p>
+        <p className="text-left text-xs text-gray-500 ml-5 w-full">
           Returns Up To one year are absolute and above one year are CAGR
         </p>
-        <p className="text-center text-gray-600 w-full">
+        <p className="text-left text-xs text-gray-500 ml-5 w-full">
           Data as pulled from SEBI. Data as of Feb 2025.
         </p>
       </div>
