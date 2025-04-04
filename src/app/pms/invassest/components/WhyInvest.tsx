@@ -13,28 +13,37 @@ export default function WhyInvest() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {[
           {
-            title: "Trusted Platform",
-            description:
-              "Access premier PMS & AIF strategies through a trusted distribution platform",
+            title: "Exclusive Access to Top PMS & AIFs",
+            description: "Gain access to India's leading investment products.",
           },
           {
-            title: "Transparent Advice",
+            title: "Expert Guidance & Support",
             description:
-              "Receive unbiased guidance and comprehensive strategy comparisons",
+              "Our team helps investors navigate their PMS investment journey.",
           },
           {
-            title: "Seamless Experience",
+            title: "Comprehensive Product Comparisons",
             description:
-              "Enjoy easy onboarding, documentation, and dedicated relationship management",
+              "Compare multiple PMS strategies, including INVasset PMS, before making an investment.",
+          },
+          {
+            title: "Seamless Investment Process",
+            description:
+              "Wealth1 ensures a hassle-free experience in investing with INVasset PMS.",
+          },
+          {
+            title: "Regular Portfolio Updates & Insights",
+            description:
+              "Stay updated with performance reports and fund manager insights.",
+          },
+          {
+            title: "Dedicated Relationship Manager",
+            description:
+              "Get personalized support throughout your investment journey.",
           },
         ].map((data, index) => (
-          <div
-            key={index}
-            className="border border-[#B28C3D]/20 bg-[#B28C3D]/5 rounded-2xl shadow p-6"
-          >
-            <h3 className="text-xl text-[#0A2B58] mb-4 font-semibold">
-              {data?.title}
-            </h3>
+          <div key={index} className="border border-gray-300 rounded-2xl shadow p-6">
+            <h3 className="text-xl text-blue-900 mb-4 font-semibold">{data?.title}</h3>
             <p className="text-sm text-gray-600">{data?.description}</p>
           </div>
         ))}
