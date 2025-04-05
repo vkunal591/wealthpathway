@@ -4,24 +4,24 @@ import React from "react";
 export default function OurApproach() {
   const data = [
     {
-      image: "/rupee.svg",
+      image: "/assets/investment.png",
       value: "₹10,000 cr+",
       label: "Gets a dedicated investment guide",
     },
     {
-      image: "/grow.svg",
+      image: "/assets/compare.png",
       value: "20.48% TWRR",
       label: "Can track and compare funds in real-time",
     },
     {
-      image: "/percent.svg",
+      image: "/assets/markettrand.png",
       value: "0% Fixed Fee",
       label: "Receives curated insights based on market trends",
     },
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58]  mb-4">
         Our Approach
       </h2>
       <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">

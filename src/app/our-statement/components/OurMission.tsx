@@ -23,8 +23,8 @@ export default function OurMission() {
     },
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16  text-[#0A2B58]">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-4">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0  text-[#0A2B58]">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58]  mb-4">
         Our Mission
       </h2>
       <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
@@ -46,7 +46,7 @@ export default function OurMission() {
                 width={900}
                 height={900}
                 alt=""
-                className="object-contain m-auto w-16 h-16 filter  object-center"
+                className="object-contain m-auto w-14 h-14 filter-gold object-center"
               />
             </div>
             <div className="text-center">

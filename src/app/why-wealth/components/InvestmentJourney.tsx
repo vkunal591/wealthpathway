@@ -7,27 +7,27 @@ export default function InvestmentJourney() {
     {
       title: "Selection",
       description: "Choose from curated investment options",
-      image:"/selection.webp"
+      image:"/assets/selection.png"
     },
     {
       title: "Consultation",
       description: "Get expert guidance from our team",
-      image:"/consultation.webp"
+      image:"/assets/consultation.png"
     },
     {
       title: "Portfolio Tracking",
       description: "Monitor your investments in real-time",
-      image:"/portfolio.webp"
+      image:"/assets/protfoliotracking.png"
     },
     {
       title: "Ongoing Support",
       description: "Receive continuous assistance and updates",
-      image:"/support.webp"
+      image:"/assets/support.png"
     },
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58] mb-8">
         Your Investment Journey With Us
       </h2>
       <p className="text-base text-gray-500 mb-8 font-semibold text-center w-full">
@@ -47,10 +47,10 @@ export default function InvestmentJourney() {
                 width={900}
                 height={900}
                 alt=""
-                className="w-32 h-32 w-auto m-auto mb-4 "
+                className="w-10 h-10 m-auto mb-4 filter-gold "
               />
               <GiBottomRight3dArrow className="absolute right-0 rotate-[-45deg]" />
-              <h2 className="text-lg font-bold mb-3 text-[#B28C3D]">
+              <h2 className="text-lg font-bold mb-3 text-[#0A2B58] ">
                 {data?.title}
               </h2>
               <p className="text-sm text-gray-500">{data?.description}</p>

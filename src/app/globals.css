@@ -224,3 +224,18 @@ to {
     opacity: 0
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.filter-gold {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(65%) saturate(549%) hue-rotate(9deg) brightness(96%) contrast(95%);
+}

@@ -5,24 +5,24 @@ const  content = [
   {
     name : "Investor-First Approach",
     desc : "Experience personalized support and guidance throughout your investment journey with our dedicated relationship managers.",
-    image : "/first-approch.webp"
+    image : "/assets/aproach.png"
   },
   {
     name : "AI-Powered Analytics",
     desc : "Leverage cutting-edge artificial intelligence for real-time market analysis and portfolio optimization.",
-    image : "/ai-power.webp"
+    image : "/assets/aiana.png"
   },
   {
     name : "Data-Driven Performance",
     desc : "Make informed decisions backed by sophisticated analytics and comprehensive market insights.",
-    image : "/data-driven.webp"
+    image : "/assets/datadriven.png"
   }
 ]
 
 export default function WhyCard() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl  font-semibold text-[#B28C3D] mb-8">
+      <h2 className="capitalize text-4xl  font-semibold text-[#0A2B58] mb-8">
         Why Wealth 1
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -37,9 +37,9 @@ export default function WhyCard() {
                 width={900}
                 height={900}
                 alt=""
-                className="w-32 h-32 mb-4 m-auto  "
+                className="w-12 h-12 mb-4 m-auto filter-gold "
               />
-              <h2 className="text-lg font-bold mb-3 text-[#B28C3D]">
+              <h2 className="text-lg font-bold mb-3 text-[#0A2B58]">
                 {data?.name}
               </h2>
               <p className="text-sm text-gray-500">

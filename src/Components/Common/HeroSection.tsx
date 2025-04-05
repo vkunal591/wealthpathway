@@ -31,14 +31,15 @@ export default function HeroSection({
   return (
     <div
       ref={ref}
-      className="p-4 lg:p-16 lg:pt-40 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start h-screen"
+      className="p-4 lg:p-16 lg:pt-40 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start "
     >
       <motion.div style={{ opacity }} ref={textRef} className="w-full lg:w-1/2">
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: isInView ? 1 : 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-sm text-gray-500 mb-2 font-semibold relative"
+          className="relative p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit px-4 text-[#0A2B58] "
+
         >
           {subtitle || "Wealth1 - Your AIF & PMS Partner"}
         </motion.p>
@@ -46,7 +47,7 @@ export default function HeroSection({
           initial={{ opacity: 0 }}
           animate={{ opacity: isInView ? 1 : 0.5 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-[#B28C3D] mb-6"
+          className="text-2xl lg:text-4xl w-full lg:w-4/5 font-bold text-[#0A2B58] mb-6"
         >
           {title || "India's Premier Alternative Investments Platform"}
         </motion.h1>

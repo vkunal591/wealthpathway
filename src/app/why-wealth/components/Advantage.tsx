@@ -6,22 +6,22 @@ export default function Advantage() {
     {
       title: "Risk Management",
       description: "Advanced risk assessment and proactive portfolio protection",
-      image: "/risk-management.webp",
+      image: "/assets/risk.png",
     },
     {
       title: "Cost Efficiency",
       description: "Transparent pricing with no hidden fees",
-      image: "/cost.png",
+      image: "/assets/costefficiency.png",
     },
     {
       title: "Exclusive Access",
       description: "Premium investment opportunities and expert network",
-      image: "/exculisive.webp",
+      image: "/assets/exclusive.png",
     }
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58] mb-8">
       The WealthOne Advantage
 
       </h2>
@@ -43,9 +43,9 @@ export default function Advantage() {
                 width={900}
                 height={900}
                 alt=""
-                className="w-32 h-32 mb-4 m-auto "
+                className="w-12 h-12 mb-4 m-auto filter-gold "
               />
-              <h2 className="text-lg font-bold mb-3 text-center text-[#B28C3D]">
+              <h2 className="text-lg font-bold mb-3 text-center text-[#0A2B58] ">
                 {data?.title}
               </h2>
               <p className="text-sm text-center text-gray-500">{data?.description}</p>

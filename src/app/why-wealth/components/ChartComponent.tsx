@@ -26,8 +26,8 @@ const data = {
     {
       label: "Traditional",
       data: [6, 3, 5, 4, 7],
-      backgroundColor: "rgba(75, 192, 192, 0.5)",
-      borderColor: "rgba(75, 192, 192, 1)",
+      backgroundColor: "rgba(10, 43, 88, 0.4)",  // semi-transparent navy
+      borderColor: "rgba(10, 43, 88, 0.7)",   
       borderWidth: 1,
       barPercentage: 0.9,
       categoryPercentage: 1.0,
@@ -35,8 +35,8 @@ const data = {
     {
       label: "Wealth1",
       data: [9, 7, 11, 9, 13],
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-      borderColor: "rgba(255, 99, 132, 1)",
+      backgroundColor: "rgba(178, 140, 61, 0.4)",
+      borderColor: "rgba(178, 140, 61, 0.7)",
       borderWidth: 1,
       barPercentage: 0.9,
       categoryPercentage: 1.0,

@@ -24,7 +24,7 @@ export default function ChangeTextColor({
         console.log(window?.innerHeight, rect.top, scrollPercent);
         const words = text.split(" ") || [];
         const newColors = words.map((_, i) =>
-          i / words.length < scrollPercent ? "text-blue-900" : "text-gray-400"
+          i / words.length < scrollPercent ? "text-[#0A2B58]" : "text-gray-400"
         );
         setTextColors(newColors);
       }
