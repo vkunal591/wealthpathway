@@ -29,11 +29,11 @@ export default function OurStandard() {
       <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
         Why Wealth1 Stands Apart
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full lg:w-3/5 m-auto ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full lg:w-4/5 m-auto ">
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-[#B28C3D]/50  shadow rounded  p-4 w-full h-auto  flex flex-col items-center justify-center"
+            className="border border-[#B28C3D]/50  shadow rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
           >
             <div className="w-full mb-4">
               <Image

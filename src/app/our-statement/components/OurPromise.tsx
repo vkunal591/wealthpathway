@@ -37,11 +37,11 @@ export default function OurPromise() {
         of options and help you choose the ones truly aligned with your
         financial future.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-3/5 m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-4/5 m-auto">
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-300 shadow rounded  p-4 w-full h-auto  flex flex-col items-center justify-center"
+            className="border border-gray-300 shadow rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
           >
             <div className="w-full mb-4">
               <Image

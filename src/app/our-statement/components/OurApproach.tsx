@@ -14,7 +14,7 @@ export default function OurApproach() {
       label: "Can track and compare funds in real-time",
     },
     {
-      image: "/assets/markettrand.png",
+      image: "/assets/markettrend.png",
       value: "0% Fixed Fee",
       label: "Receives curated insights based on market trends",
     },
@@ -44,7 +44,7 @@ export default function OurApproach() {
                 width={900}
                 height={900}
                 alt=""
-                className="object-contain m-auto w-20 h-20 object-center"
+                className="object-contain m-auto w-12 h-12 filter-gold object-center"
               />
             </div>
             <div className="text-center">
