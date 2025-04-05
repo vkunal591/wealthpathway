@@ -36,8 +36,8 @@ export default function ChangeTextColor({
 
   return (
     <p
-      className={`text-xl md:text-xl font-semibold lg:w-4/5 m-auto text-center ${
-        className || "mb-16"
+      className={`text-xl md:text-4xl font-semibold lg:w-4/5 text-left  ${
+        className || "mb-8"
       }`}
       ref={textRef}
     >

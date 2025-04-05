@@ -1,26 +1,21 @@
-// app/page.tsx (or pages/index.tsx if using the `pages` directory)
 "use client";
 
 import { useState, useEffect } from "react";
-import HeroSection from "@/Components/Common/HeroSection";
-import Loader from "@/Components/Common/Loader"; // Assuming you have a Loader component
-import ColorChangeText from "./components/ColorChangeText";
-import DoesDifferect from "./components/DoesDifferect";
-import CanHelp from "./components/CanHelp";
-import DedicatedPartner from "@/Components/Common/DedicatedPartner";
-import GetInTouch from "@/Components/Common/GetInTouch";
 
+import Loader from "@/Components/Common/Loader";
+import HeroSection2 from "@/Components/theam/components/HeroSection2";
+import InfoCard2 from "@/Components/theam/components/InfoCard2";
+import WeAre from "@/Components/theam/components/WeAre";
+import InvesmentCard from "@/Components/theam/components/InvesmentCard";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay (replace with actual data fetching if needed)
     const timer = setTimeout(() => {
-      setLoading(false); // Hide loader after 1 second
+      setLoading(false);
     }, 2000);
 
-    // Cleanup timeout on unmount
     return () => clearTimeout(timer);
   }, []);
 
@@ -30,25 +25,31 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <HeroSection />
-      {/* <OurClients /> */}
-      <ColorChangeText
-        text={[
-          "Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions.",
-          "Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies.",
-          "At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations.",
-        ]}
-      />
-      <DoesDifferect />
-      <DedicatedPartner />
-      <CanHelp />
-      <GetInTouch /> 
-
-      {/*
-      <InsightClients />
-      <OurExpert />
-      */}
-      
+      <HeroSection2 />
+      <InfoCard2 />
+      <WeAre />
+      <InvesmentCard /> 
     </div>
   );
 }
+
+// <div>
+//   {/* <HeroSection /> */}
+//   {/* <OurClients /> */}
+//   {/* <ColorChangeText
+//   text={[
+//     "Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions.",
+//     "Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies.",
+//     "At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations.",
+//     ]}
+//     /> */}
+//   {/* <DoesDifferect />
+// <DedicatedPartner />
+// <CanHelp />
+// <GetInTouch />  */}
+
+//   {/*
+// <InsightClients />
+// <OurExpert />
+// */}
+// </div>

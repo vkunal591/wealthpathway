@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  --primary-blue: #0A2B58;
+  --primary-gold:#B28C3D;
 }
 
 @theme inline {
@@ -10,6 +12,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-rethink: var(--font-rethink-sans);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,19 +26,58 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-rethink-sans);
+
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
+
+.text-primary {
+  color: var(--primary-gold)
+}
+
+
+.text-dark-primary {
+  color: var(--primary-blue);
+}
+
+
+.bg-primary {
+  background-color: var(--primary-gold);
+}
+
+.bg-dark-primary {
+  background-color: var(--primary-blue);
+}
+
+
+
+.border-color-primary {
+  border-color: var(--primary-gold);
+}
+
+
+.border-color-dark-primary {
+  border-color: var(--primary-blue);
+}
+
+
+
+
+
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
 

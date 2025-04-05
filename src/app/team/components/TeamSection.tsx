@@ -1,3 +1,4 @@
+import { team } from "@/datas/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,7 +8,7 @@ import { LiaLinkedin } from "react-icons/lia";
 export default function TeamSection() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-4">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58] mb-4">
         Meet Our Team
       </h2>
       <p className="text-[#0A2B58] text-base w-full lg:w-3/5 m-auto text-center mb-8">
@@ -15,17 +16,16 @@ export default function TeamSection() {
         investment management, research, and client service to deliver
         exceptional value to our investors.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-        {Array(4)
-          .fill(null)
-          .map((data, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+        {team &&
+          team?.map((data: any, index: any) => (
             <div
               key={index}
               className="border border-gray-300 shadow rounded  p-4 w-full"
             >
               <div className="w-full mb-4">
                 <Image
-                  src={"/sarah.png"}
+                  src={data?.image || "/sarah.png"}
                   width={900}
                   height={900}
                   alt=""
@@ -33,19 +33,20 @@ export default function TeamSection() {
                 />
               </div>
               <div>
-                <h2 className="text-2xl text-[#0A2B58] font-semibold mb-2">John Doe</h2>
+                <h2 className="text-2xl text-[#0A2B58] font-semibold mb-2">
+                  {data?.name}
+                </h2>
                 <p className="text-sm text-[#B28C3D] mb-4">Ceo, Founder</p>
                 <p className="text-base text-[#0A2B58]/70 mb-4">
-                  With over 15 years of experience in portfolio management,
-                  Sarah leads our investment strategy with a focus on
-                  sustainable long-term growth.
+                  {data?.positon}
                 </p>
               </div>
               <div className="flex items-center gap-4 text-[#B28C3D]">
-                <Link href={""} className="flex items-center">
-                  <LiaLinkedin className="mr-1 text-[#B28C3D] text-2xl" /> Linkedin
+                <Link href={""} className="flex items-center text-[#0A2B58]">
+                  <LiaLinkedin className="mr-1 text-[#B28C3D] text-2xl" />{" "}
+                  Linkedin
                 </Link>
-                <Link href={""} className="flex items-center">
+                <Link href={""} className="flex items-center text-[#0A2B58]">
                   <FaEnvelope className="mr-1 text-[#B28C3D]" /> Email
                 </Link>
               </div>
