@@ -39,7 +39,6 @@ export default function HeroSection({
           animate={{ opacity: isInView ? 1 : 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit px-4 text-[#0A2B58] "
-
         >
           {subtitle || "Wealth1 - Your AIF & PMS Partner"}
         </motion.p>
@@ -53,7 +52,7 @@ export default function HeroSection({
         </motion.h1>
         <p className="text-base w-full lg:w-4/5 font-semibold text-gray-600 mb-10">
           {description ||
-            "Discover curated PMS and AIF opportunities with Wealth 1 expert guidance in Portfolio Management Services and Alternative Investment Funds."}
+            "Discover curated PMS and AIF opportunities with Wealth1 expert guidance in Portfolio Management Services and Alternative Investment Funds."}
         </p>
         <motion.div
           whileHover={{

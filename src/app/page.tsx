@@ -6,7 +6,8 @@ import Loader from "@/Components/Common/Loader";
 import HeroSection2 from "@/Components/theam/components/HeroSection2";
 import InfoCard2 from "@/Components/theam/components/InfoCard2";
 import WeAre from "@/Components/theam/components/WeAre";
-import InvesmentCard from "@/Components/theam/components/InvesmentCard";
+import OurServices from "@/Components/theam/components/OurServices";
+import WhyChoose2 from "@/Components/theam/components/WhyChoose2";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,9 @@ export default function Home() {
       <HeroSection2 />
       <InfoCard2 />
       <WeAre />
-      <InvesmentCard /> 
+      <OurServices />
+      {/* <Success /> */}
+      <WhyChoose2 />
     </div>
   );
 }

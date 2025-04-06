@@ -24,7 +24,7 @@ export default function ChangeTextColor({
         console.log(window?.innerHeight, rect.top, scrollPercent);
         const words = text.split(" ") || [];
         const newColors = words.map((_, i) =>
-          i / words.length < scrollPercent ? "text-[#0A2B58]" : "text-gray-400"
+          i / words.length < scrollPercent ? "text-gray-500" : "text-gray-200"
         );
         setTextColors(newColors);
       }
@@ -36,7 +36,7 @@ export default function ChangeTextColor({
 
   return (
     <p
-      className={`text-xl md:text-4xl font-semibold lg:w-4/5 text-left  ${
+      className={`text-xl md:text-base lg:w-4/5 text-left  ${
         className || "mb-8"
       }`}
       ref={textRef}

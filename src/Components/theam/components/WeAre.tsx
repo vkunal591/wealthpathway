@@ -10,20 +10,27 @@ export default function WeAre() {
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-start">
         <div className="self-start lg:col-span-3">
           <p className="p-1 mb-2 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
-            Wealth1 Premium PMS
+            Wealth1 Premium PM
           </p>
-          <ChangeTextColor text="INVasset Growth Fund PMS is an Award-Winning, SEBI-registered Quant-based Portfolio Management Service for HNIs & NRIs." />
+          <h2 className="text-2xl mb-4 font-semibold text-[#0A2B58]">
+            Unlocking Alpha Through PMS & AIF
+          </h2>
+
+          <ChangeTextColor
+            className="text-xs mb-4"
+            text=" Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions. <br> Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies. <br> At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations."
+          />
 
           <FlowButton>Learn More</FlowButton>
         </div>
         <div className="self-start lg:col-span-2 border-l p-6 rounded-md">
-          <span className="w-full text-cente pl-10 ">
-            <NumberCounter to={20} />
+          <span className="w-full text-cente pl-6 ">
+            <NumberCounter to={30} />
           </span>
-          <h2 className="text-xs font-semibold text-[#0A2B58]">
+          <h2 className="text-[10px] font-semibold text-[#0A2B58]">
             Years of Financial Planning Expertise
           </h2>
-          <hr className="my-2" />
+          <hr className="my-6 border border-gray-200" />
           <TextNavigator />
         </div>
       </div>

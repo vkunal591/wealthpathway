@@ -47,7 +47,7 @@ export default function DoesDifferect() {
       </p>
 
       <h2 className="text-2xl lg:text-4xl text-blue-900 w-full lg:w-3/5 font-semibold m-auto text-center mb-10">
-        How Wealth 1 does things differently
+        How Wealth1 does things differently
       </h2>
       <div className="contianer space-y-8">
         {sections.map((data: any, index: any) => (

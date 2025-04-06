@@ -221,7 +221,7 @@ export default function Navbar2() {
       className="flex items-center justify-between bg-white/40 w-full shadow fixed  z-[5000] border-none text-green-50 m-auto p-4"
       animate={controls}
     >
-      <div className="flex items-center justify-between bg-white/30 blur -z-10  h-20 absolute left-0 top-0 w-full"></div>
+      <div className="flex items-center justify-between bg-white/80 blu -z-10  h-20 absolute left-0 top-0 w-full"></div>
       <div className="w-1/2 lg:w-1/5 flex items-center justify-start">
         <Link href={"/"}>
           <Image
@@ -270,7 +270,7 @@ export default function Navbar2() {
               {/* Submenu */}
               {item.submenu && (
                 <div
-                  className={`absolute w-44 top-11 mt-2 bg-dark-primary  text-gray-50  ${
+                  className={`absolute w-44 top-11 mt-2 bg-dark-primary rounded text-gray-50  ${
                     activeSubmenuId === item.name ? "block" : "hidden"
                   }`}
                   onMouseLeave={handleMouseLeave} // Reset on mouse leave
@@ -285,7 +285,7 @@ export default function Navbar2() {
                             pathname == "/pms/invassest"
                               ? "text-white"
                               : "text-gray-50"
-                          } rounded-xl hover:bg-[#B28C3D]/70 hover:text-gray-50 hover:font-semibold flex justify-start items-center gap-4`}
+                          }  hover:border-b hover:border-[#B28C3D]/70 hover:text-gray-50 hover:font-semibold flex justify-start items-center gap-4`}
                         >
                           {/* <span className="text-3xl rounded-full p-3 group-hover:bg-white">
                             <Image

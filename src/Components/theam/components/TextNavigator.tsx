@@ -6,25 +6,19 @@ const sections = [
     id: "intro",
     title: "Introduction",
     content:
-      "This is the introduction paragraph. It sets the stage for what's to come.",
+      "Wealth1 leads India's Alternative Investments revolution, guiding discerning investors through their wealth creation journey with PMS and AIF solutions.",
   },
   {
     id: "features",
     title: "Features",
     content:
-      "Here are the key features. Each one is designed to make your life easier.",
+      "Our expertise in Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) combines deep market insights with AI-driven strategies.",
   },
   {
-    id: "pricing",
-    title: "Pricing",
+    id: "commitment",
+    title: "Commitment",
     content:
-      "Our pricing is simple and transparent, designed to give you the best value.",
-  },
-  {
-    id: "faq",
-    title: "FAQ",
-    content:
-      "Got questions? We've got answers to the most frequently asked ones.",
+      "At Wealth1, we remain committed to delivering exceptional Alternative Investment solutions that preserve and grow wealth across generations.",
   },
 ];
 
@@ -63,7 +57,7 @@ const TextNavigator = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="text-gray-800 text-sm"
+            className="text-gray-500 text-sm"
           >
             {activeContent}
           </motion.p>
