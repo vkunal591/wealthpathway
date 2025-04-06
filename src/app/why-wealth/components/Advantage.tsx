@@ -20,12 +20,12 @@ export default function Advantage() {
     }
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 ">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58] mb-8">
-      The WealthOne Advantage
+    <div className="max-w-7xl m-auto p-4 lg:p-16  lg:pb-4">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58] mb-4 ">
+      The Wealth1 Advantage
 
       </h2>
-      <p className="text-base text-gray-500 mb-8 font-semibold text-center w-full">
+      <p className="text-base text-gray-500 mb-8 text-center w-full">
       Comprehensive benefits designed for modern investors
 
 

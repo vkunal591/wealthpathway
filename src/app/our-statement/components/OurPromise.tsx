@@ -26,13 +26,18 @@ export default function OurPromise() {
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58]  mb-4">
+      <h2 className="capitalize text-5xl text-center  font-bold text-[#0A2B58]  mb-4">
         Our Promise
       </h2>
       <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
-        Unbiased, Uncompromised, Unmatched
+        <span className="text-primary">{"  Unbiased"}</span>,
+        <span className="text-primary">{"  Uncompromised"}</span>,
+        <span className="text-primary">{"  Unmatched"}</span>
       </p>
-      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <div className="w-full flex items-center justify-center mb-8">
+        <span className="bg-primary h-1 w-20 inline-block m-auto "></span>
+      </div>
+      <p className="text-base text-gray-500 mb-4 text-center w-full lg:w-4/5 m-auto">
         We are not here to push products. We are here to guide you through a sea
         of options and help you choose the ones truly aligned with your
         financial future.
@@ -41,7 +46,7 @@ export default function OurPromise() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-300 shadow rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
+            className="border border-gray-300 group hover:shadow hover:scale-105 transition-all ease-in-out  rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
           >
             <div className="w-full mb-4">
               <Image

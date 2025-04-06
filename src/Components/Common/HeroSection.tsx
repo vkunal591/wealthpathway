@@ -1,15 +1,13 @@
 "use client";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useRef } from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import FlowButton from "../theam/components/FlowButton";
 
 export default function HeroSection({
   subtitle,
   title,
   description,
-  link,
   image,
 }: {
   subtitle?: string;
@@ -31,7 +29,7 @@ export default function HeroSection({
   return (
     <div
       ref={ref}
-      className="p-4 lg:p-16 lg:pt-40 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start "
+      className="p-4 lg:p-16 lg:pt-40 lg:pb-4 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start "
     >
       <motion.div style={{ opacity }} ref={textRef} className="w-full lg:w-1/2">
         <motion.p
@@ -60,24 +58,18 @@ export default function HeroSection({
             boxShadow: "0px 5px 15px gray",
           }}
           whileTap={{ scale: 0.95 }}
-          className="rounded-full w-2/3"
+          className="rounded-full w-fit"
         >
-          <Link
-            href={link || "/"}
-            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-sm bg-[#B28C3D] text-gray-50 rounded-full items-center justify-center transition-all"
-          >
-            Explore Alternative Investments
-            <IoIosArrowRoundForward className="text-2xl font-extrabold hidden lg:inline-block" />
-          </Link>
+          <FlowButton>Explore Alternative Investments</FlowButton>
         </motion.div>
       </motion.div>
       <div className="w-full lg:w-1/2">
         <Image
           src={image || "/property.png"}
-          width={900}
+          width={1680}
           height={900}
           alt="Investment"
-          className="object-contain w-2/3 m-auto"
+          className="object-contain w-3/5 m-auto"
         />
       </div>
     </div>

@@ -20,14 +20,18 @@ export default function OurApproach() {
     },
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0 text-blue-900">
       <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58]  mb-4">
         Our Approach
       </h2>
       <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
-        Data-Driven, People-Focused
+        <span className="text-primary">{"  Data-Driven"}</span>,
+        <span className="text-primary">{"  People-Focused"}</span>
       </p>
-      <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <div className="w-full flex items-center justify-center mb-8">
+        <span className="bg-primary h-1 w-20 inline-block m-auto "></span>
+      </div>
+      <p className="text-base text-gray-500 mb-4 text-center w-full lg:w-4/5 m-auto">
         While we use advanced technology to analyze portfolios, compare returns,
         and assess risk metrics, we never lose sight of the human behind the
         numbers.
@@ -36,9 +40,9 @@ export default function OurApproach() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-300 shadow rounded  p-4 w-full h-56  flex flex-col items-center justify-center"
+            className="border border-gray-300 rounded group hover:shadow hover:scale-105 transition-all ease-in-out duration-300 p-4 w-full h-44  flex flex-col items-center justify-center"
           >
-            <div className="w-full">
+            <div className="w-full mb-4">
               <Image
                 src={item?.image || "/logo.png"}
                 width={900}

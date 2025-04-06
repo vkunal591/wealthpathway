@@ -40,37 +40,37 @@ const aboutus = [
 ];
 
 const pms = [
-  {
-    name: "PMS Overview",
-    image: "/assets/webdev.png",
-    path: "/pms/pms-overview",
-    id: "pms-overview", // Unique ID for submenu
-  },
-  {
-    name: "FAQs",
-    image: "/assets/webdev.png",
-    path: "/pms/faqs",
-    id: "faqs", // Unique ID for submenu
-  },
-  {
-    name: "Product",
-    image: "/assets/webdev.png",
-    path: "/pms/product",
-    id: "product", // Unique ID for submenu
-  },
+  // {
+  //   name: "PMS Overview",
+  //   image: "/assets/webdev.png",
+  //   path: "/pms/pms-overview",
+  //   id: "pms-overview", // Unique ID for submenu
+  // },
+  // {
+  //   name: "FAQs",
+  //   image: "/assets/webdev.png",
+  //   path: "/pms/faqs",
+  //   id: "faqs", // Unique ID for submenu
+  // },
+  // {
+  //   name: "Product",
+  //   image: "/assets/webdev.png",
+  //   path: "/pms/product",
+  //   id: "product", // Unique ID for submenu
+  // },
 
-  {
-    name: "Analytics",
-    image: "/assets/webdev.png",
-    path: "/pms/analatics",
-    id: "analatics", // Unique ID for submenu
-  },
-  {
-    name: "Stallion",
-    image: "/assets/webdev.png",
-    path: "/pms/stallion",
-    id: "stallion", // Unique ID for submenu
-  },
+  // {
+  //   name: "Analytics",
+  //   image: "/assets/webdev.png",
+  //   path: "/pms/analatics",
+  //   id: "analatics", // Unique ID for submenu
+  // },
+  // {
+  //   name: "Stallion",
+  //   image: "/assets/webdev.png",
+  //   path: "/pms/stallion",
+  //   id: "stallion", // Unique ID for submenu
+  // },
   {
     name: "INVasset",
     image: "/assets/webdev.png",
@@ -79,70 +79,70 @@ const pms = [
   },
 ];
 
-const aif = [
-  {
-    name: "AIF Overview",
-    image: "/assets/webdev.png",
-    path: "/aif/aif-overview",
-    id: "pms-overview", // Unique ID for submenu
-  },
-  {
-    name: "FAQs",
-    image: "/assets/webdev.png",
-    path: "/ait/faqs",
-    id: "faqs", // Unique ID for submenu
-  },
-  {
-    name: "Product",
-    image: "/assets/webdev.png",
-    path: "/aif/product",
-    id: "product", // Unique ID for submenu
-  },
+// const aif = [
+//   {
+//     name: "AIF Overview",
+//     image: "/assets/webdev.png",
+//     path: "/aif/aif-overview",
+//     id: "pms-overview", // Unique ID for submenu
+//   },
+//   {
+//     name: "FAQs",
+//     image: "/assets/webdev.png",
+//     path: "/ait/faqs",
+//     id: "faqs", // Unique ID for submenu
+//   },
+//   {
+//     name: "Product",
+//     image: "/assets/webdev.png",
+//     path: "/aif/product",
+//     id: "product", // Unique ID for submenu
+//   },
 
-  {
-    name: "Analytics",
-    image: "/assets/webdev.png",
-    path: "/aif/analatics",
-    id: "analatics", // Unique ID for submenu
-  },
-];
+//   {
+//     name: "Analytics",
+//     image: "/assets/webdev.png",
+//     path: "/aif/analatics",
+//     id: "analatics", // Unique ID for submenu
+//   },
+// ];
 
-const reports = [
-  {
-    name: "PMS Reports",
-    image: "/assets/webdev.png",
-    path: "/reports/pms-reports",
-    id: "pms-reports", // Unique ID for submenu
-  },
-  {
-    name: "AIF Reports",
-    image: "/assets/webdev.png",
-    path: "/aif/aif-reports",
-    id: "aif-reports", // Unique ID for submenu
-  },
-  {
-    name: "Magzine",
-    image: "/assets/webdev.png",
-    path: "/reports/magzine",
-    id: "magzine", // Unique ID for submenu
-  },
-];
+// const reports = [
+//   {
+//     name: "PMS Reports",
+//     image: "/assets/webdev.png",
+//     path: "/reports/pms-reports",
+//     id: "pms-reports", // Unique ID for submenu
+//   },
+//   {
+//     name: "AIF Reports",
+//     image: "/assets/webdev.png",
+//     path: "/aif/aif-reports",
+//     id: "aif-reports", // Unique ID for submenu
+//   },
+//   {
+//     name: "Magzine",
+//     image: "/assets/webdev.png",
+//     path: "/reports/magzine",
+//     id: "magzine", // Unique ID for submenu
+//   },
+// ];
 
-const events = [
-  {
-    name: "Physical Events",
-    image: "/assets/webdev.png",
-    path: "/events/physical-events",
-    id: "physical-events", // Unique ID for submenu
-  },
+// const events = [
+//   {
+//     name: "Physical Events",
+//     image: "/assets/webdev.png",
+//     path: "/events/physical-events",
+//     id: "physical-events", // Unique ID for submenu
+//   },
 
-  {
-    name: "Virtual Events",
-    image: "/assets/webdev.png",
-    path: "/events/virtual-events",
-    id: "virtual-events", // Unique ID for submenu
-  },
-];
+//   {
+//     name: "Virtual Events",
+//     image: "/assets/webdev.png",
+//     path: "/events/virtual-events",
+//     id: "virtual-events", // Unique ID for submenu
+//   },
+// ];
 
 export default function Navbar2() {
   const [scrollingDown, setScrollingDown] = useState(false);
@@ -174,10 +174,10 @@ export default function Navbar2() {
     {
       name: "AIF",
       path: "/aif",
-      submenu: aif,
+      submenu: [],
     },
-    { name: "Reports", path: "/reports", submenu: reports },
-    { name: "Events", path: "/events", submenu: events },
+    { name: "Reports", path: "/reports", submenu: [] },
+    { name: "Events", path: "/events", submenu: [] },
   ];
 
   const handleLinkClick = () => setActiveSubmenuId(null);
@@ -312,10 +312,10 @@ export default function Navbar2() {
           href={"/"}
           className="w-1/3 hidden text-dark-primary hover:text-gray-900 lg:inline-block"
         >
-          Member Login
+          Investor Login
         </Link>
 
-        <FlowButton>Contact Us</FlowButton>
+        <FlowButton>Schedule a Consultation</FlowButton>
         <Sidebar />
       </div>
     </motion.nav>

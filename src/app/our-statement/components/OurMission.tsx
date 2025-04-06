@@ -24,13 +24,18 @@ export default function OurMission() {
   ];
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0  text-[#0A2B58]">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58]  mb-4">
+      <h2 className="capitalize text-5xl text-center  font-bold text-[#0A2B58]  mb-4">
         Our Mission
       </h2>
       <p className="text-base text-[#0A2B58] mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
-        Elevating Investor Confidence Through Knowledge & Access
+        Elevating Investor Confidence Through
+        <span className="text-primary">{"  Knowledge"}</span>, &
+        <span className="text-primary">{"  Access"}</span>,
       </p>
-      <p className="text-base text-[#0A2B58] font-semibold text-center w-full lg:w-4/5 m-auto mb-8">
+      <div className="w-full flex items-center justify-center mb-8">
+        <span className="bg-primary h-1 w-20 inline-block m-auto "></span>
+      </div>
+      <p className="text-base text-gray-500 text-center w-full lg:w-4/5 m-auto mb-8">
         Our mission is to bridge the gap between great investment products and
         the investors who deserve them. We aim to
       </p>
@@ -38,9 +43,9 @@ export default function OurMission() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-300 shadow rounded  p-4 w-full h-56  flex flex-col items-center justify-center"
+            className="border border-gray-300 hover:shadow hover:scale-105 transition-all ease-in-out divide-purple-300 rounded group p-4 w-full h-56  flex flex-col items-center justify-center "
           >
-            <div className="w-full mb-4">
+            <div className="w-full mb-4 ">
               <Image
                 src={item?.image || "/logo.png"}
                 width={900}

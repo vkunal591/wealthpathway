@@ -31,11 +31,12 @@ export default function Page() {
   return (
     <div className="bg-white text-[#0A2B58] ">
       <OurStatement />
-      <ChangeTextColor
-        className="mb-4"
-        text="At Wealth1, we believe that alternative investments like Portfolio Management Services (PMS) and Alternative Investment Funds (AIFs) are not just products — they are powerful tools that, when curated right, can shape long-term wealth."
-      />
-      <ChangeTextColor text="As a next-generation distributor, we exist to simplify, personalize, and humanize the process of investing in PMS and AIFs for investors across India and the world." />
+      <div className="max-w-7xl m-auto flex flex-col items-center justify-center">
+        <ChangeTextColor
+          className="mb-4 text-xl "
+          text="At Wealth1, we believe that alternative investments like Portfolio Management Services (PMS) and Alternative Investment Funds (AIFs) are not just products — they are powerful tools that, when curated right, can shape long-term wealth. <br> As a next-generation distributor, we exist to simplify, personalize, and humanize the process of investing in PMS and AIFs for investors across India and the world."
+        />
+      </div>
       <WhyChooseUs />
       <OurPromise />
       <OurApproach />

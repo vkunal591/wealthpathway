@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Rethink_Sans } from "next/font/google";
+import { Manrope, Rethink_Sans } from "next/font/google";
 import Navbar2 from "@/Components/theam/components/Navbar2";
 import TopHeader from "@/Components/theam/components/TopHeader";
 import AnimatedCursor from "react-animated-cursor";
@@ -13,6 +13,13 @@ const rethinkSans = Rethink_Sans({
   display: "swap", // Optional: defines how the font is displayed
 });
 
+
+const manrope = Manrope({
+  variable: "--font-manrope", // Custom CSS variable
+  subsets: ["latin"], // Optional: subsets to load
+  weight: ["400", "500", "600", "700"], // Optional: specify the font weights you want
+  display: "swap", // Optional: defines how the font is displayed
+});
 export const metadata: Metadata = {
   title: "PMS & AIF Investments",
   description: "PMS & AIF Investments",
@@ -25,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rethinkSans.variable} antialiased`}>
+      <body className={`${rethinkSans.variable} ${manrope.variable} antialiased`}>
         <TopHeader />
         <Navbar2 />
         {children}

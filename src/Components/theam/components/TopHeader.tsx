@@ -11,18 +11,18 @@ export default function TopHeader() {
         {/* Left Section */}
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1 text-xs">
-            <IoLocationOutline className="text-sm" /> 101 E 129th St, East
-            Chicago, IN 46312, US
+            <IoLocationOutline className="text-sm" /> 911, One Lodha Place,
+            Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013
           </span>
           <span className="flex items-center gap-1 text-xs">
-            <CgMail className="text-sm" /> info@example.com
+            <CgMail className="text-sm" /> info@wealth1.com
           </span>
         </div>
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
           <span className="text-xs flex items-center gap-1">
-            <IoCall className="text-sm" /> +1 234 567 890
+            <IoCall className="text-sm" /> 098158 10172
           </span>
           <span className="w-[1px] bg-white/50 h-5 inline-block"></span>
           <div className="flex items-center gap-3">

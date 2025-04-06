@@ -104,7 +104,7 @@ export default function Page() {
         description={
           "Experience the perfect blend of human expertise and artificial intelligence, delivering superior investment solutions tailored to your needs."
         }
-        image={"/why.png"}
+        image={"/assets/hero-img.svg"}
       />
       <WhyCard />
       <InvestmentJourney />

@@ -127,7 +127,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-lg uppercase text-[#B28C3D] font-semibold">Company</h3>
+            <h3 className="mb-5 text-lg uppercase text-[#B28C3D] font-semibold">
+              Company
+            </h3>
             <ul className="text-xs text-gray-200 space-y-3.5">
               {company &&
                 company?.map((item, index) => (
@@ -155,7 +157,9 @@ export default function Footer() {
           </div> */}
 
           <div className="lg:col-span-2">
-            <h3 className="mb-5 text-lg uppercase text-[#B28C3D] font-semibold">Contact Us</h3>
+            <h3 className="mb-5 text-lg uppercase text-[#B28C3D] font-semibold">
+              Contact Us
+            </h3>
             <div>
               <Link
                 href={"mailto:allabove@company.com"}
@@ -164,22 +168,37 @@ export default function Footer() {
                 <strong>
                   <IoMailOutline className="text-xl mr-2" />
                 </strong>{" "}
-                sales@aboveallagency.com.au
+                help@wealth1.com
               </Link>
               <Link
-                href={"tel:0411 537 183"}
+                href={"tel:098158 10172"}
                 className="text-xs mb-2 flex items-center"
               >
                 <strong>
                   <IoCallOutline className="text-xl mr-2" />
                 </strong>{" "}
-                0411 537 183{" "}
+                {"098158 10172"}
               </Link>
               <p className="text-xs flex items-center mb-4">
                 <strong>
                   <IoLocationOutline className="text-xl mr-2" />
                 </strong>{" "}
-                U19/10 Gladstone Rd, castle Hill NSW 2154
+                4th Floor, Two Horizon Centre, DLF Phase 5, Gurugram, Haryana,
+                122002
+              </p>
+              <p className="text-xs flex items-center mb-4">
+                <strong>
+                  <IoLocationOutline className="text-xl mr-2" />
+                </strong>{" "}
+                Plot No. 14-15, First Floor, Canal Road, South City, Ludhiana,
+                Punjab, 142027
+              </p>
+              <p className="text-xs flex items-center mb-4">
+                <strong>
+                  <IoLocationOutline className="text-xl mr-2" />
+                </strong>{" "}
+                911, One Lodha Place, Senapati Bapat Marg, Lower Parel, Mumbai,
+                Maharashtra 400013
               </p>
               <p className="flex items-center gap-4 pl-6">
                 <Link

@@ -25,15 +25,18 @@ export default function OurStandard() {
     },
   ];
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-[#B28C3D] mb-8">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0  text-blue-900">
+      <h2 className="capitalize text-4xl text-center  font-semibold text-dark-primary mb-4">
         Why Wealth1 Stands Apart
       </h2>
+      <div className="w-full flex items-center justify-center">
+        <span className="bg-primary h-1 w-20 inline-block m-auto "></span>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full lg:w-4/5 m-auto ">
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-[#B28C3D]/50  shadow rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
+            className=" hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300 rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
           >
             <div className="w-full mb-4">
               <Image
@@ -53,7 +56,7 @@ export default function OurStandard() {
           </div>
         ))}
       </div>
-      <p className="text-base text-[#0A2B58] mb-8 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-base text-[#0A2B58] mb-8 text-center w-full lg:w-3/5 m-auto">
         We are Wealth1&apos;s first AI-led PMS & AIF distribution platform built
         around investor convenience, confidence, and clarity.
       </p>
