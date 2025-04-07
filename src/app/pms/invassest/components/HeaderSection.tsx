@@ -11,7 +11,7 @@ export default function HeaderSection() {
           Wealth1 Premium PMS
         </p>
         <h2 className="capitalize text-4xl text-center  font-bold text-[#0A2B58] mb-4">
-        INVasset Growth Fund PMS – Quant Derive Portfolio Management Strategy
+        INVasset Growth Fund PMS – Quantitative Portfolio Management Strategy
         </h2>
         <p className="text-base text-gray-500 mb-4 font-semibold text-center w-full lg:w-4/5 m-auto">
           A data-driven Portfolio Management Service combining market wisdom

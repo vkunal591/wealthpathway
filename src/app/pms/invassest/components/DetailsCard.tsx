@@ -47,7 +47,7 @@ const data2 = [
   {
     icon: "graph",
     value: "Expected CAGR",
-    label: "Expected CAGR",
+    label: "Expected over long term",
     value1: "18-28% CAGR",
   },
 ];
