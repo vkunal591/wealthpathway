@@ -35,7 +35,7 @@ const data2 = [
   {
     icon: "briefcase",
     value: "Minimum Investment",
-    value1: "₹50 Lakhs",
+    value1: "₹50 L",
     label: "As per SEBI regulations",
   },
   {
@@ -49,6 +49,10 @@ const data2 = [
     value: "Expected CAGR",
     label: "Expected over long term",
     value1: "18-28% CAGR",
+    label2: "Plan A:",
+    value2: "1.5% Fixed Fee + 15% Profit Sharing over 10% Hurdle Rate",
+    label3: "Plan B:",
+    value3: "2.5% Fixed Fee",
   },
 ];
 
@@ -260,15 +264,23 @@ const sections = [
                   <h2 className="text-lg text-[#0A2B58] mb-2 font-semibold">
                     {item?.value}
                   </h2>
-                  <p className="text-sm font-semibold text-gray-500 ">
+                  <p
+                    className={` font-bold text-[#0A2B58] ${
+                      index === 2 ? "text-sm" : " text-2xl"
+                    } `}
+                  >
                     {item?.value1}
                   </p>
                   <p className="text-xs text-gray-500 ">{item?.label}</p>
 
                   <p className="text-sm font-semibold text-gray-500 ">
-                    {item?.value2}
+                    {item?.label2}
                   </p>
-                  <p className="text-xs text-gray-500 ">{item?.label1}</p>
+                  <p className="text-xs text-gray-500 ">{item?.value2}</p>
+                  <p className="text-sm font-semibold text-gray-500 ">
+                    {item?.label3}
+                  </p>
+                  <p className="text-xs text-gray-500 ">{item?.value3}</p>
                 </div>
               </div>
             );
