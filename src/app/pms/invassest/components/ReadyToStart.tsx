@@ -1,4 +1,5 @@
 "use client";
+import FlowButton from "@/Components/theam/components/FlowButton";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
@@ -22,12 +23,7 @@ export default function ReadyToStart() {
           whileTap={{ scale: 0.95 }}
           className="rounded-full"
         >
-          <Link
-            href={"/"}
-            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-base bg-[#B28C3D] text-gray-50 rounded-full items-center justify-center transition-all"
-          >
-            Schedule a consultation with Wealth1
-          </Link>
+          <FlowButton>Schedule a consultation with Wealth1</FlowButton>
         </motion.div>
 
         <motion.div
@@ -38,12 +34,7 @@ export default function ReadyToStart() {
           whileTap={{ scale: 0.95 }}
           className="rounded-full hidden"
         >
-          <Link
-            href={"/"}
-            className="p-3 lg:px-8 font-semibold text-center hidden lg:flex text-base bg-[#B28C3D]/10 text-[#B28C3D] rounded-full items-center justify-center transition-all"
-          >
-            Download Brochure
-          </Link>
+          <FlowButton>Download Brochure</FlowButton>
         </motion.div>
       </div>
     </div>

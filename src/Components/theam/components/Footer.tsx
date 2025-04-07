@@ -97,7 +97,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="text-gray-400 bg-dark-primary py-10 px-4 lg:px-10">
+    <footer className="text-gray-50 bg-black py-10 px-4 lg:px-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-7 lg:gap-10 mx-auto">
           <div className="w-full lg:col-span-2">
@@ -111,10 +111,11 @@ export default function Footer() {
               />
             </div>
             <div>
-              <p className=" tracking-wide text-xs/7 text-gray-400 mt-4 lg:mb-2">
-                Wealth1 is your trusted IT partner in Sydney, offering custom
-                solutions for websites, mobile apps, and advanced technologies
-                like AI. Let&apos;s create something exceptional together!
+              <p className=" tracking-wide text-xs/7 text-gray-50 mt-4 lg:mb-2">
+                At Wealth1, our Portfolio Management Services (PMS) are designed
+                for discerning investors who seek personalized and professional
+                management of their wealth. With a team of experienced fund
+                managers and financial experts.
               </p>
             </div>
           </div>
@@ -130,7 +131,7 @@ export default function Footer() {
             <h3 className="mb-5 text-lg uppercase text-[#B28C3D] font-semibold">
               Company
             </h3>
-            <ul className="text-xs text-gray-200 space-y-3.5">
+            <ul className="text-xs text-gray-50 space-y-3.5">
               {company &&
                 company?.map((item, index) => (
                   <li key={index}>
@@ -219,9 +220,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr className="my-8 border-gray-200" />
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <div className="text-gray-300/80">
+        <hr className="my-8 border-gray-50" />
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-50">
+          <div className="text-gray-50">
             © {new Date().getFullYear()} Wealth1. All rights reserved.
           </div>
           <div className="flex space-x-4 text-base mt-2 md:mt-0">

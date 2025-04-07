@@ -36,7 +36,7 @@ export default function ChangeTextColor({
 
   return (
     <p
-      className={`text-xl md:text-base lg:w-4/5 text-left  ${
+      className={`text-xl md:text-base lg:w-4/5  ${
         className || "mb-8"
       }`}
       ref={textRef}

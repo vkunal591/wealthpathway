@@ -24,7 +24,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left py-3 lg:py-0 border-b border-white/20 lg:border-none"
       >
-        <div className="flex justify-between items-center lg:text-white/70 hover:text-gray-500">
+        <div className="flex justify-between items-center lg:text-white hover:text-gray-500">
           <h2 className="text-lg lg:text-sm font-medium lg:font-none">{title}</h2>
           <p className="text-lg font-medium">
             {isOpen ? (

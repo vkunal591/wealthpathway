@@ -264,7 +264,7 @@ export default function DetailsCard2() {
             <button
               key={section.id}
               onClick={() => setActiveTab(section.id)}
-              className={`px-4 py-2 text-sm font-semibold transition-all duration-200 flex items-center gap-2 ${
+              className={` text-lg font-semibold transition-all duration-200 flex items-center gap-2 ${
                 activeTab === section.id
                   ? "border-b-[1.5px] boeder-[#B28C3D] text-[#B28C3D]"
                   : "border-[#0A2B58] text-[#0A2B58]"

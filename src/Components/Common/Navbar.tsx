@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 const aboutus = [
   {
-    name: "Why Wealth",
+    name: "Why Wealth1",
     image: "/assets/webdev.png",
     path: "/why-wealth",
     id: "why-wealth", // Unique ID for submenu

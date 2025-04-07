@@ -18,7 +18,7 @@ export const MobileMenu = [
 
 const aboutus = [
   {
-    label: "Why Wealth",
+    label: "Why Wealth1",
     image: "/assets/webdev.png",
     href: "/services/aboutus",
     id: "why-wealth", // Unique ID for submenu

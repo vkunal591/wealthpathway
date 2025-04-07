@@ -1,4 +1,5 @@
 "use client";
+import FlowButton from "@/Components/theam/components/FlowButton";
 import React, { useState } from "react";
 import { BsCheck2Circle } from "react-icons/bs";
 import { FiUserCheck } from "react-icons/fi";
@@ -132,15 +133,13 @@ const sections = [
             real-time. It’s not a black box. It’s a clear, rules-based system
             developed by experts with decades of skin in the game.
           </p>
-          <p className="mt-2 text-gray-600">
+          <p className="mt-2 mb-4 text-gray-600">
             What sets INVasset apart is their quant-based, algorithm-driven
             investment strategy. They don’t guess, they calculate. They don’t
             time the market— they trust their time-tested model. Their decisions
             are powered by data, not driven by emotions.
           </p>
-          <button className="mt-6 px-6 py-3 bg-gold text-gray-50 rounded-full bg-gradient-to-r from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50 font-semibold shadow-md">
-            Learn More
-          </button>
+          <FlowButton>Learn More</FlowButton>
         </div>
         <div className="self-start shadow p-6 rounded-md">
           <h2 className="text-xl font-semibold text-[#0A2B58]">
@@ -265,7 +264,7 @@ const sections = [
                     {item?.value}
                   </h2>
                   <p
-                    className={` font-bold text-[#0A2B58] ${
+                    className={`font-bold text-[#0A2B58] ${
                       index === 2 ? "text-sm" : " text-2xl"
                     } `}
                   >
@@ -362,17 +361,19 @@ export default function DetailsCard() {
       {/* Navigation Buttons */}
       <div className="flex space-x-6 pb-4">
         {sections.map((section) => (
-          <button
-            key={section.id}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 outline-0  hover:from-[#B28C3D]/90 hover:via-[#B28C3D]/80 hover:to-[#B28C3D]/90 hover:text-white transition-color ease-in-out ${
-              activeSection === section.id
-                ? "bg-gradient-to-r from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50  text-gray-50 font-bold shadow-md"
-                : "bg-gradient-to-r from-[#B28C3D]/20 via-[#B28C3D]/20 to-[#B28C3D]/10  border-gray-50 text-[#0A2B58]"
-            }`}
-            onClick={() => setActiveSection(section.id)}
-          >
-            {section.title}
-          </button>
+          <FlowButton>
+            <button
+              key={section.id}
+              className={` rounded-full font-semibold transition-all duration-300 outline-0  hover:from-[#B28C3D]/90 hover:via-[#B28C3D]/80 hover:to-[#B28C3D]/90 hover:text-white transition-color ease-in-out ${
+                activeSection === section.id
+                  ? "bg-gradient-to- from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50  text-[#B28C3D] font-bold shadow-md"
+                  : "bg-gradient-to- from-[#B28C3D]/20 via-[#B28C3D]/20 to-[#B28C3D]/10  border-gray-50 text-white"
+              }`}
+              onClick={() => setActiveSection(section.id)}
+            >
+              {section.title}
+            </button>
+          </FlowButton>
         ))}
       </div>
 
