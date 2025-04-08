@@ -360,10 +360,10 @@ export default function DetailsCard() {
     <div className="max-w-7xl m-auto p-14 lg:p-16 lg:pb-0 text-[#0A2B58]">
       {/* Navigation Buttons */}
       <div className="flex space-x-6 pb-4">
-        {sections.map((section) => (
-          <FlowButton>
+        {sections.map((section,index) => (
+          <FlowButton key={index}>
             <button
-              key={section.id}
+              
               className={` rounded-full font-semibold transition-all duration-300 outline-0  hover:from-[#B28C3D]/90 hover:via-[#B28C3D]/80 hover:to-[#B28C3D]/90 hover:text-white transition-color ease-in-out ${
                 activeSection === section.id
                   ? "bg-gradient-to- from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50  text-[#B28C3D] font-bold shadow-md"

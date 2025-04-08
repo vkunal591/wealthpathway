@@ -1,8 +1,7 @@
 import React from "react";
 import FlowButton from "./FlowButton";
 import ChangeTextColor from "@/app/components/ChangeTextColor";
-import NumberCounter from "./NumberCounter";
-import TextNavigator from "./TextNavigator";
+
 
 export default function WeAre() {
   return (
