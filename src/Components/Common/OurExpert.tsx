@@ -28,7 +28,7 @@ const experts: Profile[] = [
     linkedin: "https://linkedin.com/in/sarahjohnson",
     quote:
       "With over 15 years of experience in portfolio management, Sarah leads our investment strategy with a focus on sustainable long-term growth.",
-    imageUrl: "/logo.png",
+    imageUrl: "/logofinal.png",
   },
   {
     name: "Michael Chen",
@@ -40,7 +40,7 @@ const experts: Profile[] = [
     linkedin: "https://linkedin.com/in/michaelchen",
     quote:
       "Michael brings deep analytical expertise and a data-driven approach to our investment research process.",
-    imageUrl: "/logo.png",
+    imageUrl: "/logofinal.png",
   },
   {
     name: "Dr. Raj Patel",
@@ -52,7 +52,7 @@ const experts: Profile[] = [
     linkedin: "https://linkedin.com/in/rajpatel",
     quote:
       "An expert in quantitative analysis, Raj ensures our portfolios maintain optimal risk-adjusted returns.",
-    imageUrl: "/logo.png",
+    imageUrl: "/logofinal.png",
   },
   {
     name: "Emma Thompson",
@@ -64,7 +64,7 @@ const experts: Profile[] = [
     linkedin: "https://linkedin.com/in/emmathompson",
     quote:
       "Emma leads our client service team, ensuring personalized attention and support for every investor.",
-    imageUrl: "/logo.png",
+    imageUrl: "/logofinal.png",
   },
 ];
 export default function OurExpert() {
@@ -84,7 +84,7 @@ export default function OurExpert() {
           <div className={`flex ${"items-center"} transition-transform gap-4`}>
             <div className="flex justify-center items-center">
               <Image
-                src={"/logo.png"}
+                src={"/logofinal.png"}
                 alt={"logo"}
                 width={60}
                 height={60}
@@ -92,7 +92,7 @@ export default function OurExpert() {
               />
 
               <Image
-                src={"/logo.png"}
+                src={"/logofinal.png"}
                 alt={"logo"}
                 width={60}
                 height={60}
@@ -100,7 +100,7 @@ export default function OurExpert() {
               />
 
               <Image
-                src={"/logo.png"}
+                src={"/logofinal.png"}
                 alt={"logo"}
                 width={60}
                 height={60}

@@ -47,7 +47,7 @@ export default function OurMission() {
           >
             <div className="w-full mb-4 ">
               <Image
-                src={item?.image || "/logo.png"}
+                src={item?.image || "/logofinal.png"}
                 width={900}
                 height={900}
                 alt=""

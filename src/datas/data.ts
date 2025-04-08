@@ -42,19 +42,26 @@ export const team = [
 ];
 
 export const team2 = [
+  
   {
-    name: "Bhavik Joshi",
-    position: "Business Head",
-    image: "/team/bhavetjoshi.jpeg",
+    name: "Narender Agarwal",
+    position: "Founder & Partner",
+    image: "/team/naren.png",
+    email: "naren.agarwal@wealth1.com",
+    linkedin: "https://www.linkedin.com/in/narender-agarwal-a475681a6",
   },
   {
-    name: "Kalp Jain",
-    position: "Business Head",
-    image: "/team/kapljain.jpeg",
+    name: "Jickson Sajee",
+    position: "Investor Relations",
+    image: "/team/jickson.jpeg",
+    email: "jickson.sajee@wealth1.com",
+    linkedin: "https://www.linkedin.com/in/jickson-sajee-974a6b181/",
   },
   {
     name: "Charmi Shah",
     position: "Tech Lead",
     image: "/team/charmishah.jpeg",
+    email: "charmi.shah@wealth1.com",
+    linkedin: "https://www.linkedin.com/in/charmi-shah-finance",
   },
 ];

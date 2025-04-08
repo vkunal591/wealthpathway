@@ -16,7 +16,7 @@ export default function TeamSection() {
         investment management, research, and client service to deliver
         exceptional value to our investors.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-3/5 m-auto mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-3/5 m-auto mb-8 hidden">
         {team &&
           team?.map((data: any, index: any) => (
             <div

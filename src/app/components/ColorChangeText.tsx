@@ -19,7 +19,7 @@ export default function ColorChangeText({ text }: { text: string[] }) {
 
       <div className="w-full lg:w-3/5 justify-start items-center gap-4 hidden">
         <Image
-          src={"/logo.jpeg"}
+          src={"/logofinal.png"}
           width={800}
           height={800}
           alt="profile"

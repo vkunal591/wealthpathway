@@ -210,7 +210,7 @@ const Sidebar = () => {
           <div className="flex p-3 shadow-md z-50 ">
             <Link href={"/"}>
               <Image
-                src={"/logo.png"}
+                src={"/logofinal.png"}
                 width={140}
                 height={60}
                 unoptimized

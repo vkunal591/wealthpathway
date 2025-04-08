@@ -103,19 +103,20 @@ export default function Footer() {
           <div className="w-full lg:col-span-2">
             <div className="mb-4">
               <Image
-                src="/logo.png"
+                src="/logofinal.png"
                 width={200}
                 height={70}
                 alt="Wealth1"
-                className="w-40 h-18 filter invert"
+                className="w-40 h-24 filter invert"
               />
             </div>
             <div>
               <p className=" tracking-wide text-xs/7 text-gray-50 mt-4 lg:mb-2">
-                At Wealth1, our Portfolio Management Services (PMS) are designed
-                for discerning investors who seek personalized and professional
-                management of their wealth. With a team of experienced fund
-                managers and financial experts.
+                Wealth1 is India’s leading platform for discovering top
+                SEBI-registered PMS and AIF strategies. Powered by AI-driven
+                insights and expert research, we help investors select
+                risk-aligned portfolios with transparency, trust, and long-term
+                focus.
               </p>
             </div>
           </div>
