@@ -29,7 +29,7 @@ export default function HeroSection({
   return (
     <div
       ref={ref}
-      className="p-4 lg:p-16 lg:pt-40 lg:pb-4 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start "
+      className="p-4 lg:p-16 pt-30 lg:pt-40 lg:pb-4 max-w-7xl m-auto flex flex-col lg:flex-row justify-end items-start "
     >
       <motion.div style={{ opacity }} ref={textRef} className="w-full text-center m-auto">
         <motion.p

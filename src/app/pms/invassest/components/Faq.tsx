@@ -11,7 +11,7 @@ export default function Faq() {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
   return (
-    <div className="container mx-auto px-6 lg:p-16 lg:pt-0 space-y-4 ">
+    <div className="container mx-auto p-4 lg:p-16 lg:pt-0 space-y-4 ">
       <h2 className="text-3xl font-bold text-center text-[#0A2B58]">
         Frequently Asked Questions
       </h2>

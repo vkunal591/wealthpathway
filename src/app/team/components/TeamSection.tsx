@@ -7,7 +7,7 @@ import { LiaLinkedin } from "react-icons/lia";
 
 export default function TeamSection() {
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 ">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 pt-40 ">
       <h2 className="capitalize text-4xl text-center  font-semibold text-[#0A2B58] mb-4">
         Meet Our Team
       </h2>
@@ -16,7 +16,7 @@ export default function TeamSection() {
         investment management, research, and client service to deliver
         exceptional value to our investors.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-3/5 m-auto mb-8 hidden">
+      <div className=" grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-3/5 m-auto mb-8 hidden">
         {team &&
           team?.map((data: any, index: any) => (
             <div
@@ -54,7 +54,7 @@ export default function TeamSection() {
           ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-4/5 m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:w-4/5 m-auto">
         {team2 &&
           team2?.map((data: any, index: any) => (
             <div

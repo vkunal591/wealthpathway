@@ -10,7 +10,7 @@ export default function TopHeader() {
       <div className="max-w-screen-xl mx-auto flex justify-between items-center flex-wrap gap-2">
         {/* Left Section */}
         <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1 text-xs">
+          <span className="items-center gap-1 text-xs hidden lg:flex">
             <IoLocationOutline className="text-sm" /> 911, One Lodha Place,
             Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013
           </span>

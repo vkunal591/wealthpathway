@@ -97,7 +97,7 @@ const sections = [
     title: "Alternative Investment Funds",
     icon: "calendar",
     content: (
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <h2 className="text-3xl font-bold text-[#0A2B58]">
             Alternative Investment Funds
@@ -133,7 +133,7 @@ const sections = [
     title: "Risk Management",
     icon: "calendar",
     content: (
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <h2 className="text-3xl font-bold text-[#0A2B58]">Risk Management</h2>
           <p className="mt-4 text-gray-600 leading-relaxed mb-4">
@@ -212,7 +212,7 @@ const sections = [
     title: "Portfolio Review",
     icon: "chartPie",
     content: (
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <h2 className="text-3xl font-bold text-[#0A2B58]">
             Portfolio Review
@@ -254,9 +254,9 @@ export default function DetailsCard2() {
   const [activeTab, setActiveTab] = useState("Portfolio Management Services");
 
   return (
-    <div className="max-w-7xl m-auto p-4  text-[#0A2B58]">
+    <div className="max-w-7xl m-auto lg:p-4  text-[#0A2B58]">
       {/* Navigation Buttons */}
-      <div className="flex space-x-6 pb-4">
+      <div className="flex flex-col lg:flex-row space-x-6 pb-4">
         {sections.map((section) => {
           const IconComponent = iconMap[section.icon];
 
@@ -287,7 +287,7 @@ export default function DetailsCard2() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="bg-transparent p-8 mt-4 "
+          className="bg-transparent lg:p-8 mt-4 "
         >
           {sections.find((section) => section.id === activeTab)?.content}
         </motion.div>

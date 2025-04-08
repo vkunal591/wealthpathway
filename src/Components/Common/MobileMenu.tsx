@@ -20,19 +20,19 @@ const aboutus = [
   {
     label: "Why Wealth1",
     image: "/assets/webdev.png",
-    href: "/services/aboutus",
+    href: "/why-wealth",
     id: "why-wealth", // Unique ID for submenu
   },
   {
     label: "Our Statement",
     image: "/assets/webdev.png",
-    href: "/about/our-statement",
+    href: "/our-statement",
     id: "our-statemetn", // Unique ID for submenu
   },
   {
     label: "Team",
     image: "/assets/webdev.png",
-    href: "/about/team",
+    href: "/team",
     id: "team", // Unique ID for submenu
   },
 
@@ -45,37 +45,37 @@ const aboutus = [
 ];
 
 const pms = [
-  {
-    label: "PMS Overview",
-    image: "/assets/webdev.png",
-    href: "/pms/pms-overview",
-    id: "pms-overview", // Unique ID for submenu
-  },
-  {
-    label: "FAQs",
-    image: "/assets/webdev.png",
-    href: "/pms/faqs",
-    id: "faqs", // Unique ID for submenu
-  },
-  {
-    label: "Product",
-    image: "/assets/webdev.png",
-    href: "/pms/product",
-    id: "product", // Unique ID for submenu
-  },
+  // {
+  //   label: "PMS Overview",
+  //   image: "/assets/webdev.png",
+  //   href: "/pms/pms-overview",
+  //   id: "pms-overview", // Unique ID for submenu
+  // },
+  // {
+  //   label: "FAQs",
+  //   image: "/assets/webdev.png",
+  //   href: "/pms/faqs",
+  //   id: "faqs", // Unique ID for submenu
+  // },
+  // {
+  //   label: "Product",
+  //   image: "/assets/webdev.png",
+  //   href: "/pms/product",
+  //   id: "product", // Unique ID for submenu
+  // },
 
-  {
-    label: "Analytics",
-    image: "/assets/webdev.png",
-    href: "/pms/analatics",
-    id: "analatics", // Unique ID for submenu
-  },
-  {
-    label: "Stallion",
-    image: "/assets/webdev.png",
-    href: "/pms/stallion",
-    id: "stallion", // Unique ID for submenu
-  },
+  // {
+  //   label: "Analytics",
+  //   image: "/assets/webdev.png",
+  //   href: "/pms/analatics",
+  //   id: "analatics", // Unique ID for submenu
+  // },
+  // {
+  //   label: "Stallion",
+  //   image: "/assets/webdev.png",
+  //   href: "/pms/stallion",
+  //   id: "stallion", // Unique ID for submenu
+  // },
   {
     label: "INVasset",
     image: "/assets/webdev.png",
@@ -152,24 +152,24 @@ const events = [
 export const services = [
   {
     title: "About Us",
-    link: aboutus,
+    links: aboutus,
   },
   {
     title: "PMS",
     links: pms,
   },
-  {
-    title: "AIF",
-    links: aif,
-  },
-  {
-    title: "Reports",
-    links: reports,
-  },
-  {
-    title: "Events",
-    links: events,
-  },
+  // {
+  //   title: "AIF",
+  //   links: aif,
+  // },
+  // {
+  //   title: "Reports",
+  //   links: reports,
+  // },
+  // {
+  //   title: "Events",
+  //   links: events,
+  // },
 ];
 
 const Sidebar = () => {
@@ -202,7 +202,7 @@ const Sidebar = () => {
   return (
     <div className="relative ">
       <div
-        className={`fixed top-[-20%] right-[-10%] h-full bg-gray-900 text-primary z-50 transform ${
+        className={`fixed top-0 right-[-10%] h-full bg-gray-900 text-primary z-50 transform ${
           isOpen ? "w-[85%] md:w-3/4 right-0" : "w-0"
         } transition-all duration-500 ease-in-out`}
       >
@@ -240,7 +240,7 @@ const Sidebar = () => {
               services={services}
               handleLinkClick={handleLinkClick}
             />
-            {menuItems?.map((item: any) => (
+            {/* {menuItems?.map((item: any) => (
               <div key={item.id} className="relative group">
                 <Link
                   href={item.path}
@@ -251,7 +251,7 @@ const Sidebar = () => {
                   {item.name}
                 </Link>
               </div>
-            ))}
+            ))} */}
             <div className="py-4">
               <p className="pb-2">Follow us at:</p>
               <SocialMediaLinks size={30} />

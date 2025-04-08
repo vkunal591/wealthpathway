@@ -22,7 +22,7 @@ export default function WhyChoose2() {
         <p className="p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
           Why Choose PMS with Wealth1
         </p>
-        <h2 className="capitalize w-3/5 m-auto text-4xl text-center   font-bold text-[#0A2B58] mb-4">
+        <h2 className="capitalize w-full lg:w-3/5 m-auto text-xl lg:text-4xl text-center   font-bold text-[#0A2B58] mb-4">
           Leading the Alternative Investments Revolution
         </h2>
         <p className="text-sm text-gray-500 ">
@@ -32,7 +32,7 @@ export default function WhyChoose2() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 w-4/5 m-auto gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:w-4/5 m-auto gap-4 ">
         {data.map((item, index) => {
           return (
             <div
