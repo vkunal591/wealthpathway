@@ -84,70 +84,70 @@ const pms = [
   },
 ];
 
-const aif = [
-  {
-    label: "AIF Overview",
-    image: "/assets/webdev.png",
-    href: "/aif/aif-overview",
-    id: "pms-overview", // Unique ID for submenu
-  },
-  {
-    label: "FAQs",
-    image: "/assets/webdev.png",
-    href: "/ait/faqs",
-    id: "faqs", // Unique ID for submenu
-  },
-  {
-    label: "Product",
-    image: "/assets/webdev.png",
-    href: "/aif/product",
-    id: "product", // Unique ID for submenu
-  },
+// const aif = [
+//   {
+//     label: "AIF Overview",
+//     image: "/assets/webdev.png",
+//     href: "/aif/aif-overview",
+//     id: "pms-overview", // Unique ID for submenu
+//   },
+//   {
+//     label: "FAQs",
+//     image: "/assets/webdev.png",
+//     href: "/ait/faqs",
+//     id: "faqs", // Unique ID for submenu
+//   },
+//   {
+//     label: "Product",
+//     image: "/assets/webdev.png",
+//     href: "/aif/product",
+//     id: "product", // Unique ID for submenu
+//   },
 
-  {
-    label: "Analytics",
-    image: "/assets/webdev.png",
-    href: "/aif/analatics",
-    id: "analatics", // Unique ID for submenu
-  },
-];
+//   {
+//     label: "Analytics",
+//     image: "/assets/webdev.png",
+//     href: "/aif/analatics",
+//     id: "analatics", // Unique ID for submenu
+//   },
+// ];
 
-const reports = [
-  {
-    label: "PMS Reports",
-    image: "/assets/webdev.png",
-    href: "/reports/pms-reports",
-    id: "pms-reports", // Unique ID for submenu
-  },
-  {
-    label: "AIF Reports",
-    image: "/assets/webdev.png",
-    href: "/aif/aif-reports",
-    id: "aif-reports", // Unique ID for submenu
-  },
-  {
-    label: "Magzine",
-    image: "/assets/webdev.png",
-    href: "/reports/magzine",
-    id: "magzine", // Unique ID for submenu
-  },
-];
+// const reports = [
+//   {
+//     label: "PMS Reports",
+//     image: "/assets/webdev.png",
+//     href: "/reports/pms-reports",
+//     id: "pms-reports", // Unique ID for submenu
+//   },
+//   {
+//     label: "AIF Reports",
+//     image: "/assets/webdev.png",
+//     href: "/aif/aif-reports",
+//     id: "aif-reports", // Unique ID for submenu
+//   },
+//   {
+//     label: "Magzine",
+//     image: "/assets/webdev.png",
+//     href: "/reports/magzine",
+//     id: "magzine", // Unique ID for submenu
+//   },
+// ];
 
-const events = [
-  {
-    label: "Physical Events",
-    image: "/assets/webdev.png",
-    href: "/events/physical-events",
-    id: "physical-events", // Unique ID for submenu
-  },
+// const events = [
+//   {
+//     label: "Physical Events",
+//     image: "/assets/webdev.png",
+//     href: "/events/physical-events",
+//     id: "physical-events", // Unique ID for submenu
+//   },
 
-  {
-    label: "Virtual Events",
-    image: "/assets/webdev.png",
-    href: "/events/virtual-events",
-    id: "virtual-events", // Unique ID for submenu
-  },
-];
+//   {
+//     label: "Virtual Events",
+//     image: "/assets/webdev.png",
+//     href: "/events/virtual-events",
+//     id: "virtual-events", // Unique ID for submenu
+//   },
+// ];
 
 export const services = [
   {
@@ -175,15 +175,15 @@ export const services = [
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Define menuItems with submenus for "Services" and "Industries"
-  const menuItems = [
-    { id: 1, name: "Home", path: "/" },
-    // { id: 2, name: "About Us", path: "/about-us" },
-    // { id: 3, name: "PMS", path: "/pms" },
-    // { id: 4, name: "AID", path: "/aif" },
-    // { id: 5, name: "Reports", path: "/reports" },
-    // { id: 6, name: "Events", path: "/events" },
-  ];
+  // // Define menuItems with submenus for "Services" and "Industries"
+  // const menuItems = [
+  //   { id: 1, name: "Home", path: "/" },
+  //   // { id: 2, name: "About Us", path: "/about-us" },
+  //   // { id: 3, name: "PMS", path: "/pms" },
+  //   // { id: 4, name: "AID", path: "/aif" },
+  //   // { id: 5, name: "Reports", path: "/reports" },
+  //   // { id: 6, name: "Events", path: "/events" },
+  // ];
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
