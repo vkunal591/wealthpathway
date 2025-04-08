@@ -50,10 +50,6 @@ const data2 = [
     value: "Expected CAGR",
     label: "Expected over long term",
     value1: "18-28% CAGR",
-    label2: "Plan A:",
-    value2: "1.5% Fixed Fee + 15% Profit Sharing over 10% Hurdle Rate",
-    label3: "Plan B:",
-    value3: "2.5% Fixed Fee",
   },
 ];
 
