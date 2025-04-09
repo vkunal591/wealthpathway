@@ -65,12 +65,12 @@ const pms = [
   //   path: "/pms/analatics",
   //   id: "analatics", // Unique ID for submenu
   // },
-  {
-    name: "ICICI",
-    image: "/assets/webdev.png",
-    path: "/pms/icici",
-    id: "icici", // Unique ID for submenu
-  },
+  // {
+  //   name: "Stallion",
+  //   image: "/assets/webdev.png",
+  //   path: "/pms/stallion",
+  //   id: "stallion", // Unique ID for submenu
+  // },
   {
     name: "INVasset",
     image: "/assets/webdev.png",

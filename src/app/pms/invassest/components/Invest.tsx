@@ -36,7 +36,7 @@ const Invest: React.FC<InvestProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Eligibility */}
         <div className={cardClass}>
-          <h3 className="text-[#0A2B58] text-xl font-semibold mb-4">Eligibility for INVasset PMS</h3>
+          <h3 className="text-[#0A2B58] text-xl font-semibold mb-4">Eligibility </h3>
           <ul className="mt-4 space-y-4 grid grid-cols-2 text-gray-600 mb-4">
             {eligibilityItems.map((item, idx) => (
               <li key={idx} className="flex items-center gap-2">

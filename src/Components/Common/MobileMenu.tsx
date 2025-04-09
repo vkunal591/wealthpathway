@@ -77,6 +77,12 @@ const pms = [
   //   id: "stallion", // Unique ID for submenu
   // },
   {
+    label: "ICICI",
+    image: "/assets/webdev.png",
+    href: "/pms/icici",
+    id: "icici", // Unique ID for submenu
+  },
+  {
     label: "INVasset",
     image: "/assets/webdev.png",
     href: "/pms/invassest",

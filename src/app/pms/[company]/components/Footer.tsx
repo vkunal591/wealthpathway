@@ -19,42 +19,36 @@ export default function Footer() {
   ];
 
   const pms = [
-    // {
-    //   label: "PMS Overview",
-    //   image: "/assets/webdev.png",
-    //   href: "/pms/pms-overview",
-    //   id: "pms-overview", // Unique ID for submenu
-    // },
-    // {
-    //   label: "FAQs",
-    //   image: "/assets/webdev.png",
-    //   href: "/pms/faqs",
-    //   id: "faqs", // Unique ID for submenu
-    // },
-    // {
-    //   label: "Product",
-    //   image: "/assets/webdev.png",
-    //   href: "/pms/product",
-    //   id: "product", // Unique ID for submenu
-    // },
-
-    // {
-    //   label: "Analytics",
-    //   image: "/assets/webdev.png",
-    //   href: "/pms/analatics",
-    //   id: "analatics", // Unique ID for submenu
-    // },
-    // {
-    //   label: "Stallion",
-    //   image: "/assets/webdev.png",
-    //   href: "/pms/stallion",
-    //   id: "stallion", // Unique ID for submenu
-    // },
     {
-      label: "ICICI",
+      label: "PMS Overview",
       image: "/assets/webdev.png",
-      href: "/pms/icici",
-      id: "icici", // Unique ID for submenu
+      href: "/pms/pms-overview",
+      id: "pms-overview", // Unique ID for submenu
+    },
+    {
+      label: "FAQs",
+      image: "/assets/webdev.png",
+      href: "/pms/faqs",
+      id: "faqs", // Unique ID for submenu
+    },
+    {
+      label: "Product",
+      image: "/assets/webdev.png",
+      href: "/pms/product",
+      id: "product", // Unique ID for submenu
+    },
+
+    {
+      label: "Analytics",
+      image: "/assets/webdev.png",
+      href: "/pms/analatics",
+      id: "analatics", // Unique ID for submenu
+    },
+    {
+      label: "Stallion",
+      image: "/assets/webdev.png",
+      href: "/pms/stallion",
+      id: "stallion", // Unique ID for submenu
     },
     {
       label: "INVasset",
