@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   IoCallOutline,
   IoMailOutline,
-  IoLocationOutline,
 } from "react-icons/io5";
 import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import Accordion from "./FooterAccordion";
@@ -179,35 +178,15 @@ export default function Footer() {
                 contact@wealth1.com
               </Link>
               <Link
-                href={"tel:+9198551 31158"}
+                href={"tel:+919855131158"}
                 className="text-xs mb-2 flex items-center"
               >
                 <strong>
                   <IoCallOutline className="text-xl mr-2" />
                 </strong>{" "}
-                {"+91 98551 31158"}
+                {"+91 9855131158"}
               </Link>
-              <p className="text-xs flex items-center mb-4">
-                <strong>
-                  <IoLocationOutline className="text-xl mr-2" />
-                </strong>{" "}
-                4th Floor, Two Horizon Centre, DLF Phase 5, Gurugram, Haryana,
-                122002
-              </p>
-              <p className="text-xs flex items-center mb-4">
-                <strong>
-                  <IoLocationOutline className="text-xl mr-2" />
-                </strong>{" "}
-                Plot No. 14-15, First Floor, Canal Road, South City, Ludhiana,
-                Punjab, 142027
-              </p>
-              <p className="text-xs flex items-center mb-4">
-                <strong>
-                  <IoLocationOutline className="text-xl mr-2" />
-                </strong>{" "}
-                911, One Lodha Place, Senapati Bapat Marg, Lower Parel, Mumbai,
-                Maharashtra 400013
-              </p>
+          
               <p className="flex items-center gap-4 pl-6">
                 <Link
                   href={

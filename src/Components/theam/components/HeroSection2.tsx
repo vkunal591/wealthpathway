@@ -38,7 +38,7 @@ export default function HeroSection2() {
               <FlowButton>Explore Alternative Investments</FlowButton>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 overflow-hidden roundedx shadow-2xl">
+          <div className="w-full lg:w-1/2 overflow-hidden rounded-md shadow-2xl">
             <Image
               src={"/assets/heronew.png"}
               alt={""}

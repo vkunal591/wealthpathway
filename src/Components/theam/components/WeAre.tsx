@@ -11,7 +11,7 @@ export default function WeAre() {
           <p className="p-1 mb-2 text-sm font-medium m-auto  border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
             Wealth1 Premium PM
           </p>
-          <h2 className="text-2xl mb-4 font-semibold text-[#0A2B58]">
+          <h2 className="text-4xl mb-4 font-bold text-[#0A2B58]">
             Unlocking Alpha Through PMS & AIF
           </h2>
 
