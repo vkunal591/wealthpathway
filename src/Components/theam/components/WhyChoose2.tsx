@@ -19,7 +19,7 @@ export default function WhyChoose2() {
   return (
     <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-4">
       <div className="flex flex-col items-center justify-between mb-8">
-        <p className="p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
+        <p className="p-1 mb-4 text-sm font-medium border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
           Why Choose PMS with Wealth1
         </p>
         <h2 className="capitalize w-full lg:w-3/5 m-auto text-xl lg:text-4xl text-center   font-bold text-[#0A2B58] mb-4">

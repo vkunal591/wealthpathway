@@ -76,6 +76,7 @@ export default function HeaderSection({
           )}
         </div>
       </div>
+      
     </div>
   );
 }

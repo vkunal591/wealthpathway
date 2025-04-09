@@ -221,11 +221,11 @@ export default function Navbar2() {
       className="flex items-center justify-between bg-white/40 w-full shadow fixed  z-[5000] border-none text-green-50 m-auto p-4"
       animate={controls}
     >
-      <div className="flex items-center justify-between bg-white/80 blu -z-10 h-full lg:h-20 absolute left-0 top-0 w-full"></div>
+      <div className="flex items-center justify-between bg-white/80 blu -z-10 h-full absolute left-0 top-0 w-full"></div>
       <div className="w-1/2 lg:w-1/5 flex items-center justify-start">
         <Link href={"/"}>
           <Image
-            src={"/logo2.png"}
+            src={"/logo.png"}
             width={150}
             height={70}
             unoptimized

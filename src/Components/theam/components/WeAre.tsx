@@ -8,7 +8,7 @@ export default function WeAre() {
     <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-4">
       <div className="grid grid-cols-1  gap-4 items-start">
         <div className="text-center">
-          <p className="p-1 mb-2 text-xs m-auto font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
+          <p className="p-1 mb-2 text-sm font-medium m-auto  border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit  px-4 text-[#0A2B58] ">
             Wealth1 Premium PM
           </p>
           <h2 className="text-2xl mb-4 font-semibold text-[#0A2B58]">

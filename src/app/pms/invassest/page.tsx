@@ -13,13 +13,13 @@ import ReadyToStart from "./components/ReadyToStart";
 export default function page() {
   return (
     <div className="bg-white">
-      <div className="bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
+      <div className="bg-gradient-to-r from-[#B28C3D]/30 via-[#B28C3D]/20 to-[#B28C3D]/10">
         <HeaderSection
           title="INVasset Growth Fund PMS – Quant Driven Portfolio Management Strategy"
           buttonLink="/invest"
           showFactsheet={false}
           factsheetLink="/factsheet.pdf"
-          containerClassName="bg-white"
+          containerClassName=""
           className="pt-32"
           textClassName="text-primary"
         />

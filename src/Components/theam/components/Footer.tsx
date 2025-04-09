@@ -170,22 +170,22 @@ export default function Footer() {
             </h3>
             <div>
               <Link
-                href={"mailto:allabove@company.com"}
+                href={"mailto:contact@wealth1.com"}
                 className="text-xs mb-2 flex items-center"
               >
                 <strong>
                   <IoMailOutline className="text-xl mr-2" />
                 </strong>{" "}
-                help@wealth1.com
+                contact@wealth1.com
               </Link>
               <Link
-                href={"tel:098158 10172"}
+                href={"tel:+9198551 31158"}
                 className="text-xs mb-2 flex items-center"
               >
                 <strong>
                   <IoCallOutline className="text-xl mr-2" />
                 </strong>{" "}
-                {"098158 10172"}
+                {"+91 98551 31158"}
               </Link>
               <p className="text-xs flex items-center mb-4">
                 <strong>
