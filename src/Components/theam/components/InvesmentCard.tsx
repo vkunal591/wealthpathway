@@ -28,7 +28,7 @@ export default function InvesmentCard() {
   ];
   return (
     <div className="max-w-7xl m-auto py-4 lg:p-10 lg:pb-4 text-blue-900">
-      <div className="grid grid-cols-1 md:grid-cols-3 shadow mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 mb-8">
         {data.map((item, index) => {
           const IconComponent = iconMap[item.icon];
           return (
@@ -44,10 +44,10 @@ export default function InvesmentCard() {
                 </div>
               </div>
               <div className="text-center w-full">
-                <h2 className="text-lg text-[#0A2B58] group-hover:text-gray-50 mb-2 font-semibold">
+                <h2 className="text-xl text-[#0A2B58] group-hover:text-gray-50 mb-2 font-semibold">
                   {item.value}
                 </h2>
-                <p className="text-sm text-gray-500 group-hover:text-gray-50 ">{item.label}</p>
+                <p className="text-base text-justify h-20 text-gray-500 group-hover:text-gray-50 ">{item.label}</p>
               </div>
             </div>
           );

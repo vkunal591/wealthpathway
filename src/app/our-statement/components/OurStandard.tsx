@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function OurStandard() {
   const data = [
@@ -24,19 +25,38 @@ export default function OurStandard() {
       label: "Seamless Onboarding & Dedicated Relationship Managers",
     },
   ];
+
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0  text-blue-900">
-      <h2 className="capitalize text-4xl text-center  font-semibold text-dark-primary mb-4">
+    <div className="max-w-7xl m-auto p-4 lg:py-16 lg:pb-0 text-blue-900">
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="capitalize text-4xl text-center font-semibold text-dark-primary mb-4"
+      >
         Why Wealth1 Stands Apart
-      </h2>
-      <div className="w-full flex items-center justify-center">
-        <span className="bg-primary h-1 w-20 inline-block m-auto "></span>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full lg:w-4/5 m-auto ">
+      </motion.h2>
+
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="w-full flex items-center justify-center"
+      >
+        <span className="bg-primary h-1 w-20 inline-block m-auto origin-left"></span>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full lg:w-4/5 m-auto">
         {data.map((item, index) => (
-          <div
+          <motion.div
             key={index}
-            className=" hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300 rounded  p-4 py-8 w-full h-auto  flex flex-col items-center justify-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300 rounded p-4 py-8 w-full h-auto flex flex-col items-center justify-center"
           >
             <div className="w-full mb-4">
               <Image
@@ -48,18 +68,24 @@ export default function OurStandard() {
               />
             </div>
             <div className="text-center">
-              {/* <h2 className="text-2xl text-gray-700 mb-2 font-semibold">
-                {item?.value}
-              </h2> */}
-              <p className="text-base text-[#0A2B58] mb-4">{item?.label}</p>
+              <p className="text-base font-semibold text-[#0A2B58] mb-4">
+                {item?.label}
+              </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-      <p className="text-base text-[#0A2B58] mb-8 text-center w-full lg:w-3/5 m-auto">
+
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-base font-semibold text-[#0A2B58] mb-8 text-center w-full lg:w-3/5 m-auto"
+      >
         We are Wealth1&apos;s first AI-led PMS & AIF distribution platform built
         around investor convenience, confidence, and clarity.
-      </p>
+      </motion.p>
     </div>
   );
 }

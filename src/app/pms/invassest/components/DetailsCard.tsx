@@ -1,6 +1,5 @@
 "use client";
 import FlowButton from "@/Components/theam/components/FlowButton";
-import Link from "next/link";
 import React, { useState } from "react";
 import { BsCheck2Circle } from "react-icons/bs";
 import { FiUserCheck } from "react-icons/fi";
@@ -357,19 +356,17 @@ export default function DetailsCard() {
     <div className="max-w-7xl m-auto p-4 lg:p-16 lg:pb-0 text-[#0A2B58]">
       {/* Navigation Buttons */}
       <div className="flex flex-col lg:flex-row space-y-2 lg:space-x-6 pb-4">
-        {sections.map((section,index) => (
-          <FlowButton key={index}>
-            <Link
-              href={""}
+        {sections.map((section, index) => (
+          <FlowButton key={index} onClick={() => setActiveSection(section.id)}>
+            <p
               className={` rounded-full font-semibold transition-all duration-300 outline-0  hover:from-[#B28C3D]/90 hover:via-[#B28C3D]/80 hover:to-[#B28C3D]/90 hover:text-white transition-color ease-in-out ${
                 activeSection === section.id
                   ? "bg-gradient-to- from-[#B28C3D] via-[#B28C3D]/95 to-[#B28C3D]/50  text-[#B28C3D] font-bold shadow-md"
                   : "bg-gradient-to- from-[#B28C3D]/20 via-[#B28C3D]/20 to-[#B28C3D]/10  border-gray-50 text-white"
               }`}
-              onClick={() => setActiveSection(section.id)}
             >
               {section.title}
-            </Link>
+            </p>
           </FlowButton>
         ))}
       </div>

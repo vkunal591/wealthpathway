@@ -49,7 +49,7 @@ const sections = [
     icon: "briefcase",
     content: (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-        <div className="self-start">
+        <div className="self-start p-2">
           <h2 className="text-2xl font-bold text-[#0A2B58]">
             Grow Your Wealth with Expert-Driven Investments
           </h2>
@@ -61,8 +61,8 @@ const sections = [
             financial goals, risk appetite, and investment horizon.
           </p>
         </div>
-        <div className="self-start shadow p-6 rounded-md">
-          <h2 className="text-xl font-semibold text-[#0A2B58]">
+        <div className="self-start shadow px-6 py-2 rounded-md">
+          <h2 className="text-xl font-semibold text-[#B28C3D]">
             Investment Focus
           </h2>
           <div className="mt-4 space-y-2 text-gray-600">
@@ -81,7 +81,7 @@ const sections = [
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <BsCheck2Circle className="text-[#B28C3D] text-[27px]" />
+              <BsCheck2Circle className="text-[#B28C3D] text-[28px]" />
               <div className="">
                 Investment solutions built around specific themes divke ESG,
                 technology, or global diversification.
@@ -287,7 +287,7 @@ export default function DetailsCard2() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="bg-transparent lg:p-8 mt-4 "
+          className="bg-transparent text-justify mt-4 "
         >
           {sections.find((section) => section.id === activeTab)?.content}
         </motion.div>

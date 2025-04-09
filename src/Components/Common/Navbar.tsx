@@ -220,7 +220,7 @@ export default function Navbar() {
       <div className="w-1/2 lg:w-1/5 flex items-center justify-start">
         <Link href={"/"}>
           <Image
-            src={"/logo2.png"}
+            src={"/logofinal.png"}
             width={150}
             height={70}
             unoptimized

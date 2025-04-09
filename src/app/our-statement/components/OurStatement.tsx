@@ -6,7 +6,7 @@ export default function OurStatement() {
       <h2 className="capitalize text-5xl text-center  font-bold text-[#0A2B58]  mb-4">
         Our Statement
       </h2>
-      <p className="text-base text-[#0A2B58] mb-8 font-semibold text-center w-full lg:w-4/5 m-auto">
+      <p className="text-lg text-[#0A2B58] mb-8 font-semibold text-center w-full lg:w-4/5 m-auto">
         Empowering India&apos;s Investment Future Through
         <span className="text-primary">{"  Clarity"}</span>,
         <span className="text-primary">{"  Choice"} </span> &
