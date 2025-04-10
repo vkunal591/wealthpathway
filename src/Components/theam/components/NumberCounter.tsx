@@ -4,6 +4,7 @@ interface NumberCounterProps {
   from?: number;
   to: number;
   duration?: number; // in milliseconds
+  decimals?: number; // how many decimals to show
   className?: string;
 }
 
@@ -11,7 +12,8 @@ const NumberCounter: React.FC<NumberCounterProps> = ({
   from = 0,
   to,
   duration = 1000,
-  className = "text-[#0A2B58] text-5xl",
+  decimals = 0,
+  className = "text-[#0A2B58] text-4xl",
 }) => {
   const [count, setCount] = useState(from);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -24,16 +26,13 @@ const NumberCounter: React.FC<NumberCounterProps> = ({
         if (entry.isIntersecting && !hasAnimated) {
           animate();
           setHasAnimated(true);
-          observer.disconnect(); // stop observing after animation
+          observer.disconnect();
         }
       },
-      {
-        threshold: 0.5, // At least 50% visible
-      }
+      { threshold: 0.5 }
     );
 
     if (ref.current) observer.observe(ref.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -42,7 +41,7 @@ const NumberCounter: React.FC<NumberCounterProps> = ({
       if (!startTimestamp.current) startTimestamp.current = timestamp;
       const progress = timestamp - startTimestamp.current;
       const progressRatio = Math.min(progress / duration, 1);
-      const currentNumber = Math.floor(from + (to - from) * progressRatio);
+      const currentNumber = from + (to - from) * progressRatio;
 
       setCount(currentNumber);
 
@@ -56,7 +55,10 @@ const NumberCounter: React.FC<NumberCounterProps> = ({
 
   return (
     <span ref={ref} className={className}>
-      {count.toLocaleString()}{"+"}
+      {count.toLocaleString(undefined, {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals,
+      })}
     </span>
   );
 };

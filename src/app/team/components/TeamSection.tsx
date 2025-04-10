@@ -1,4 +1,5 @@
-import { team, team2 } from "@/datas/data";
+"use client"
+import { team2 } from "@/datas/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -32,8 +33,8 @@ export default function TeamSection() {
       </motion.p>
 
       <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-3/5 m-auto mb-8 hidden">
-        {team &&
-          team.map((data: any, index: number) => (
+        {team2 &&
+          team2.map((data: any, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -63,7 +64,7 @@ export default function TeamSection() {
               <div className="flex items-center gap-4 text-[#B28C3D]">
                 <Link href={data?.linkedin} className="flex items-center text-[#0A2B58]">
                   <LiaLinkedin className="mr-1 text-[#B28C3D] text-2xl" />
-                  Linkedin
+                  Linkedin {data?.linkedin +"dklkfd"}
                 </Link>
                 <Link href={data?.email} className="flex items-center text-[#0A2B58]">
                   <FaEnvelope className="mr-1 text-[#B28C3D]" /> Email
@@ -103,11 +104,11 @@ export default function TeamSection() {
                 </p>
               </div>
               <div className="flex items-center gap-4 text-[#B28C3D]">
-                <Link href={""} className="flex items-center text-[#0A2B58]">
+                <Link target="blank" href={data?.linkedin} className="flex items-center text-[#0A2B58]">
                   <LiaLinkedin className="mr-1 text-[#B28C3D] text-2xl" />
-                  Linkedin
+                  Linkedin 
                 </Link>
-                <Link href={""} className="flex items-center text-[#0A2B58]">
+                <Link href={`mailto:${data?.email}`} className="flex items-center text-[#0A2B58]">
                   <FaEnvelope className="mr-1 text-[#B28C3D]" /> Email
                 </Link>
               </div>

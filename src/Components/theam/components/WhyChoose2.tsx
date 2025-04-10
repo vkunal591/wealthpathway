@@ -1,17 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import InvesmentCard from "./InvesmentCard";
+import NumberCounter from "./NumberCounter";
 
 const data = [
   {
     icon: "briefcase",
     value: "PMS Investors in India",
-    label: "1.9L+",
+    label: 1.9,
+    unit: "L+",
+    subUnit: "",
   },
   {
     icon: "calendar",
     value: "Assets Under Management",
-    label: "₹36.6L Cr",
+    label: 36.6,
+    unit: "L Cr",
+    subUnit: "₹",
   },
 ];
 
@@ -49,7 +54,15 @@ export default function WhyChoose2() {
           >
             <div className="mb-2 h-16 rounded-full group-hover:border-t-[#B28C3D]/50 group-hover:border-r-[#0A2B58]/50 group-hover:border-b-[#B28C3D]/50 group-hover:border-l-[#0A2B58]/50 transition-colors ease-in-out duration-300">
               <div className="w-full h-full flex items-center justify-center">
-                <p className="text-3xl text-primary font-semibold">{item.label}</p>
+                <p className="text-4xl text-primary font-semibold">
+                  {item.subUnit}{" "}
+                  <NumberCounter
+                    to={item?.label}
+                    duration={3000}
+                    decimals={2}
+                  />{" "}
+                  {item.unit}{" "}
+                </p>
               </div>
             </div>
             <div className="text-center w-full">
