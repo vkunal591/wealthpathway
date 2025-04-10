@@ -279,7 +279,7 @@ export default function DetailsCard2() {
   const [activeTab, setActiveTab] = useState("Portfolio Management Services");
 
   return (
-    <div className="max-w-7xl m-auto lg:p-4  text-[#0A2B58]">
+    <div className="max-w-7xl m-auto lg:p-4 lg:px-16  text-[#0A2B58]">
       {/* Navigation Buttons */}
       <div className="flex flex-col lg:flex-row space-x-6 pb-4">
         {sections.map((section) => {

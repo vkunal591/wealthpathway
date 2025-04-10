@@ -22,7 +22,7 @@ const Faq: React.FC<FaqProps> = ({
   title = "Frequently Asked Questions",
   subtitle = "Get answers to commonly asked questions about INVasset PMS.",
   allowMultiple = false,
-  containerClass = "container mx-auto p-4 lg:p-16 lg:pt-0 space-y-4",
+  containerClass = "container mx-auto p-4 lg:px-16 lg:pt-0 space-y-4",
 }) => {
   const [openIndexes, setOpenIndexes] = useState<number[]>([0]); // First one open by default
 
@@ -50,7 +50,7 @@ const Faq: React.FC<FaqProps> = ({
         return (
           <div
             key={index}
-            className="border rounded-2xl text-[#0A2B58] p-4 border-l-4 border-l-[#B28C3D] border-gray-300 py-6"
+            className="border rounded-2xl text-[#0A2B58] p-4 border-l-4 border-l-[#B28C3D] border-gray-300 py-6 mb-4"
           >
             <button
               onClick={() => toggleFAQ(index)}

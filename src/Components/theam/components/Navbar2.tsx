@@ -1,15 +1,13 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import {
-  IoIosArrowDown,
-  IoIosArrowUp,
-} from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Sidebar from "@/Components/Common/MobileMenu";
 import FlowButton from "./FlowButton";
+import { Fetch } from "@/utils/api";
 
 const aboutus = [
   {
@@ -39,45 +37,45 @@ const aboutus = [
   },
 ];
 
-const pms = [
-  // {
-  //   name: "PMS Overview",
-  //   image: "/assets/webdev.png",
-  //   path: "/pms/pms-overview",
-  //   id: "pms-overview", // Unique ID for submenu
-  // },
-  // {
-  //   name: "FAQs",
-  //   image: "/assets/webdev.png",
-  //   path: "/pms/faqs",
-  //   id: "faqs", // Unique ID for submenu
-  // },
-  // {
-  //   name: "Product",
-  //   image: "/assets/webdev.png",
-  //   path: "/pms/product",
-  //   id: "product", // Unique ID for submenu
-  // },
+// const pms = [
+//   // {
+//   //   name: "PMS Overview",
+//   //   image: "/assets/webdev.png",
+//   //   path: "/pms/pms-overview",
+//   //   id: "pms-overview", // Unique ID for submenu
+//   // },
+//   // {
+//   //   name: "FAQs",
+//   //   image: "/assets/webdev.png",
+//   //   path: "/pms/faqs",
+//   //   id: "faqs", // Unique ID for submenu
+//   // },
+//   // {
+//   //   name: "Product",
+//   //   image: "/assets/webdev.png",
+//   //   path: "/pms/product",
+//   //   id: "product", // Unique ID for submenu
+//   // },
 
-  // {
-  //   name: "Analytics",
-  //   image: "/assets/webdev.png",
-  //   path: "/pms/analatics",
-  //   id: "analatics", // Unique ID for submenu
-  // },
-  {
-    name: "ICICI",
-    image: "/assets/webdev.png",
-    path: "/pms/icici",
-    id: "icici", // Unique ID for submenu
-  },
-  {
-    name: "INVasset",
-    image: "/assets/webdev.png",
-    path: "/pms/invassest",
-    id: "invassest", // Unique ID for submenu
-  },
-];
+//   // {
+//   //   name: "Analytics",
+//   //   image: "/assets/webdev.png",
+//   //   path: "/pms/analatics",
+//   //   id: "analatics", // Unique ID for submenu
+//   // },
+//   {
+//     name: "ICICI",
+//     image: "/assets/webdev.png",
+//     path: "/pms/icici",
+//     id: "icici", // Unique ID for submenu
+//   },
+//   {
+//     name: "INVasset",
+//     image: "/assets/webdev.png",
+//     path: "/pms/invassest",
+//     id: "invassest", // Unique ID for submenu
+//   },
+// ];
 
 // const aif = [
 //   {
@@ -144,13 +142,28 @@ const pms = [
 //   },
 // ];
 
+type InputType = {
+  _id: string;
+  title: string;
+  subTitle: string;
+  slug: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+type OutputType = {
+  name: string;
+  path: string;
+};
+
 export default function Navbar2() {
   const [scrollingDown, setScrollingDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const controls = useAnimation();
   const pathname = usePathname(); // Get current route
   const [activeSubmenuId, setActiveSubmenuId] = useState<string | null>(null); // Track active submenu by ID
-
+  const [pageList, setPageList] = useState<any>();
   const handleMouseEnter = (submenuId: string) => {
     setActiveSubmenuId(submenuId); // Set the submenu as active on hover
   };
@@ -170,7 +183,7 @@ export default function Navbar2() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about-us", submenu: aboutus },
-    { name: "PMS", path: "/pms", submenu: pms },
+    { name: "PMS", path: "/pms", submenu: pageList },
     {
       name: "AIF",
       path: "/aif",
@@ -197,6 +210,25 @@ export default function Navbar2() {
       setLastScrollY(currentScrollY);
     }
   };
+
+  function convertToNavItems(items: InputType[]): OutputType[] {
+    return items.map((item) => ({
+      name: item.title || "Untitled",
+      path: `/pms/${item.slug?.replace(/\s+/g, "-") || ""}`,
+    }));
+  }
+
+  const fetchPageList = async () => {
+    const response: any = await Fetch("/api/pages", undefined, 5000);
+    const pageList = await response.data.result;
+    console.log(pageList);
+    const navItems = convertToNavItems(pageList);
+    console.log(navItems);
+    setPageList(navItems);
+  };
+  useEffect(() => {
+    fetchPageList();
+  }, []);
 
   useEffect(() => {
     // Add scroll event listener
@@ -276,8 +308,8 @@ export default function Navbar2() {
                   onMouseLeave={handleMouseLeave} // Reset on mouse leave
                 >
                   <ul className="space-y-2 p-2 grid grid-cols-1">
-                    {item?.submenu?.map((subItem: any) => (
-                      <li key={subItem.id}>
+                    {item?.submenu?.map((subItem: any, index: any ) => (
+                      <li key={index}>
                         <Link
                           href={subItem.path}
                           onClick={handleLinkClick}
@@ -315,8 +347,8 @@ export default function Navbar2() {
           Investor Login
         </Link>
 
-       <span className="hidden lg:inline-block">
-         <FlowButton>Schedule a Consultation</FlowButton>
+        <span className="hidden lg:inline-block">
+          <FlowButton>Schedule a Consultation</FlowButton>
         </span>
         <Sidebar />
       </div>

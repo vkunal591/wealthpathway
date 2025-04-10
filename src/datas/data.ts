@@ -45,7 +45,7 @@ export const team2 = [
   {
     name: "Narender Agarwal",
     position: "Founder & Partner",
-    image: "/team/naren.png",
+    image: "/team/naren2.png",
     email: "naren.agarwal@wealth1.com",
     linkedin: "https://www.linkedin.com/in/narender-agarwal-a475681a6",
   },
@@ -59,7 +59,7 @@ export const team2 = [
   {
     name: "Jickson Sajee",
     position: "Investor Relations",
-    image: "/team/jickson.jpeg",
+    image: "/team/bgremove.png",
     email: "jickson.sajee@wealth1.com",
     linkedin: "https://www.linkedin.com/in/jickson-sajee-974a6b181/",
   },
