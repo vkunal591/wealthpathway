@@ -13,16 +13,22 @@ import React from "react";
 
 export default async function page(ctx: any) {
   const { company } = await ctx.params;
-  const fetchPageData = await getData(`/api/pages/?slug=${company}`);
-  console.log(fetchPageData);
-  console.log(company);
+  const fetchPageData = await getData(`/api/section/?slug=${company}`);
+  // console.log(fetchPageData[1].contents);
+  // console.log(company);
   return (
     <div className="bg-white">
       <div className="bg-white">
         <div className="bg-gradient-to-r from-[#B28C3D]/30 via-[#B28C3D]/20 to-[#B28C3D]/10">
           <HeaderSection
-            title={fetchPageData[0]?.title || `ICICI Prudential PMS Contra Strategy`}
-            subtitle={fetchPageData[0]?.description ||"A contrarian investing approach targeting temporarily out-of-favor but fundamentally strong companies with strong potential for future growth."}
+            tagline={fetchPageData[0]?.subtitle}
+            title={
+              fetchPageData[0]?.title || `ICICI Prudential PMS Contra Strategy`
+            }
+            subtitle={
+              fetchPageData[0]?.description ||
+              "A contrarian investing approach targeting temporarily out-of-favor but fundamentally strong companies with strong potential for future growth."
+            }
             buttonLink="/icici"
             showFactsheet={false}
             factsheetLink="/factsheet.pdf"
@@ -52,8 +58,9 @@ export default async function page(ctx: any) {
             },
             { icon: "chartPie", label: "Benchmark", value: "BSE 500 TRI" },
           ]}
+          contentData={fetchPageData[1].contents}
         />
-        <DetailsCard />
+        <DetailsCard data={fetchPageData} />
         <Portfolio
           subtitle="The ICICI Prudential Contra Strategy maintains a diversified portfolio across market capitalizations with a focus on sectors poised for turnaround."
           compositionContent={[
