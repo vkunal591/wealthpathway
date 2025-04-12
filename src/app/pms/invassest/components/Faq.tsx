@@ -37,7 +37,7 @@ const Faq: React.FC<FaqProps> = ({
       setOpenIndexes((prev) => (prev[0] === index ? [] : [index]));
     }
   };
-
+  if (!faqs) return <div>No Faqs</div>;
   return (
     <div className={containerClass}>
       <h2 className="text-3xl font-bold text-center text-[#0A2B58]">{title}</h2>
@@ -45,7 +45,7 @@ const Faq: React.FC<FaqProps> = ({
         {subtitle}
       </p>
 
-      {faqs.map((faq, index) => {
+      {faqs.map((faq: any, index: any) => {
         const isOpen = openIndexes.includes(index);
         return (
           <div
@@ -56,7 +56,7 @@ const Faq: React.FC<FaqProps> = ({
               onClick={() => toggleFAQ(index)}
               className="w-full text-left flex justify-between items-center"
             >
-              <span className="font-medium">{faq.question}</span>
+              <span className="font-medium">{faq?.title}</span>
               <span className="text-xl">
                 {isOpen ? (
                   <BsDashCircle width={16} height={16} />
@@ -70,7 +70,7 @@ const Faq: React.FC<FaqProps> = ({
                 isOpen ? "max-h-40 p-4" : "max-h-0 p-0"
               }`}
             >
-              {isOpen && <p className="text-sm">{faq.answer}</p>}
+              {isOpen && <p className="text-sm">{faq?.description}</p>}
             </div>
           </div>
         );

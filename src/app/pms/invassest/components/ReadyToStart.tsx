@@ -26,7 +26,7 @@ export default function ReadyToStart({
 }: ReadyToStartProps) {
   return (
     <div className={containerClass}>
-      <h2 className="text-3xl font-bold text-center text-[#0A2B58]">{title}</h2>
+      <h2 className="text-3xl font-bold text-center capitalize text-[#0A2B58]">{title}</h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-8">
         {description}
       </p>

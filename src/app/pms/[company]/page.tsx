@@ -14,9 +14,16 @@ import React from "react";
 export default async function page(ctx: any) {
   const { company } = await ctx.params;
   const fetchPageData = await getData(`/api/section/?slug=${company}`);
+  const getInitialsFromTitle = (title: any) => {
+    if (!title) return "";
 
-  if (!fetchPageData) return <div>Not Found</div>;
-  // console.log(fetchPageData[1].contents);
+    return title
+      .split(" ")
+      .map((word: any) => word[0])
+      .join("")
+      .toUpperCase();
+  };
+  if (!fetchPageData) return <div className="mt-[9.6rem]">Not Found</div>;
   // console.log(company);
   return (
     <div className="bg-white">
@@ -85,29 +92,40 @@ export default async function page(ctx: any) {
           ]}
           note="Note: Holdings are for illustrative purposes and may change based on market conditions."
         />
-        <FundInsight
-          data={[
-            {
-              icon: "briefcase",
-              value: "Investment Philosophy",
-              label:
-                "Anand Shah and Chockalingam Narayanan bring decades of investing experience, applying disciplined contrarian thinking across the portfolio. Their objective is to identify value where the market is overly pessimistic and capitalize when mean reversion kicks in.",
-            },
-            {
-              icon: "calendar",
-              value: "Research Approach",
-              label:
-                "The fund managers are supported by a research team covering 620 companies across 20+ sectors, ensuring deep coverage and conviction in each portfolio holding.",
-            },
-          ]}
-          teamMember={{
-            initials: "AG",
-            name: "Anand Shah",
-            role: "Fund Manager, ICICI Prudential Asset Management",
-          }}
-        />
+        {fetchPageData && fetchPageData[5] && (
+          <FundInsight
+            data={[
+              {
+                icon: "briefcase",
+                value:
+                  fetchPageData[5]?.contents[0]?.title ||
+                  "Investment Philosophy",
+                label:
+                  fetchPageData[5]?.contents[0]?.description ||
+                  "Anand Shah and Chockalingam Narayanan bring decades of investing experience, applying disciplined contrarian thinking across the portfolio. Their objective is to identify value where the market is overly pessimistic and capitalize when mean reversion kicks in.",
+              },
+              {
+                icon: "calendar",
+                value:
+                  fetchPageData[5]?.contents[1]?.title || "Research Approach",
+                label:
+                  fetchPageData[5]?.contents[1]?.description ||
+                  "The fund managers are supported by a research team covering 620 companies across 20+ sectors, ensuring deep coverage and conviction in each portfolio holding.",
+              },
+            ]}
+            teamMember={{
+              initials:
+                getInitialsFromTitle(fetchPageData[5]?.contents[2]?.title) ||
+                "AG",
+              name: fetchPageData[5]?.contents[2]?.title || "Anand Shah",
+              role:
+                fetchPageData[5]?.contents[2]?.description ||
+                "Fund Manager, ICICI Prudential Asset Management",
+            }}
+          />
+        )}
         <Invest
-          title="How to Invest in ICICI Prudential PMS Contra Strategy"
+          title={`How to ${company.toUpperCase()} in ICICI Prudential PMS Contra Strategy`}
           subtitle="A simple process to begin your investment journey with ICICI Prudential PMS Contra Strategy."
           eligibilityItems={[
             "Resident Individuals",
@@ -143,57 +161,25 @@ export default async function page(ctx: any) {
           containerClass=" p-4 lg:p-16 max-w-7xl m-auto"
         />
         <Faq
-          subtitle="Get answers to commonly asked questions about ICICI Prudential PMS Contra Strategy."
-          faqs={[
-            {
-              question: "What is contrarian investing?",
-              answer:
-                "It is the practice of investing in stocks that are currently out of favor but are expected to deliver strong performance in the long term.",
-            },
-            {
-              question: "What is the ideal holding period?",
-              answer:
-                "4 years and above is recommended for optimal compounding.",
-            },
-            {
-              question: "Is the portfolio diversified across market caps?",
-              answer:
-                "Yes, it includes large (63%), mid (18%), and small-cap (19%) stocks for balanced growth and risk management.",
-            },
-            {
-              question: "Is ICICI Prudential PMS available for NRIs?",
-              answer:
-                "Yes, NRIs can invest via NRE or NRO accounts subject to regulations.",
-            },
-            {
-              question: "How often will I receive reports?",
-              answer:
-                "Monthly performance reports and quarterly reviews are shared with investors.",
-            },
-          ]}
+          title={
+            fetchPageData[6]?.subTtitle ||
+            "Frequently Asked Questions about ICICI Prudential PMS Contra Strategy"
+          }
+          subtitle={
+            fetchPageData[6]?.subTtitle ||
+            "Get answers to commonly asked questions about ICICI Prudential PMS Contra Strategy."
+          }
+          faqs={fetchPageData && fetchPageData[6]?.contents}
           allowMultiple={false} // Set to true if you want multiple open at once
           containerClass=" px-4 lg:px-16 max-w-7xl m-auto"
         />
         <div className="bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
-          <LegalInfo
-            legalPoints={[
-              {
-                title: "Regulatory Compliance",
-                description:
-                  "ICICI Prudential Asset Management is a SEBI-registered Portfolio Manager (Reg. No.: INP000000373).",
-              },
-              {
-                title: "Risk Disclaimer",
-                description:
-                  "Past performance is not indicative of future results. Investment in securities is subject to market risks. Investors are advised to read all related documents carefully before investing.",
-              },
-            ]}
-            downloads={[]}
-          />
-          ;
+          {fetchPageData && fetchPageData[7] && (
+            <LegalInfo legalPoints={fetchPageData[7].contents} downloads={[]} />
+          )}
         </div>
         <WhyInvest
-          heading="Why Invest in ICICI Prudential PMS Contra Strategy with Wealth1"
+          heading={`Why Invest in ${company.toUpperCase()} Prudential PMS Contra Strategy with Wealth1`}
           subheading="Experience a seamless investment journey with personalized support and expert guidance."
           items={[
             {
@@ -224,8 +210,8 @@ export default async function page(ctx: any) {
           containerClass=" p-4 lg:p-16 max-w-7xl m-auto"
         />
         <ReadyToStart
-          title="Ready to Invest in ICICI Prudential PMS Contra Strategy?"
-          description="Take the first step towards your wealth creation journey with ICICI Prudential PMS Contra Strategy through Wealth1's guided investment process."
+          title={`Ready to Invest in ${company.toUpperCase()} Prudential PMS Contra Strategy?`}
+          description={`Take the first step towards your wealth creation journey with ${company.toUpperCase()} Prudential PMS Contra Strategy through Wealth1's guided investment process.`}
           primaryCTA={{
             label: "Schedule a consultation with Wealth1",
           }}
