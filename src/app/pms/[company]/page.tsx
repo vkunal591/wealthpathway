@@ -14,6 +14,8 @@ import React from "react";
 export default async function page(ctx: any) {
   const { company } = await ctx.params;
   const fetchPageData = await getData(`/api/section/?slug=${company}`);
+
+  if (!fetchPageData) return <div>Not Found</div>;
   // console.log(fetchPageData[1].contents);
   // console.log(company);
   return (
