@@ -211,3 +211,6 @@ export default async function page(ctx: any) {
     </div>
   );
 }
+
+
+export const revalidate = 60;
