@@ -7,6 +7,7 @@ import {
 } from "react-icons/io5";
 import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import Accordion from "./FooterAccordion";
+import { FaAddressCard } from "react-icons/fa6";
 
 export default function Footer() {
   const company = [
@@ -112,7 +113,7 @@ export default function Footer() {
                 width={200}
                 height={70}
                 alt="Wealth1"
-                className="w-40 h-24 filter invert"
+                className="w-40 h-24 "
               />
             </div>
             <div>
@@ -186,18 +187,27 @@ export default function Footer() {
                 </strong>{" "}
                 {"+91 9855131158"}
               </Link>
+              <Link
+                href={"tel:+919855131158"}
+                className="text-xs mb-2 flex items-center"
+              >
+                <strong>
+                  <FaAddressCard className="text-xl mr-2" />
+                </strong>{" "}
+                {"43, Karelwadi, Thakurdwar Ground Floor Cabina Room no. 1, Charni Road, Mumbai - 400002"}
+              </Link>
           
               <p className="flex items-center gap-4 pl-6">
                 <Link
                   href={
-                    "https://www.facebook.com/profile.php?id=61567180822428"
+                    "/"
                   }
                   title="facebook"
                 >
                   <FaFacebook className="text-2xl text-[#B28C3D]" />
                 </Link>
                 <Link
-                  href={"https://www.instagram.com/aboveallagency"}
+                  href={"/"}
                   title="instagram"
                 >
                   <FaInstagramSquare className="text-2xl text-[#B28C3D]" />

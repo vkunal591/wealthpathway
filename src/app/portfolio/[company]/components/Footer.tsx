@@ -106,7 +106,7 @@ export default function Footer() {
                 width={200}
                 height={70}
                 alt="Wealth1"
-                className="w-40 h-24 filter invert"
+                className="w-40 h-24"
               />
             </div>
             <div>

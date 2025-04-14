@@ -1,9 +1,9 @@
 "use client";
 
 import FlowButton from "@/Components/theam/components/FlowButton";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 
 interface HeaderSectionProps {
   tagline?: string;
@@ -30,9 +30,18 @@ export default function HeaderSection({
   containerClassName = "",
   textClassName = "",
 }: HeaderSectionProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
+
   return (
     <div className={`max-w-7xl m-auto h-auto flex flex-col items-center ${containerClassName}`}>
-      <div className={`w-full h-full p-4 pt-40 pb-10 ${className}`}>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className={`w-full h-full p-4 pt-40 pb-10 ${className}`}
+      >
         {tagline && (
           <p className="p-1 mb-4 text-xs font-semibold border border-[#B28C3D]/10 bg-[#B28C3D]/10 rounded-full w-fit m-auto px-4 text-[#0A2B58]">
             {tagline}
@@ -75,8 +84,7 @@ export default function HeaderSection({
             </motion.div>
           )}
         </div>
-      </div>
-      
+      </motion.div>
     </div>
   );
 }

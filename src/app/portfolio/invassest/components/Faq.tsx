@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { BsDashCircle } from "react-icons/bs";
 import { IoIosAddCircleOutline } from "react-icons/io";
 
@@ -37,20 +37,46 @@ const Faq: React.FC<FaqProps> = ({
       setOpenIndexes((prev) => (prev[0] === index ? [] : [index]));
     }
   };
+
   if (!faqs) return <div>No Faqs</div>;
+
   return (
-    <div className={containerClass}>
-      <h2 className="text-3xl font-bold text-center text-[#0A2B58]">{title}</h2>
-      <p className="mt-4 text-gray-600 text-center leading-relaxed mb-4">
+    <motion.div
+      className={containerClass}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: false }}
+    >
+      <motion.h2
+        className="text-3xl font-bold text-center text-[#0A2B58]"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: false }}
+      >
+        {title}
+      </motion.h2>
+      <motion.p
+        className="mt-4 text-gray-600 text-center leading-relaxed mb-4"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: false }}
+      >
         {subtitle}
-      </p>
+      </motion.p>
 
       {faqs.map((faq: any, index: any) => {
         const isOpen = openIndexes.includes(index);
         return (
-          <div
+          <motion.div
             key={index}
             className="border rounded-2xl text-[#0A2B58] p-4 border-l-4 border-l-[#B28C3D] border-gray-300 py-6 mb-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false }}
           >
             <button
               onClick={() => toggleFAQ(index)}
@@ -70,12 +96,12 @@ const Faq: React.FC<FaqProps> = ({
                 isOpen ? "max-h-40 p-4" : "max-h-0 p-0"
               }`}
             >
-              {isOpen && <p className="text-sm">{faq?.description}</p>}
+              {isOpen && <p className="text-sm">{faq.description}</p>}
             </div>
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

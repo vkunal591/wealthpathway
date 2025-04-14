@@ -1,5 +1,4 @@
 "use client";
-
 import FlowButton from "@/Components/theam/components/FlowButton";
 import { motion } from "framer-motion";
 import React from "react";
@@ -25,7 +24,13 @@ export default function ReadyToStart({
   containerClass = "container mx-auto p-4 lg:p-16 lg:pt-0 space-y-4",
 }: ReadyToStartProps) {
   return (
-    <div className={containerClass}>
+    <motion.div
+      className={containerClass}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: false }}
+    >
       <h2 className="text-3xl font-bold text-center capitalize text-[#0A2B58]">{title}</h2>
       <p className="mt-4 text-gray-600 text-center leading-relaxed mb-8">
         {description}
@@ -37,7 +42,7 @@ export default function ReadyToStart({
           whileTap={{ scale: 0.95 }}
           className="rounded-full"
         >
-          <FlowButton >
+          <FlowButton>
             {primaryCTA.label}
           </FlowButton>
         </motion.div>
@@ -54,6 +59,6 @@ export default function ReadyToStart({
           </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

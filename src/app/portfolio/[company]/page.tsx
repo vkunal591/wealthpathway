@@ -1,18 +1,18 @@
 import DetailsCard from "./components/DetailsCard2";
-import Faq from "@/app/pms/invassest/components/Faq";
-import FundInsight from "@/app/pms/invassest/components/FundInsight";
-import HeaderSection from "@/app/pms/invassest/components/HeaderSection";
-import InfoCard from "@/app/pms/invassest/components/InfoCard";
-import Invest from "@/app/pms/invassest/components/Invest";
-import LegalInfo from "@/app/pms/invassest/components/LegalInfo";
-import Portfolio from "@/app/pms/invassest/components/Portfolio";
-import ReadyToStart from "@/app/pms/invassest/components/ReadyToStart";
-import WhyInvest from "@/app/pms/invassest/components/WhyInvest";
+import Faq from "@/app/portfolio/invassest/components/Faq";
+import FundInsight from "@/app/portfolio/invassest/components/FundInsight";
+import HeaderSection from "@/app/portfolio/invassest/components/HeaderSection";
+import InfoCard from "@/app/portfolio/invassest/components/InfoCard";
+import Invest from "@/app/portfolio/invassest/components/Invest";
+import LegalInfo from "@/app/portfolio/invassest/components/LegalInfo";
+import Portfolio from "@/app/portfolio/invassest/components/Portfolio";
+import ReadyToStart from "@/app/portfolio/invassest/components/ReadyToStart";
+import WhyInvest from "@/app/portfolio/invassest/components/WhyInvest";
 import React from "react";
 
 export default async function page(ctx: any) {
   const { company } = await ctx.params;
-  console.log(company)
+  console.log(company);
   return (
     <div className="bg-white p-4 lg:p-16 max-w-7xl m-auto">
       <div className="bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
@@ -78,7 +78,7 @@ export default async function page(ctx: any) {
               "The fund managers are supported by a research team covering 620 companies across 20+ sectors, ensuring deep coverage and conviction in each portfolio holding.",
           },
         ]}
-        teamMember={{
+        teamMembers={{
           initials: "AG",
           name: "Anand Shah",
           role: "Fund Manager, ICICI Prudential Asset Management",

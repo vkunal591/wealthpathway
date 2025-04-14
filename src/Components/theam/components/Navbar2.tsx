@@ -277,7 +277,7 @@ export default function Navbar2() {
             >
               <Link href={item.path} className="border-none outline-none">
                 <li
-                  className={`m-auto text-base flex items-center hover:text-gray-900 group transition-all ease-in-out ${
+                  className={`m-auto px-2 py-0.5 rounded-sm text-base flex items-center hover:text-gray-900 hover:underline hover:bg-[#B28C3D]/30 group transition-all ease-in-out ${
                     pathname === item.path
                       ? "border-b border-dark-primary text-dark-primary font-bold"
                       : "text-dark-primary hover:text-gray-900 transition duration-200"

@@ -1,80 +1,103 @@
 import DetailsCard from "./components/DetailsCard2";
-import Faq from "@/app/pms/invassest/components/Faq";
-import FundInsight from "@/app/pms/invassest/components/FundInsight";
-import HeaderSection from "@/app/pms/invassest/components/HeaderSection";
-import InfoCard from "@/app/pms/invassest/components/InfoCard";
-import Invest from "@/app/pms/invassest/components/Invest";
-import LegalInfo from "@/app/pms/invassest/components/LegalInfo";
-import Portfolio from "@/app/pms/invassest/components/Portfolio";
-import ReadyToStart from "@/app/pms/invassest/components/ReadyToStart";
-import WhyInvest from "@/app/pms/invassest/components/WhyInvest";
+import Faq from "@/app/portfolio/invassest/components/Faq";
+import FundInsight from "@/app/portfolio/invassest/components/FundInsight";
+import HeaderSection from "@/app/portfolio/invassest/components/HeaderSection";
+import InfoCard from "@/app/portfolio/invassest/components/InfoCard";
+import Invest from "@/app/portfolio/invassest/components/Invest";
+import LegalInfo from "@/app/portfolio/invassest/components/LegalInfo";
+import Portfolio from "@/app/portfolio/invassest/components/Portfolio";
+import ReadyToStart from "@/app/portfolio/invassest/components/ReadyToStart";
+import WhyInvest from "@/app/portfolio/invassest/components/WhyInvest";
+import LoadingComponent from "@/Components/Common/LoadingComponent";
 import { getData } from "@/utils/server";
 import React from "react";
 
 export default async function page(ctx: any) {
-  const { company } = await ctx.params;
-  const fetchPageData = await getData(`/api/section/?slug=${company}`);
-  const getInitialsFromTitle = (title: any) => {
-    if (!title) return "";
+  const { company } = ctx.params;
 
-    return title
-      .split(" ")
-      .map((word: any) => word[0])
-      .join("")
-      .toUpperCase();
+  let fetchPageData;
+  try {
+    fetchPageData = await getData(`/api/section/?slug=${company}`);
+  } catch (error) {
+    console.error("Failed to fetch page data:", error);
+    return (
+      <div className="mt-[9.6rem]">
+        Error loading data. Please try again later.
+      </div>
+    );
+  }
+  console.log(fetchPageData);
+  if (!Array.isArray(fetchPageData) || fetchPageData.length === 0) {
+    return (
+      <div className="mt-[9.6rem] m-auto w-1/5 text-center ">Not Found</div>
+    );
+  }
+
+  const extractRange = <T,>(
+    data: T[],
+    startIndex: number,
+    endIndex: number
+  ): T[] => {
+    return data.slice(startIndex, endIndex + 1);
   };
-  if (!fetchPageData) return <div className="mt-[9.6rem]">Not Found</div>;
-  // console.log(company);
+
+  const headerSection = fetchPageData[0] || {};
+  const infoCardContents = fetchPageData?.[1]?.contents || [];
+  const detailsData = fetchPageData || [];
+  const fundInsight = fetchPageData?.[5]?.contents || [];
+  const teamMember = extractRange(fetchPageData?.[5]?.contents, 2, 4) || [];
+  const faqSection = fetchPageData?.[6] || {};
+  const legalInfoContents = fetchPageData?.[7]?.contents || [];
+  console.log(extractRange(fetchPageData?.[5]?.contents, 2, 4));
   return (
     <div className="bg-white">
+      <LoadingComponent />
       <div className="bg-white">
         <div className="bg-gradient-to-r from-[#B28C3D]/30 via-[#B28C3D]/20 to-[#B28C3D]/10">
-          {fetchPageData && (
-            <HeaderSection
-              tagline={fetchPageData[0]?.subtitle}
-              title={
-                fetchPageData[0]?.title ||
-                `ICICI Prudential PMS Contra Strategy`
-              }
-              subtitle={
-                fetchPageData[0]?.description ||
-                "A contrarian investing approach targeting temporarily out-of-favor but fundamentally strong companies with strong potential for future growth."
-              }
-              buttonLink="/icici"
-              showFactsheet={false}
-              factsheetLink="/factsheet.pdf"
-              containerClassName=""
-              className="pt-32"
-              textClassName="text-primary"
-            />
-          )}
-        </div>{" "}
-        {fetchPageData && (
-          <InfoCard
-            className="bg-white"
-            cardClassName="hover:shadow-md transition-all"
-            data={[
-              {
-                icon: "calendar",
-                label: "Launch Date",
-                value: "September 14, 2018",
-              },
-              {
-                icon: "graph",
-                label: "Strategy",
-                value: "Contrarian | Multi-Cap",
-              },
-              {
-                icon: "briefcase",
-                label: "Fund Manager",
-                value: "Anand Shah & Chockalingam Narayanan",
-              },
-              { icon: "chartPie", label: "Benchmark", value: "BSE 500 TRI" },
-            ]}
-            contentData={fetchPageData[1].contents}
+          <HeaderSection
+            tagline={headerSection.subtitle || ""}
+            title={
+              headerSection.title || "ICICI Prudential PMS Contra Strategy"
+            }
+            subtitle={
+              headerSection.description ||
+              "A contrarian investing approach targeting temporarily out-of-favor but fundamentally strong companies with strong potential for future growth."
+            }
+            buttonLink="/icici"
+            showFactsheet={false}
+            factsheetLink="/factsheet.pdf"
+            containerClassName=""
+            className="pt-32"
+            textClassName="text-primary"
           />
-        )}
-        {fetchPageData && <DetailsCard data={fetchPageData} />}
+        </div>
+
+        <InfoCard
+          className="bg-white"
+          cardClassName="hover:shadow-md transition-all"
+          data={[
+            {
+              icon: "calendar",
+              label: "Launch Date",
+              value: "September 14, 2018",
+            },
+            {
+              icon: "graph",
+              label: "Strategy",
+              value: "Contrarian | Multi-Cap",
+            },
+            {
+              icon: "briefcase",
+              label: "Fund Manager",
+              value: "Anand Shah & Chockalingam Narayanan",
+            },
+            { icon: "chartPie", label: "Benchmark", value: "BSE 500 TRI" },
+          ]}
+          contentData={infoCardContents}
+        />
+
+        <DetailsCard data={detailsData} />
+
         <Portfolio
           subtitle="The ICICI Prudential Contra Strategy maintains a diversified portfolio across market capitalizations with a focus on sectors poised for turnaround."
           compositionContent={[
@@ -92,40 +115,33 @@ export default async function page(ctx: any) {
           ]}
           note="Note: Holdings are for illustrative purposes and may change based on market conditions."
         />
-        {fetchPageData && fetchPageData[5] && (
+
+        {fundInsight.length >= 3 && (
           <FundInsight
             data={[
               {
                 icon: "briefcase",
-                value:
-                  fetchPageData[5]?.contents[0]?.title ||
-                  "Investment Philosophy",
+                value: fundInsight[0]?.title || "Investment Philosophy",
                 label:
-                  fetchPageData[5]?.contents[0]?.description ||
-                  "Anand Shah and Chockalingam Narayanan bring decades of investing experience, applying disciplined contrarian thinking across the portfolio. Their objective is to identify value where the market is overly pessimistic and capitalize when mean reversion kicks in.",
+                  fundInsight[0]?.description ||
+                  "Anand Shah and Chockalingam Narayanan bring decades of investing experience...",
               },
               {
                 icon: "calendar",
-                value:
-                  fetchPageData[5]?.contents[1]?.title || "Research Approach",
+                value: fundInsight[1]?.title || "Research Approach",
                 label:
-                  fetchPageData[5]?.contents[1]?.description ||
-                  "The fund managers are supported by a research team covering 620 companies across 20+ sectors, ensuring deep coverage and conviction in each portfolio holding.",
+                  fundInsight[1]?.description ||
+                  "The fund managers are supported by a research team...",
               },
             ]}
-            teamMember={{
-              initials:
-                getInitialsFromTitle(fetchPageData[5]?.contents[2]?.title) ||
-                "AG",
-              name: fetchPageData[5]?.contents[2]?.title || "Anand Shah",
-              role:
-                fetchPageData[5]?.contents[2]?.description ||
-                "Fund Manager, ICICI Prudential Asset Management",
-            }}
+            teamMembers={teamMember}
           />
         )}
+
         <Invest
-          title={`How to ${company.toUpperCase()} in ICICI Prudential PMS Contra Strategy`}
+          title={`How to ${(
+            company || "invest"
+          ).toUpperCase()} in ICICI Prudential PMS Contra Strategy`}
           subtitle="A simple process to begin your investment journey with ICICI Prudential PMS Contra Strategy."
           eligibilityItems={[
             "Resident Individuals",
@@ -160,26 +176,33 @@ export default async function page(ctx: any) {
           contactEmail="contact@wealth1.com"
           containerClass=" p-4 lg:p-16 max-w-7xl m-auto"
         />
-        <Faq
-          title={
-            fetchPageData[6]?.subTtitle ||
-            "Frequently Asked Questions about ICICI Prudential PMS Contra Strategy"
-          }
-          subtitle={
-            fetchPageData[6]?.subTtitle ||
-            "Get answers to commonly asked questions about ICICI Prudential PMS Contra Strategy."
-          }
-          faqs={fetchPageData && fetchPageData[6]?.contents}
-          allowMultiple={false} // Set to true if you want multiple open at once
-          containerClass=" px-4 lg:px-16 max-w-7xl m-auto"
-        />
+
+        {faqSection?.contents && (
+          <Faq
+            title={
+              faqSection?.subTtitle ||
+              "Frequently Asked Questions about ICICI Prudential PMS Contra Strategy"
+            }
+            subtitle={
+              faqSection?.subTtitle ||
+              "Get answers to commonly asked questions about ICICI Prudential PMS Contra Strategy."
+            }
+            faqs={faqSection.contents}
+            allowMultiple={false}
+            containerClass=" px-4 lg:px-16 max-w-7xl m-auto"
+          />
+        )}
+
         <div className="bg-gradient-to-r from-[#B28C3D]/10 via-[#B28C3D]/10 to-[#B28C3D]/10">
-          {fetchPageData && fetchPageData[7] && (
-            <LegalInfo legalPoints={fetchPageData[7].contents} downloads={[]} />
+          {legalInfoContents.length > 0 && (
+            <LegalInfo legalPoints={legalInfoContents} downloads={[]} />
           )}
         </div>
+
         <WhyInvest
-          heading={`Why Invest in ${company.toUpperCase()} Prudential PMS Contra Strategy with Wealth1`}
+          heading={`Why Invest in ${(
+            company || "ICICI"
+          ).toUpperCase()} Prudential PMS Contra Strategy with Wealth1`}
           subheading="Experience a seamless investment journey with personalized support and expert guidance."
           items={[
             {
@@ -209,9 +232,14 @@ export default async function page(ctx: any) {
           ]}
           containerClass=" p-4 lg:p-16 max-w-7xl m-auto"
         />
+
         <ReadyToStart
-          title={`Ready to Invest in ${company.toUpperCase()} Prudential PMS Contra Strategy?`}
-          description={`Take the first step towards your wealth creation journey with ${company.toUpperCase()} Prudential PMS Contra Strategy through Wealth1's guided investment process.`}
+          title={`Ready to Invest in ${(
+            company || "ICICI"
+          ).toUpperCase()} Prudential PMS Contra Strategy?`}
+          description={`Take the first step towards your wealth creation journey with ${(
+            company || "ICICI"
+          ).toUpperCase()} Prudential PMS Contra Strategy through Wealth1's guided investment process.`}
           primaryCTA={{
             label: "Schedule a consultation with Wealth1",
           }}

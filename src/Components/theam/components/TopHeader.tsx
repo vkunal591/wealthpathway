@@ -11,8 +11,8 @@ export default function TopHeader() {
         {/* Left Section */}
         <div className="flex items-center gap-4">
           <span className="items-center gap-1 text-xs hidden lg:flex">
-            <IoLocationOutline className="text-sm" /> 911, One Lodha Place,
-            Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013
+            <IoLocationOutline className="text-sm" />43, Karelwadi, Thakurdwar Ground Floor
+            Cabina Room no. 1, Charni Road, Mumbai - 400002
           </span>
           <span className="flex items-center gap-1 text-xs">
             <CgMail className="text-sm" /> info@wealth1.com

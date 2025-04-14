@@ -63,7 +63,7 @@ export default function page() {
               "170+ filters covering technicals, fundamentals, sentiment, and insider activity to pick high-potential investments.",
           },
         ]}
-        teamMember={{
+        teamMembers={{
           initials: "AG",
           name: "Anirudh Garg",
           role: "Fund Manager, INVasset PMS",
