@@ -41,7 +41,7 @@ export default async function page(ctx: any) {
     return data.slice(startIndex, endIndex + 1);
   };
 
-  const headerSection = fetchPageData.length === 1 ?fetchPageData[0] : {};
+  const headerSection = fetchPageData.length >= 1 ?fetchPageData[0] : {};
   const infoCardContents = fetchPageData.length >= 2 ? fetchPageData?.[1]?.contents : [];
   const detailsData =  fetchPageData.length >= 4 ?fetchPageData : [];
   const fundInsight =  fetchPageData.length >= 5 ?fetchPageData?.[5]?.contents : [];
