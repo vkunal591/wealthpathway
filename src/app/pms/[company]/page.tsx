@@ -42,12 +42,12 @@ export default async function page(ctx: any) {
   };
 
   const headerSection = fetchPageData.length === 1 ?fetchPageData[0] : {};
-  const infoCardContents = fetchPageData.length === 2 ? fetchPageData?.[1]?.contents : [];
-  const detailsData =  fetchPageData.length === 4 ?fetchPageData : [];
-  const fundInsight =  fetchPageData.length === 5 ?fetchPageData?.[5]?.contents : [];
+  const infoCardContents = fetchPageData.length >= 2 ? fetchPageData?.[1]?.contents : [];
+  const detailsData =  fetchPageData.length >= 4 ?fetchPageData : [];
+  const fundInsight =  fetchPageData.length >= 5 ?fetchPageData?.[5]?.contents : [];
   const teamMember = extractRange( fetchPageData.length === 5 ?fetchPageData?.[5]?.contents:[], 2, 4) ||[];
-  const faqSection = fetchPageData.length === 6 ? fetchPageData?.[6] : {};
-  const legalInfoContents =  fetchPageData.length === 7 ? fetchPageData?.[7]?.contents : [];
+  const faqSection = fetchPageData.length >= 6 ? fetchPageData?.[6] : {};
+  const legalInfoContents =  fetchPageData.length >= 7 ? fetchPageData?.[7]?.contents : [];
   // console.log(extractRange(fetchPageData?.[5]?.contents, 2, 4));
   return (
     <div className="bg-white">
